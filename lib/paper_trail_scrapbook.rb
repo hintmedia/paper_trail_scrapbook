@@ -9,7 +9,9 @@ require 'pathname'
 require 'set'
 require 'paper_trail_scrapbook/config'
 require 'paper_trail_scrapbook/chapter'
+require 'paper_trail_scrapbook/changes'
 require 'paper_trail_scrapbook/life_history'
+require 'paper_trail_scrapbook/version'
 
 # Library namespace
 #
