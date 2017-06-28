@@ -21,6 +21,8 @@ module PaperTrailScrapbook
       old, new = v
       "#{BULLET} #{k}: " + if old.nil?
                              find_value(k, new)
+                           elsif new.nil?
+                             "#{find_value(k, old)} was *removed*"
                            else
                              "#{find_value(k, old)} -> #{find_value(k, new)}"
                            end
@@ -29,7 +31,9 @@ module PaperTrailScrapbook
     def find_value(key, value)
       return value.to_s unless assoc.key?(key)
 
-      assoc[key].find(value).to_s + "[#{value}]" rescue '???'
+      return '*empty*' unless value
+
+      assoc[key].find(value).to_s + "[#{value}]" rescue '*not found*'
     end
 
     def assoc_klass(name)
