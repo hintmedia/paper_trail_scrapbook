@@ -9,7 +9,7 @@ module PaperTrailScrapbook
     private
 
     def changes
-      p version
+      p version.object_changes
     end
 
     def who
@@ -26,7 +26,7 @@ module PaperTrailScrapbook
     end
 
     def whenn
-      version.updated_at.to_s
+      version.created_at.to_s
     end
 
     def kind
