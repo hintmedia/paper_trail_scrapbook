@@ -51,7 +51,7 @@ module PaperTrailScrapbook
 
     def changes
       @chs ||= YAML
-                 .load(version.object_changes)
+                 .load(version.object_changes.to_s)
                  .except('updated_at', 'created_at ', 'id')
     end
 
