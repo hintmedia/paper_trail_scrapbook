@@ -2,6 +2,8 @@ module PaperTrailScrapbook
   class Chapter
     include Concord.new(:version)
 
+    UNKNOWN = 'Someone'
+
     def story
       "On #{whenn}, #{who} #{kind} the following information:\n#{changes}"
     end
@@ -9,7 +11,7 @@ module PaperTrailScrapbook
     private
 
     def changes
-      p version.object_changes
+      Changes.new(version).change_log
     end
 
     def who
@@ -21,7 +23,7 @@ module PaperTrailScrapbook
           author
         end
       else
-        'Someone'
+        UNKNOWN
       end
     end
 
