@@ -5,7 +5,7 @@ module PaperTrailScrapbook
     UNKNOWN = 'Someone'
 
     def story
-      "On #{whenn}, #{who} #{kind} the following #{model} information:\n#{changes}".split.join(' ')
+      "On #{whenn}, #{who} #{kind} the following #{model} information:".split.join(' ') + "\n#{changes}" 
     end
 
     private

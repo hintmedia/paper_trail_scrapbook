@@ -29,7 +29,7 @@ module PaperTrailScrapbook
     def find_value(key, value)
       return value.to_s unless assoc.key?(key)
 
-      assoc[:key].find(value).to_s + "[#{value}]" rescue '???'
+      assoc[key].find(value).to_s + "[#{value}]" rescue '???'
     end
 
     def assoc_klass(name)
