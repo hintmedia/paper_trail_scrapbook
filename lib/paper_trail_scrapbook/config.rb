@@ -9,6 +9,8 @@ module PaperTrailScrapbook
     def initialize
       # Variables which affect all threads, whose access is synchronized.
       @mutex = Mutex.new
+
+      @whodunnit_class = nil
     end
   end
 end
