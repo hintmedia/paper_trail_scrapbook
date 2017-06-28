@@ -33,7 +33,7 @@ module PaperTrailScrapbook
     end
 
     def assoc_klass(name)
-      Object.const_get(name.classify) rescue Object.const_set(name.classify, Class.new)
+      Object.const_get(name.to_s.classify) rescue Object.const_set(name.to_s.classify, Class.new)
     end
 
     def klass
