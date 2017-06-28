@@ -5,10 +5,14 @@ module PaperTrailScrapbook
     UNKNOWN = 'Someone'
 
     def story
-      "On #{whenn}, #{who} #{kind} the following information:\n#{changes}"
+      "On #{whenn}, #{who} #{kind} the following #{model} information:\n#{changes}".squish
     end
 
     private
+
+    def model
+      version.item_type
+    end
 
     def changes
       PaperTrailScrapbook::Changes.new(version).change_log
@@ -28,7 +32,7 @@ module PaperTrailScrapbook
     end
 
     def whenn
-      version.created_at.strftime("%A, %d %b %Y %l:%M %p")
+      version.created_at.strftime("%A, %d %b %Y at %l:%M %p")
     end
 
     def kind
