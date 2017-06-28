@@ -33,11 +33,11 @@ module PaperTrailScrapbook
     end
 
     def assoc_klass(name)
-      Object.const_set(name.classify, Class.new)
+      Object.const_get(name.classify) rescue Object.const_set(name.classify, Class.new)
     end
 
     def klass
-      Object.const_set(version.item_type.classify, Class.new)
+      assoc_klass(version.item_type)
     end
 
     def build_associations
