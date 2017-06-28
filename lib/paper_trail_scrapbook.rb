@@ -15,4 +15,20 @@ require 'paper_trail_scrapbook/life_history'
 #
 # @api private
 module PaperTrailScrapbook
+
+  class << self
+
+    # Sets class associated with PaperTrail.whodunnit
+    # @api public
+    def whodunnit_class=(value)
+      paper_trail_scrapbook_store[:whodunnit_class] = value
+    end
+
+    # class responsible for any changes that occur.
+    #
+    # @api public
+    def whodunnit_class
+      paper_trail_scrapbook_store[:whodunnit_class]
+    end
+  end
 end

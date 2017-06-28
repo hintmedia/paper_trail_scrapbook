@@ -15,8 +15,8 @@ module PaperTrailScrapbook
     def who
       author = version.version_author
       if author
-        if (klass = Config.whodunnit_class)
-          klass.find(author.to_i).to_s
+        if PaperTrailScrapbook.whodunnit_class
+          PaperTrailScrapbook.whodunnit_class.find(author.to_i).to_s
         else
           author
         end
@@ -26,7 +26,7 @@ module PaperTrailScrapbook
     end
 
     def whenn
-      version.created_at.to_s
+      version.created_at.strftime("%A, %d %b %Y %l:%M %p")
     end
 
     def kind
