@@ -30,5 +30,25 @@ module PaperTrailScrapbook
     def whodunnit_class
       paper_trail_scrapbook_store[:whodunnit_class]
     end
+
+    # Thread-safe hash to hold PaperTrailScrapbook's data. Initializing with needed
+    # default values.
+    # @api private
+    def paper_trail_store
+      RequestStore.store[:paper_trail_scrapbook] ||= {  }
+    end
+
+    # Returns PaperTrailScrapbook's configuration object.
+    # @api private
+    def config
+      @config ||= PaperTrailScrapbook::Config.instance
+      yield @config if block_given?
+      @config
+    end
+    alias configure config
+
+    def version
+      VERSION::STRING
+    end
   end
 end
