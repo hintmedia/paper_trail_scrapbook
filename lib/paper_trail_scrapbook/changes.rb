@@ -9,20 +9,20 @@ module PaperTrailScrapbook
       build_associations
     end
 
-    BULLET = '•'
+    BULLET = ' •'
 
     def change_log
-      changes.map{ |k,v| digest(k,v)}.join("\n")
+      changes.map { |k, v| digest(k, v) }.join("\n")
     end
 
     private
 
-    def digest(k,v)
+    def digest(k, v)
       old, new = v
       "#{BULLET} #{k}: " + if old.nil?
-                             find_value(k,new)
+                             find_value(k, new)
                            else
-                             "#{find_value(k,old)} -> #{find_value(k,new)}"
+                             "#{find_value(k, old)} -> #{find_value(k, new)}"
                            end
     end
 
@@ -33,7 +33,9 @@ module PaperTrailScrapbook
     end
 
     def assoc_klass(name)
-      Object.const_get(name.to_s.classify) rescue Object.const_set(name.to_s.classify, Class.new)
+      Object.const_get(name.to_s.classify)
+    rescue
+      Object.const_set(name.to_s.classify, Class.new)
     end
 
     def klass
@@ -43,12 +45,14 @@ module PaperTrailScrapbook
     def build_associations
       @assoc ||= Hash[klass
                         .reflect_on_all_associations
-                        .select{ |a| a.macro == :belongs_to }
-                        .map{|x| [x.foreign_key.to_s, assoc_klass(x.name)]}]
+                        .select { |a| a.macro == :belongs_to }
+                        .map { |x| [x.foreign_key.to_s, assoc_klass(x.name)] }]
     end
 
     def changes
-      @chs ||= YAML.load(version.object_changes).except('created_at', 'id')
+      @chs ||= YAML
+                 .load(version.object_changes)
+                 .except('updated_at', 'created_at ', 'id')
     end
 
     attr_reader :assoc, :chs
