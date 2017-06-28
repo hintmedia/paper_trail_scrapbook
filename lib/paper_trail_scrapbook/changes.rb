@@ -50,5 +50,7 @@ module PaperTrailScrapbook
     def changes
       @chs ||= YAML.load(version.object_changes).except('created_at', 'id')
     end
+
+    attr_reader :assoc, :chs
   end
 end
