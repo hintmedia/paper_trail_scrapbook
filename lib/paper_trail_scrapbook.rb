@@ -34,7 +34,7 @@ module PaperTrailScrapbook
     # Thread-safe hash to hold PaperTrailScrapbook's data. Initializing with needed
     # default values.
     # @api private
-    def paper_trail_store
+    def paper_trail_scrapbook_store
       RequestStore.store[:paper_trail_scrapbook] ||= {  }
     end
 
