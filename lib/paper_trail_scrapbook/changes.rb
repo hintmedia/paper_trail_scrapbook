@@ -3,6 +3,8 @@ module PaperTrailScrapbook
 
     include Concord.new(:version)
 
+    BULLET = '•'
+
     def change_log
       changes.map{ |k,v| digest(k,v)}.join("\n")
     end
@@ -11,7 +13,7 @@ module PaperTrailScrapbook
 
     def digest(k,v)
       old, new = v
-      "#{bullet} #{k}: " + if old.nil?
+      "#{BULLET} #{k}: " + if old.nil?
                              new.to_s
                            else
                              "#{old} -> #{new}"
