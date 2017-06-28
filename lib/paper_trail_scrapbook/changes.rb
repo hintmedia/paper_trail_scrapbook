@@ -49,10 +49,14 @@ module PaperTrailScrapbook
                         .map { |x| [x.foreign_key.to_s, assoc_klass(x.name)] }]
     end
 
+    def object_changes
+      version.object_changes
+    end
+
     def changes
-      @chs ||= YAML
-                 .load(version.object_changes.to_s)
-                 .except('updated_at', 'created_at ', 'id')
+      @chs ||= object_changes ? YAML
+                                  .load(object_changes)
+                                  .except('updated_at', 'created_at ', 'id') : {}
     end
 
     attr_reader :assoc, :chs
