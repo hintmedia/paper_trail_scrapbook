@@ -11,7 +11,7 @@ module PaperTrailScrapbook
     private
 
     def changes
-      Changes.new(version).change_log
+      PaperTrailScrapbook::Changes.new(version).change_log
     end
 
     def who
