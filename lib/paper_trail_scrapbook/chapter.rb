@@ -10,10 +10,14 @@ module PaperTrailScrapbook
     # @return [String] Human readable description of changes
     #
     def story
-      "On #{whenn}, #{who} #{kind} the following #{model} information:".split.join(' ') + "\n#{changes}"
+      preface + "\n#{changes}"
     end
 
     private
+
+    def preface
+      "On #{whenn}, #{who} #{kind} the following #{model} information:".split.join(' ')
+    end
 
     def model
       version.item_type
