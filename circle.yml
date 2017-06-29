@@ -5,6 +5,10 @@ machine:
 dependencies:
   pre:
     - gem install bundler
+
+database:
+  override:
+    - bundle install
 test:
   override:
     - bundle exec rake spec
