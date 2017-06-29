@@ -22,7 +22,7 @@ Create an initializer i.e. _config/initializers/paper_trail_scrapbook.rb
 ```
 
 This gem will call `find` on that class, and translate the result to a 
-String via `to_s`, so it can be a simple Rails Model, or you can create a custom Ruby class that has `find` class method and 
+String via `to_s`, so it can be a simple Rails model, or a custom Ruby class that has `find` class method and 
 expects the `whodunnit` value. For example
 
 ```ruby
@@ -30,11 +30,10 @@ class WhoDidIt
   def self.find(email)
     Person.find_by(email: email)
   end
-  
-  def to_s
-    name
-  end
 end
+
+
+PaperTrailScrapbook.config.whodunnit_class = WhoDidIt
 
 ```
 
@@ -45,7 +44,7 @@ widget = Widget.find 42
 text = PaperTrailScrapbook::LifeStory.new(widget).story
 # On Wednesday, 07 Jun 2017 at 2:37 PM, Rob Owens created the following Widget information:
 #   • email: Tim@example.com
-#   • name: Tim Example 
+#   • name: Tim's Widget 
 #   • built: true
 #   • created_by: Rob Owens[1742]
 #   • provider: RedCharge[3113]
@@ -63,7 +62,7 @@ Created by Tim Chambers in 2017.
 
 https://github.com/tjchambers/paper_trail_scrapbook/graphs/contributors
 
-Acknowledgement and kudos to Andy Stewart, Ben Atkins and Jared Beck, and all the other contributors to the PaperTrail gem. 
+Acknowledgement and kudos to Andy Stewart, Ben Atkins, Jared Beck, and all the other contributors to the PaperTrail gem. 
 Without them this would not be possible.
 
 
