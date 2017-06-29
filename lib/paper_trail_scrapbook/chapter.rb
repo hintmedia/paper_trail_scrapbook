@@ -2,10 +2,10 @@ module PaperTrailScrapbook
   class Chapter
     include Concord.new(:version)
 
-    UNKNOWN = '*the app*'
+    UNKNOWN = '*the app*'.freeze
 
     def story
-      "On #{whenn}, #{who} #{kind} the following #{model} information:".split.join(' ') + "\n#{changes}" 
+      "On #{whenn}, #{who} #{kind} the following #{model} information:".split.join(' ') + "\n#{changes}"
     end
 
     private
@@ -32,17 +32,17 @@ module PaperTrailScrapbook
     end
 
     def whenn
-      version.created_at.strftime("%A, %d %b %Y at %l:%M %p")
+      version.created_at.strftime('%A, %d %b %Y at %l:%M %p')
     end
 
     def kind
       case version.event
-        when 'create'
-          'created'
-        when 'update'
-          'updated'
-        when 'destroy'
-          'destroyed'
+      when 'create'
+        'created'
+      when 'update'
+        'updated'
+      when 'destroy'
+        'destroyed'
       end
     end
   end

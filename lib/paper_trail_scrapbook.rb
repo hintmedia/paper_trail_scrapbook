@@ -17,9 +17,7 @@ require 'paper_trail_scrapbook/version'
 #
 # @api private
 module PaperTrailScrapbook
-
   class << self
-
     # Sets class associated with PaperTrail.whodunnit
     # @api public
     def whodunnit_class=(value)
@@ -37,7 +35,7 @@ module PaperTrailScrapbook
     # default values.
     # @api private
     def paper_trail_scrapbook_store
-      RequestStore.store[:paper_trail_scrapbook] ||= {  }
+      RequestStore.store[:paper_trail_scrapbook] ||= {}
     end
 
     # Returns PaperTrailScrapbook's configuration object.
