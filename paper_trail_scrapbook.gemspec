@@ -28,7 +28,7 @@ Gem::Specification.new do |gem|
   # Why `railties`? Possibly used by `spec/dummy_app` boot up?
   gem.add_development_dependency 'railties', ['>= 4.0', '< 5.2']
 
-  gem.add_development_dependency 'rspec-rails', '~> 3.6' 
+  gem.add_development_dependency 'rspec-rails', '~> 3.6'
   gem.add_development_dependency 'database_cleaner', '~> 1.2'
   gem.add_development_dependency 'rubocop'
   gem.add_development_dependency 'rubocop-rspec'

@@ -3,7 +3,7 @@ require 'spec_helper'
 module PaperTrailScrapbook
   ::RSpec.describe Chapter do
     let(:version) do
-      OpenStruct.new(id:             2674798,
+      OpenStruct.new(id:             2_674_798,
                      item_type:      'Widget',
                      item_id:        4806,
                      event:          'update',

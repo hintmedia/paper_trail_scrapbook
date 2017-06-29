@@ -3,9 +3,9 @@ require 'spec_helper'
 module PaperTrailScrapbook
   ::RSpec.describe Changes do
     let(:version) do
-      OpenStruct.new(id:             2674798,
+      OpenStruct.new(id:             2_674_798,
                      item_type:      'Widget',
-                     item_id:        4806,
+                     item_id:        4804,
                      event:          'update',
                      whodunnit:      '1742',
                      object:         "---\nid: \nadvertiser_id: \ncampaign_id: \namount: \nauthorization_id: \npaid_on: \ncreated_at: \nupdated_at: \nstatus: active\nname: \nemail: \nx_address: \nnotes: \ninternal_notes: \ndiscount_percent: !ruby/object:BigDecimal 18:0.0\norder_number: \nsponsor_delivery_date: \nother_terms: \npayment_terms_cd: \npayment_due_date: \nother_payment_terms: \ncreated_by: \nsent: false\nad_agency_id: \ntoken: \ndiscounted_amount: \n",
@@ -19,11 +19,13 @@ module PaperTrailScrapbook
     describe '#change_log' do
       it 'provides a set of changes' do
         expect(subject).to match(/discounted_amount: 29612.0 added/)
+        expect(subject).not_to match(/created_at:/)
+        expect(subject).not_to match(/id:/)
       end
 
       it 'provides a set of create changes' do
         version.event = 'create'
-        
+
         expect(subject).to match(/discounted_amount: 29612.0$/)
       end
     end
