@@ -18,7 +18,7 @@ module PaperTrailScrapbook
 
     def digest(k, v)
       return if old.nil? && (new.nil? || new.empty?)
-      
+
       old, new = v
       "#{BULLET} #{k}: " + if creating?
                              find_value(k, new).to_s
@@ -62,9 +62,9 @@ module PaperTrailScrapbook
 
     def build_associations
       @assoc ||= Hash[klass
-                 .reflect_on_all_associations
-                 .select { |a| a.macro == :belongs_to }
-                 .map { |x| [x.foreign_key.to_s, assoc_klass(x.name, x.options)] }]
+                        .reflect_on_all_associations
+                        .select { |a| a.macro == :belongs_to }
+                        .map { |x| [x.foreign_key.to_s, assoc_klass(x.name, x.options)] }]
     end
 
     def object_changes
@@ -73,8 +73,8 @@ module PaperTrailScrapbook
 
     def changes
       @chs ||= object_changes ? YAML
-        .safe_load(object_changes)
-        .except('updated_at', 'created_at ', 'id') : {}
+                                  .load(object_changes)
+                                  .except('updated_at', 'created_at ', 'id') : {}
     end
 
     attr_reader :assoc, :chs

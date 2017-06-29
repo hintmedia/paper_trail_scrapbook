@@ -1,3 +1,5 @@
 AllCops:
   DisabledByDefault: false
 
+Security/YAMLLoad:
+  Enabled: false
