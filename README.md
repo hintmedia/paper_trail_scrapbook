@@ -1,5 +1,7 @@
 # Paper Trail Scrapbook
 
+[![CircleCI](https://circleci.com/gh/tjchambers/paper_trail_scrapbook/tree/master.svg?style=svg)](https://circleci.com/gh/tjchambers/paper_trail_scrapbook/tree/master)
+
 Human Readable audit reporting for users of [PaperTrail](https://github.com/airblade/paper_trail) gem.
 
 ## Installation
