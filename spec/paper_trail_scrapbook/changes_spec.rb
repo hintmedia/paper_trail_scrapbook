@@ -16,9 +16,15 @@ module PaperTrailScrapbook
     let(:object) { described_class.new(version) }
     let(:subject) { object.change_log }
 
-    describe '#changes' do
-      it 'provides a whole story' do
+    describe '#change_log' do
+      it 'provides a set of changes' do
         expect(subject).to match(/discounted_amount: 29612.0 added/)
+      end
+
+      it 'provides a set of create changes' do
+        version.event = 'create'
+        
+        expect(subject).to match(/discounted_amount: 29612.0$/)
       end
     end
   end
