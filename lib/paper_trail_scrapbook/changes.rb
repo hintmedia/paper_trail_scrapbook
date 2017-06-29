@@ -8,7 +8,6 @@ module PaperTrailScrapbook
 
     def initialize(*)
       super
-
       build_associations
     end
 
@@ -20,7 +19,11 @@ module PaperTrailScrapbook
     # @return [String] Summary analysis of changes
     #
     def change_log
-      changes.map { |k, v| digest(k, v) }.compact.join("\n").gsub('_id:', ':')
+      changes
+        .map { |k, v| digest(k, v) }
+        .compact
+        .join("\n")
+        .gsub('_id:', ':')
     end
 
     private
