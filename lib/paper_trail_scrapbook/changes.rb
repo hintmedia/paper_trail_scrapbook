@@ -17,9 +17,9 @@ module PaperTrailScrapbook
     private
 
     def digest(k, v)
-      return if old.nil? && (new.nil? || new.empty?)
-
       old, new = v
+      return if old.nil? && (new.nil? || new.empty?)
+      
       "#{BULLET} #{k}: " + if creating?
                              find_value(k, new).to_s
                            elsif old.nil?
