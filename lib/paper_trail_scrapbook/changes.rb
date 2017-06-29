@@ -44,7 +44,7 @@ module PaperTrailScrapbook
       direct_class = options[:class_name]
       return direct_class if direct_class && !direct_class.is_a?('String')
 
-      Object.const_get(direct_class || name.to_s.classify)
+      Object.const_get((direct_class || name.to_s).classify)
     rescue
       Object.const_set(name.to_s.classify, Class.new)
     end
