@@ -40,8 +40,11 @@ module PaperTrailScrapbook
       assoc[key].find(value).to_s + "[#{value}]" rescue "*not found*[#{value}]"
     end
 
-    def assoc_klass(name)
-      Object.const_get(name.to_s.classify)
+    def assoc_klass(name, options = {})
+      direct_class = options[:class_name]
+      return direct_class if direct_class && !direct_class.is_a?('String')
+
+      Object.const_get(direct_class || name.to_s.classify)
     rescue
       Object.const_set(name.to_s.classify, Class.new)
     end
@@ -54,7 +57,7 @@ module PaperTrailScrapbook
       @assoc ||= Hash[klass
                         .reflect_on_all_associations
                         .select { |a| a.macro == :belongs_to }
-                        .map { |x| [x.foreign_key.to_s, assoc_klass(x.name)] }]
+                        .map { |x| [x.foreign_key.to_s, assoc_klass(x.name, x.options)] }]
     end
 
     def object_changes
