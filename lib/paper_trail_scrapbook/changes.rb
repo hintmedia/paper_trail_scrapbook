@@ -42,7 +42,7 @@ module PaperTrailScrapbook
 
     def assoc_klass(name, options = {})
       direct_class = options[:class_name]
-      return direct_class if direct_class && !direct_class.is_a?('String')
+      return direct_class if direct_class && !direct_class.is_a?(String)
 
       Object.const_get((direct_class || name.to_s).classify)
     rescue
