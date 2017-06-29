@@ -4,6 +4,11 @@ module PaperTrailScrapbook
 
     UNKNOWN = '*the app*'.freeze
 
+    # Single version historical analysis
+    #
+    #
+    # @return [String] Human readable description of changes
+    #
     def story
       "On #{whenn}, #{who} #{kind} the following #{model} information:".split.join(' ') + "\n#{changes}"
     end

@@ -1,4 +1,8 @@
 module PaperTrailScrapbook
+  # Class Changes provides detailed attribute by attribute analysis
+  #
+  # @author Timothy Chambers <tim@possibilogy.com>
+  #
   class Changes
     include Concord.new(:version)
 
@@ -10,6 +14,11 @@ module PaperTrailScrapbook
 
     BULLET = ' •'.freeze
 
+    # Attribute change analysis
+    #
+    #
+    # @return [String] Summary analysis of changes
+    #
     def change_log
       changes.map { |k, v| digest(k, v) }.compact.join("\n").gsub('_id:', ':')
     end
