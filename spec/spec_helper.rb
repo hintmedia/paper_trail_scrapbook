@@ -2,6 +2,9 @@
 ENV['RAILS_ENV'] ||= 'test'
 ENV['DB'] ||= 'sqlite'
 
+require 'simplecov'
+SimpleCov.start
+
 unless File.exist?(File.expand_path('dummy_app/config/database.yml', __dir__))
   warn 'WARNING: No database.yml detected for the dummy app, please run `rake prepare` first'
 end
