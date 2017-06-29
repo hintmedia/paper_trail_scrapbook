@@ -2,13 +2,22 @@
 machine:
   ruby:
     version: '2.2.7'
+  environment:
+    CC_TEST_REPORTER_ID: e0db6fd6beb8208980b2908947735982fb5a4e8a9a3cb742dc194e00df79f388
+
 dependencies:
   pre:
     - gem install bundler
+  post:
+    - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+    - chmod +x ./cc-test-reporter
 
 database:
   override:
     - bundle install
 test:
+  pre:
+    - cc-test-reporter before-build
   override:
-    - bundle exec rake spec
+    - bundle exec rake spec; cc-test-reporter after-build --exit-code $?
+
