@@ -94,7 +94,7 @@ module PaperTrailScrapbook
       @chs ||= if object_changes
                  YAML
                    .load(object_changes)
-                   .except('updated_at', 'created_at ', 'id')
+                   .except('updated_at', 'created_at', 'id')
                else
                  {}
                end
