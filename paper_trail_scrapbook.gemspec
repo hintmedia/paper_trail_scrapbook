@@ -3,12 +3,12 @@ require File.expand_path('../lib/paper_trail_scrapbook/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.name        = 'paper_trail_scrapbook'
   gem.version     = PaperTrailScrapbook::VERSION.dup
-  gem.date        = '2016-10-09'
+  gem.date        = Time.now.utc.strftime('%Y-%m-%d')
   gem.summary     = 'Paper Trail Scrapbook'
   gem.description = "Human Readable Change Log for Paper Trail'd data"
   gem.authors     = ['Timothy Chambers']
   gem.email       = 'tim@possibilogy.com'
-  gem.files       = ['lib/paper_trail_scrapbook.rb']
+  gem.files       = `git ls-files`.split("\n")
   gem.homepage    = 'https://github.com/tjchambers/paper_trail_scrapbook'
   gem.license     = 'MIT'
 
@@ -18,20 +18,21 @@ Gem::Specification.new do |gem|
   # Rails does not follow semver, makes breaking changes in minor versions.
   gem.add_dependency 'activerecord', ['>= 4.0', '< 5.2']
   gem.add_dependency 'request_store', '~> 1.1'
- 
+  gem.add_dependency 'adamantium'
+  gem.add_dependency 'concord'
+  gem.add_dependency 'paper_trail'
+
   gem.add_development_dependency 'rake', '~> 12.0'
   gem.add_development_dependency 'ffaker', '~> 2.5'
 
   # Why `railties`? Possibly used by `spec/dummy_app` boot up?
   gem.add_development_dependency 'railties', ['>= 4.0', '< 5.2']
- 
-  gem.add_development_dependency 'rspec-rails', '~> 3.5'
-  gem.add_development_dependency 'generator_spec', '~> 0.9.3'
-  gem.add_development_dependency 'database_cleaner', '~> 1.2' 
-  gem.add_development_dependency 'rubocop' 
-  gem.add_development_dependency 'rubocop-rspec' 
+
+  gem.add_development_dependency 'rspec-rails', '~> 3.6'
+  gem.add_development_dependency 'rspec-core', '~> 3.6'
+  gem.add_development_dependency 'database_cleaner', '~> 1.2'
+  gem.add_development_dependency 'rubocop'
+  gem.add_development_dependency 'rubocop-rspec'
   gem.add_development_dependency 'timecop', '~> 0.8.0'
-  gem.add_development_dependency 'sqlite3', '~> 1.2'
-  gem.add_development_dependency 'pg', '~> 0.19.0'
-  gem.add_development_dependency 'mysql2', '~> 0.4.2'
+  gem.add_development_dependency 'sqlite3'
 end

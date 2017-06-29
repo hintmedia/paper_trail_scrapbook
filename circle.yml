@@ -1,10 +1,10 @@
 ---
 machine:
   ruby:
-    version: '2.3.1'
+    version: '2.2.7'
 dependencies:
   pre:
     - gem install bundler
 test:
   override:
-    - bundle exec rake ci
+    - bundle exec rake spec

@@ -64,9 +64,9 @@ module PaperTrailScrapbook
       @assoc ||=
         Hash[
           klass
-            .reflect_on_all_associations
-            .select { |a| a.macro.equal?(:belongs_to) }
-            .map { |x| [x.foreign_key.to_s, assoc_klass(x.name, x.options)] }
+        .reflect_on_all_associations
+        .select { |a| a.macro.equal?(:belongs_to) }
+        .map { |x| [x.foreign_key.to_s, assoc_klass(x.name, x.options)] }
         ]
     end
 
