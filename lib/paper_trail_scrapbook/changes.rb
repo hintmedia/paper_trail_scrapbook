@@ -12,7 +12,7 @@ module PaperTrailScrapbook
     BULLET = ' •'
 
     def change_log
-      changes.map { |k, v| digest(k, v) }.join("\n")
+      changes.map { |k, v| digest(k, v) }.join("\n").gsub('_id:', ':')
     end
 
     private
@@ -33,7 +33,11 @@ module PaperTrailScrapbook
 
       return '*empty*' unless value
 
-      assoc[key].find(value).to_s + "[#{value}]" rescue '*not found*'
+      if key == 'held_advertiser_id'
+        p assoc
+      end
+
+      assoc[key].find(value).to_s + "[#{value}]" rescue "*not found*[#{value}]"
     end
 
     def assoc_klass(name)
