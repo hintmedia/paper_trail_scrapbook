@@ -2,7 +2,7 @@ module PaperTrailScrapbook
   class Chapter
     include Concord.new(:version)
 
-    UNKNOWN = 'Someone'
+    UNKNOWN = '*the app*'
 
     def story
       "On #{whenn}, #{who} #{kind} the following #{model} information:".split.join(' ') + "\n#{changes}" 

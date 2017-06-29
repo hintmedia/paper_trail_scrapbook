@@ -20,7 +20,7 @@ module PaperTrailScrapbook
     def digest(k, v)
       old, new = v
       "#{BULLET} #{k}: " + if old.nil?
-                             find_value(k, new)
+                             "#{find_value(k, new)} added"
                            elsif new.nil?
                              "#{find_value(k, old)} was *removed*"
                            else
