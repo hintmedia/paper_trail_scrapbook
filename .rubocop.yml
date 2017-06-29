@@ -1,5 +1,8 @@
 AllCops:
   DisabledByDefault: false
+  TargetRubyVersion: 2.2
+  TargetRailsVersion: 4.0
+  DisplayCopNames: true
 
 Security/YAMLLoad:
   Enabled: false
