@@ -29,15 +29,19 @@ module PaperTrailScrapbook
       old, new = v
       return if old.nil? && (new.nil? || new.eql?(''))
 
-      "#{BULLET} #{k}: " + if creating?
-                             find_value(k, new).to_s
-                           elsif old.nil?
-                             "#{find_value(k, new)} added"
-                           elsif new.nil?
-                             "#{find_value(k, old)} was *removed*"
-                           else
-                             "#{find_value(k, old)} -> #{find_value(k, new)}"
-                           end
+      "#{BULLET} #{k}: #{detailed_analysis(k, new, old)}"
+    end
+
+    def detailed_analysis(k, new, old)
+      if creating?
+        find_value(k, new).to_s
+      elsif old.nil?
+        "#{find_value(k, new)} added"
+      elsif new.nil?
+        "#{find_value(k, old)} was *removed*"
+      else
+        "#{find_value(k, old)} -> #{find_value(k, new)}"
+      end
     end
 
     def creating?
