@@ -22,7 +22,7 @@ module PaperTrailScrapbook
       p.save!
       p
     end
-    
+
     let(:target) do
       a = Authorship.new(book: book, author: author)
       a.save!
