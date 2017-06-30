@@ -40,8 +40,8 @@ GEM
     arel (8.0.0)
     ast (2.3.0)
     builder (3.2.3)
-    codeclimate-test-reporter (0.6.0)
-      simplecov (>= 0.7.1, < 1.0.0)
+    codeclimate-test-reporter (1.0.7)
+      simplecov
     concord (0.1.5)
       adamantium (~> 0.2.0)
       equalizer (~> 0.0.9)
@@ -133,7 +133,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  codeclimate-test-reporter
+  codeclimate-test-reporter (~> 1.0.7)
   database_cleaner (~> 1.2)
   ffaker (~> 2.5)
   paper_trail_scrapbook!
