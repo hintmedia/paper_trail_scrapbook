@@ -61,7 +61,7 @@ module PaperTrailScrapbook
       return '*empty*' unless value
 
       begin
-        assoc[key].find(value).to_s + "[#{value}]"
+        assoc[key].find(value).to_s.to_s + "[#{value}]"
       rescue
         "*not found*[#{value}]"
       end

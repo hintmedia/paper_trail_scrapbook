@@ -4,8 +4,10 @@ module PaperTrailScrapbook
   ::RSpec.describe LifeHistory do
     before do
       PaperTrailScrapbook.config.whodunnit_class = Person
+
       p = Person.new(name: 'The Tim Man')
       p.save!
+
       PaperTrail.whodunnit = p.id
     end
 
@@ -16,7 +18,7 @@ module PaperTrailScrapbook
     end
 
     let(:author) do
-      p = Person.new(name: 'Dr. Suess')
+      p = Person.new(name: 'Dr. Seuss')
       p.save!
       p
     end
@@ -35,7 +37,27 @@ module PaperTrailScrapbook
         expect(subject).to match(/The Tim Man/)
 
         expect(subject).to match(/How the Grinch stole Xmas\[/)
-        expect(subject).to match(/Dr. Suess\[/)
+        expect(subject).to match(/Dr. Seuss\[/)
+      end
+
+      it 'provides a whole story missing to_s content' do
+        book.title = nil
+        book.save!
+
+        expect(subject).to match(/book: \[/)
+      end
+
+      it 'provides a whole story missing reference' do
+        book.destroy
+
+        expect(subject).to match(/book: \*not found\*\[/)
+      end
+
+      it 'provides a whole story missing reference' do
+        target.book = nil
+        target.save!
+
+        expect(subject).to match(/How the Grinch stole Xmas\[1\] was \*removed\*/)
       end
     end
   end
