@@ -17,9 +17,9 @@ Gem::Specification.new do |gem|
 
   # Rails does not follow semver, makes breaking changes in minor versions.
   gem.add_dependency 'activerecord', ['>= 4.0', '< 5.2']
-  gem.add_dependency 'adamantium'
-  gem.add_dependency 'concord'
-  gem.add_dependency 'paper_trail'
+  gem.add_dependency 'adamantium', '~> 0'
+  gem.add_dependency 'concord', '~> 0'
+  gem.add_dependency 'paper_trail', '~> 0'
 
   gem.add_development_dependency 'rake', '~> 12.0'
   gem.add_development_dependency 'ffaker', '~> 2.5'
@@ -29,10 +29,10 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency 'rspec-rails', '~> 3.6'
   gem.add_development_dependency 'database_cleaner', '~> 1.2'
-  gem.add_development_dependency 'rubocop'
-  gem.add_development_dependency 'rubocop-rspec'
+  gem.add_development_dependency 'rubocop', '~> 0'
+  gem.add_development_dependency 'rubocop-rspec', '~> 0'
   gem.add_development_dependency 'timecop', '~> 0.8.0'
-  gem.add_development_dependency 'sqlite3'
-  gem.add_development_dependency 'simplecov'
-  gem.add_development_dependency 'codeclimate-test-reporter'
+  gem.add_development_dependency 'sqlite3', '~> 0'
+  gem.add_development_dependency 'simplecov', '~> 0'
+  gem.add_development_dependency 'codeclimate-test-reporter', '~> 0'
 end
