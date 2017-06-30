@@ -1,4 +1,8 @@
 module PaperTrailScrapbook
+  # Class Chapter provides single version history analysis
+  #
+  # @author Timothy Chambers <tim@possibilogy.com>
+  #
   class Chapter
     include Concord.new(:version)
 
