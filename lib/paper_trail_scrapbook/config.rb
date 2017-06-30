@@ -3,7 +3,7 @@ require 'singleton'
 module PaperTrailScrapbook
   # Global configuration affecting all threads.
   class Config
-    include Singleton 
+    include Singleton
 
     DEFAULT_TIME_FORMAT = '%A, %d %b %Y at %l:%M %p'.freeze
     DEFAULT_EVENTS      = { 'create'  => 'created',
