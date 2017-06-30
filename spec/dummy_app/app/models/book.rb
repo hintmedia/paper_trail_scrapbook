@@ -6,4 +6,8 @@ class Book < ActiveRecord::Base
   has_many :editors, through: :editorships
 
   has_paper_trail
+
+  def to_s
+    title
+  end
 end
