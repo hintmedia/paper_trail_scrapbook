@@ -40,7 +40,7 @@ module PaperTrailScrapbook
     end
 
     def whenn
-      version.created_at.strftime('%A, %d %b %Y at %l:%M %p')
+      version.created_at.strftime(PaperTrailScrapbook.config.time_format)
     end
 
     def kind
