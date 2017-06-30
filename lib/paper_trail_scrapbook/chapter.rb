@@ -44,16 +44,8 @@ module PaperTrailScrapbook
     end
 
     def kind
-      case version.event
-        when 'create'
-          'created'
-        when 'update'
-          'updated'
-        when 'destroy'
-          'destroyed'
-        else
-          raise ArgumentError, "incorrect event:#{version.event}"
-      end
+      PaperTrailScrapbook.config.events[version.event] or
+        raise ArgumentError, "incorrect event:#{version.event}"
     end
   end
 end
