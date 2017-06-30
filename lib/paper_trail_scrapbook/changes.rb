@@ -19,11 +19,13 @@ module PaperTrailScrapbook
     # @return [String] Summary analysis of changes
     #
     def change_log
-      changes
-        .map { |k, v| digest(k, v) }
-        .compact
-        .join("\n")
-        .gsub('_id:', ':')
+      text = changes
+               .map { |k, v| digest(k, v) }
+               .compact
+               .join("\n")
+
+      text = text.gsub('_id:', ':') if PaperTrailScrapbook.config.drop_id_suffix
+      text
     end
 
     private
