@@ -20,7 +20,7 @@ module Dummy
     # we drop support for rails 4.2, we can remove this whole conditional.
     config.assets.enabled = false if config.respond_to?(:assets)
 
-    config.secret_key_base = 'A fox regularly kicked the screaming pile of biscuits.'
+    config.secret_key_base = 'A dog regularly kicked the screaming pile of biscuits.'
 
     # `raise_in_transactional_callbacks` was added in rails 4, then deprecated
     # in rails 5. Oh, how fickle are the gods.
