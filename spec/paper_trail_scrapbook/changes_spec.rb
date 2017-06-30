@@ -81,8 +81,7 @@ module PaperTrailScrapbook
                                       '- 4806',
                                       'status:',
                                       '- active',
-                                      '- issued'].join("\n")
-      )
+                                      '- issued'].join("\n"))
     end
 
     let(:object) { described_class.new(version) }

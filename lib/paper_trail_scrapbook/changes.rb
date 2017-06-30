@@ -22,9 +22,9 @@ module PaperTrailScrapbook
     #
     def change_log
       text = changes
-               .map { |k, v| digest(k, v) }
-               .compact
-               .join("\n")
+             .map { |k, v| digest(k, v) }
+             .compact
+             .join("\n")
 
       text = text.gsub('_id:', ':') if PaperTrailScrapbook.config.drop_id_suffix
       text
@@ -84,9 +84,9 @@ module PaperTrailScrapbook
       @assoc ||=
         Hash[
           klass
-            .reflect_on_all_associations
-            .select { |a| a.macro.equal?(:belongs_to) }
-            .map { |x| [x.foreign_key.to_s, assoc_klass(x.name, x.options)] }
+        .reflect_on_all_associations
+        .select { |a| a.macro.equal?(:belongs_to) }
+        .map { |x| [x.foreign_key.to_s, assoc_klass(x.name, x.options)] }
         ]
     end
 

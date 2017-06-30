@@ -48,8 +48,8 @@ module PaperTrailScrapbook
     end
 
     def kind
-      PaperTrailScrapbook.config.events[version.event] or
-        raise ArgumentError, "incorrect event:#{version.event}"
+      PaperTrailScrapbook.config.events[version.event] ||
+        raise(ArgumentError, "incorrect event:#{version.event}")
     end
   end
 end

@@ -1,5 +1,5 @@
 require 'adamantium'
-require 'concord' 
+require 'concord'
 require 'equalizer'
 require 'ice_nine'
 require 'pathname'
