@@ -3,6 +3,17 @@ AllCops:
   TargetRubyVersion: 2.2
   TargetRailsVersion: 4.0
   DisplayCopNames: true
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'vendor/**/*'
+    - 'test/**/*'
+    - 'bin/**/*'
 
 Security/YAMLLoad:
   Enabled: false
+
+# Limit line length
+Metrics/LineLength:
+  Max: 150

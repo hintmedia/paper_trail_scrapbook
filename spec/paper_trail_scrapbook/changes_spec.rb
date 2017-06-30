@@ -8,9 +8,31 @@ module PaperTrailScrapbook
                      item_id:        4804,
                      event:          'update',
                      whodunnit:      '1742',
-                     object:         "---\nid: \namount: \nauthorization_id: \npaid_on: \ncreated_at: \nupdated_at: \nstatus: active\nname: \nemail: \nx_address: \nnotes: \ninternal_notes: \ndiscount_percent: !ruby/object:BigDecimal 18:0.0\norder_number: \nsponsor_delivery_date: \nother_terms: \npayment_terms_cd: \npayment_due_date: \nother_payment_terms: \ncreated_by: \nsent: false\ntoken: \ndiscounted_amount: \n",
+                     object:         ['---','id: ',
+                                      'amount: ',
+                                      'authorization_id: ',
+                                      'paid_on: ',
+                                      'created_at: ',
+                                      'updated_at: ',
+                                      'status: active',
+                                      'name: ',
+                                      'email: ',
+                                      'x_address: ',
+                                      'notes: ',
+                                      'internal_notes: ',
+                                      'discount_percent: !ruby/object:BigDecimal 18:0.0',
+                                      'order_number: ',
+                                      'sponsor_delivery_date: ',
+                                      'other_terms: ',
+                                      'payment_terms_cd: ',
+                                      'payment_due_date: ',
+                                      'other_payment_terms: ',
+                                      'created_by: ',
+                                      'sent: false',
+                                      'token: ',
+                                      'discounted_amount: '].join("\n"),
                      created_at:     Time.current,
-                     object_changes: "---\nemail:\n- \n- tim@redbox.com\nname:\n- \n- Tim Chambers\norder_number:\n- \n- ''\nnotes:\n- \n- ''\ninternal_notes:\n- \n- ''\nother_terms:\n- \n- ''\npayment_terms_cd:\n- \n- 1\nother_payment_terms:\n- \n- ''\nsent:\n- false\n- true\ncreated_by:\n- \n- 1742\nadvertiser_id:\n- \n- 3113\namount:\n- \n- 29612.0\ndiscounted_amount:\n- \n- !ruby/object:BigDecimal 36:0.29612E5\ncreated_at:\n- \n- &1 2017-06-07 21:37:02.188657104 Z\nupdated_at:\n- \n- *1\nid:\n- \n- 4806\nstatus:\n- active\n- issued\n")
+                     object_changes: "---','email:','- ','- tim@redbox.com','name:','- ','- Tim Chambers','order_number:','- ','- ''','notes:','- ','- ''','internal_notes:','- ','- ''','other_terms:','- ','- ''','payment_terms_cd:','- ','- 1','other_payment_terms:','- ','- ''','sent:','- false','- true','created_by:','- ','- 1742','advertiser_id:','- ','- 3113','amount:','- ','- 29612.0','discounted_amount:','- ','- !ruby/object:BigDecimal 36:0.29612E5','created_at:','- ','- &1 2017-06-07 21:37:02.188657104 Z','updated_at:','- ','- *1','id:','- ','- 4806','status:','- active','- issued','")
     end
 
     let(:object) { described_class.new(version) }
@@ -20,6 +42,7 @@ module PaperTrailScrapbook
       it 'provides a set of changes' do
         expect(subject).to match(/discounted_amount: 29612.0 added/)
         expect(subject).not_to match(/created_at:/)
+        expect(subject).not_to match(/updated_at:/)
         expect(subject).not_to match(/id:/)
       end
 

@@ -6,11 +6,10 @@ module PaperTrailScrapbook
 
     # Single version historical analysis
     #
-    #
     # @return [String] Human readable description of changes
     #
     def story
-      preface + "\n#{changes}"
+      "#{preface}\\n#{changes}"
     end
 
     private
@@ -46,12 +45,14 @@ module PaperTrailScrapbook
 
     def kind
       case version.event
-      when 'create'
-        'created'
-      when 'update'
-        'updated'
-      when 'destroy'
-        'destroyed'
+        when 'create'
+          'created'
+        when 'update'
+          'updated'
+        when 'destroy'
+          'destroyed'
+        else
+          raise ArgumentError, "incorrect event:#{version.event}"
       end
     end
   end
