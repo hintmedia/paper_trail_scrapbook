@@ -19,7 +19,7 @@ module PaperTrailScrapbook
     private
 
     def preface
-      "On #{whenn}, #{who} #{kind} the following #{model} information:".split.join(' ')
+      "On #{whenn}, #{who} #{kind} the following #{model} information:".squeeze(' ')
     end
 
     def model
@@ -27,14 +27,14 @@ module PaperTrailScrapbook
     end
 
     def changes
-      PaperTrailScrapbook::Changes.new(version).change_log
+      Changes.new(version).change_log
     end
 
     def who
       author = version.version_author
       if author
-        if PaperTrailScrapbook.config.whodunnit_class
-          PaperTrailScrapbook.config.whodunnit_class.find(author.to_i).to_s
+        if whodunnit_class
+          whodunnit_class.find(author).to_s
         else
           author
         end
@@ -43,12 +43,20 @@ module PaperTrailScrapbook
       end
     end
 
+    def whodunnit_class
+      config.whodunnit_class
+    end
+
+    def config
+      PaperTrailScrapbook.config
+    end
+
     def whenn
-      version.created_at.strftime(PaperTrailScrapbook.config.time_format)
+      version.created_at.strftime(config.time_format)
     end
 
     def kind
-      PaperTrailScrapbook.config.events[version.event] ||
+      config.events[version.event] ||
         raise(ArgumentError, "incorrect event:#{version.event}")
     end
   end
