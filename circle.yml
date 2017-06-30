@@ -11,7 +11,7 @@ dependencies:
 
 database:
   override:
-    - bundle install
+    - echo "no db"
 test:
   
   override:

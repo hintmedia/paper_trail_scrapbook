@@ -19,7 +19,9 @@ then you should configure this into the scrapbook so it can locate and provide a
 
 Create an initializer i.e. _config/initializers/paper_trail_scrapbook.rb
 ```ruby
- PaperTrailScrapbook.config.whodunnit_class = User
+ PaperTrailScrapbook.configure do |config|
+   config.whodunnit_class = User
+ end
 
 ```
 
