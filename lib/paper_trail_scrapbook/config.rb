@@ -10,12 +10,15 @@ module PaperTrailScrapbook
                             'update'  => 'updated',
                             'destroy' => 'destroyed' }.freeze
 
-    attr_accessor :whodunnit_class, :time_format, :events
+    SCRUB_COLUMNS = ['updated_at', 'created_at', 'id'].freeze
+
+    attr_accessor :whodunnit_class, :time_format, :events, :scrub_columns
 
     def initialize
       @whodunnit_class = nil
       @time_format     = DEFAULT_TIME_FORMAT
       @events          = DEFAULT_EVENTS
+      @scrub_columns   = SCRUB_COLUMNS
     end
   end
 end
