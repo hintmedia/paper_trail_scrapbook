@@ -8,7 +8,8 @@ module PaperTrailScrapbook
                      item_id:        4804,
                      event:          'update',
                      whodunnit:      '1742',
-                     object:         ['---','id: ',
+                     object:         ['---',
+                                      'id: ',
                                       'amount: ',
                                       'authorization_id: ',
                                       'paid_on: ',
@@ -32,15 +33,67 @@ module PaperTrailScrapbook
                                       'token: ',
                                       'discounted_amount: '].join("\n"),
                      created_at:     Time.current,
-                     object_changes: "---','email:','- ','- tim@redbox.com','name:','- ','- Tim Chambers','order_number:','- ','- ''','notes:','- ','- ''','internal_notes:','- ','- ''','other_terms:','- ','- ''','payment_terms_cd:','- ','- 1','other_payment_terms:','- ','- ''','sent:','- false','- true','created_by:','- ','- 1742','advertiser_id:','- ','- 3113','amount:','- ','- 29612.0','discounted_amount:','- ','- !ruby/object:BigDecimal 36:0.29612E5','created_at:','- ','- &1 2017-06-07 21:37:02.188657104 Z','updated_at:','- ','- *1','id:','- ','- 4806','status:','- active','- issued','")
+                     object_changes: ['---',
+                                      'email:',
+                                      '- ',
+                                      '- tim@redbox.com',
+                                      'name:',
+                                      '- ',
+                                      '- Tim Chambers',
+                                      'order_number:',
+                                      '- ',
+                                      "- ''",
+                                      'notes:',
+                                      '- ',
+                                      "- ''",
+                                      'internal_notes:',
+                                      '- ',
+                                      "- ' '",
+                                      'other_terms:',
+                                      '- ',
+                                      "- ' '",
+                                      'payment_terms_cd:',
+                                      '- ',
+                                      '- 1',
+                                      'other_payment_terms:',
+                                      '- ',
+                                      "- ' '",
+                                      'sent:',
+                                      '- false',
+                                      '- true',
+                                      'created_by:',
+                                      '- ',
+                                      '- 1742',
+                                      'amount:',
+                                      '- ',
+                                      '- 29612.0',
+                                      'discounted_amount:',
+                                      '- ',
+                                      '- !ruby/object:BigDecimal 36:0.29612E5',
+                                      'created_at:',
+                                      '- ',
+                                      '- &1 2017-06-07 21:37:02.188657104 Z',
+                                      'updated_at:',
+                                      '- ',
+                                      '- *1',
+                                      'id:',
+                                      '- ',
+                                      '- 4806',
+                                      'status:',
+                                      '- active',
+                                      '- issued'].join("\n")
+      )
     end
 
     let(:object) { described_class.new(version) }
     let(:subject) { object.change_log }
 
     describe '#change_log' do
-      it 'provides a set of changes' do
+      it 'provides a set of update changes' do
         expect(subject).to match(/discounted_amount: 29612.0 added/)
+      end
+
+      it 'filters the proper columns' do
         expect(subject).not_to match(/created_at:/)
         expect(subject).not_to match(/updated_at:/)
         expect(subject).not_to match(/id:/)

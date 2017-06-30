@@ -1,6 +1,5 @@
 require 'adamantium'
-require 'concord'
-require 'digest/sha1'
+require 'concord' 
 require 'equalizer'
 require 'ice_nine'
 require 'pathname'
@@ -15,26 +14,6 @@ require 'paper_trail_scrapbook/version'
 # @api private
 module PaperTrailScrapbook
   class << self
-    # Sets class associated with PaperTrail.whodunnit
-    # @api public
-    def whodunnit_class=(value)
-      paper_trail_scrapbook_store[:whodunnit_class] = value
-    end
-
-    # class responsible for any changes that occur.
-    #
-    # @api public
-    def whodunnit_class
-      paper_trail_scrapbook_store[:whodunnit_class]
-    end
-
-    # Thread-safe hash to hold PaperTrailScrapbook's data. Initializing with needed
-    # default values.
-    # @api private
-    def paper_trail_scrapbook_store
-      RequestStore.store[:paper_trail_scrapbook] ||= {}
-    end
-
     # Returns PaperTrailScrapbook's configuration object.
     # @api private
     def config

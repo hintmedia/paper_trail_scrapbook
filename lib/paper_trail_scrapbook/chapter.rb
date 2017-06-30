@@ -29,8 +29,8 @@ module PaperTrailScrapbook
     def who
       author = version.version_author
       if author
-        if PaperTrailScrapbook.whodunnit_class
-          PaperTrailScrapbook.whodunnit_class.find(author.to_i).to_s
+        if PaperTrailScrapbook.config.whodunnit_class
+          PaperTrailScrapbook.config.whodunnit_class.find(author.to_i).to_s
         else
           author
         end

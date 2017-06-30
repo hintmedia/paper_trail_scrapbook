@@ -10,6 +10,7 @@ AllCops:
     - 'vendor/**/*'
     - 'test/**/*'
     - 'bin/**/*'
+    - 'spec/dummy_app/db/**/*'
 
 Security/YAMLLoad:
   Enabled: false
