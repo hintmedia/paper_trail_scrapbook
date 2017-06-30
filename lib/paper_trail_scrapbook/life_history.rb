@@ -4,6 +4,8 @@ module PaperTrailScrapbook
   # @author Timothy Chambers <tim@possibilogy.com>
   #
   class LifeHistory
+    include Adamantium::Flat
+    
     def initialize(object)
       @versions = object.versions
     end

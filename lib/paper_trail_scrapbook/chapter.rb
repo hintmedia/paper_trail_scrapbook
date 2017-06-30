@@ -5,8 +5,7 @@ module PaperTrailScrapbook
   #
   class Chapter
     include Concord.new(:version)
-
-    UNKNOWN = '*the app*'.freeze
+    include Adamantium::Flat
 
     # Single version historical analysis
     #
@@ -19,7 +18,7 @@ module PaperTrailScrapbook
     private
 
     def preface
-      "On #{whenn}, #{who} #{kind} the following #{model} information:".squeeze(' ')
+      "On #{whenn}, #{who} #{kind} the following #{model} info:".squeeze(' ')
     end
 
     def model
@@ -39,7 +38,7 @@ module PaperTrailScrapbook
           author
         end
       else
-        UNKNOWN
+        config.unknown_whodunnit
       end
     end
 
