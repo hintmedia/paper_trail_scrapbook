@@ -1,12 +1,11 @@
 PATH
   remote: .
   specs:
-    paper_trail_scrapbook (0.0.5)
+    paper_trail_scrapbook (0.0.6)
       activerecord (>= 4.0, < 5.2)
       adamantium
       concord
       paper_trail
-      request_store (~> 1.1)
 
 GEM
   remote: http://rubygems.org/

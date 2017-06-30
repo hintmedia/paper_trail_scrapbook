@@ -16,8 +16,7 @@ Gem::Specification.new do |gem|
   gem.required_ruby_version = '>= 2.2.0'
 
   # Rails does not follow semver, makes breaking changes in minor versions.
-  gem.add_dependency 'activerecord', ['>= 4.0', '< 5.2']
-  gem.add_dependency 'request_store', '~> 1.1'
+  gem.add_dependency 'activerecord', ['>= 4.0', '< 5.2'] 
   gem.add_dependency 'adamantium'
   gem.add_dependency 'concord'
   gem.add_dependency 'paper_trail'
