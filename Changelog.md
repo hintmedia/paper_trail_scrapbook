@@ -15,7 +15,19 @@ recommendations of [keepachangelog.com](http://keepachangelog.com/).
 
 ### Fixed
 
+## 0.1.3 (2017-07-05) Bugfix Release
+
+### Breaking Changes
+
 - None
+
+### Added
+
+- None
+
+### Fixed
+
+- Formatting fixes (unconverted CR-LF)
 
 ## 0.1.0 (2017-06-30) Initial Release
 

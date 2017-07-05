@@ -12,7 +12,7 @@ module PaperTrailScrapbook
     # @return [String] Human readable description of changes
     #
     def story
-      "#{preface}\\n#{changes}"
+      "#{preface}\n#{changes}"
     end
 
     private
