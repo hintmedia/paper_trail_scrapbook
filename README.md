@@ -46,7 +46,7 @@ PaperTrailScrapbook.config.whodunnit_class = WhoDidIt
 ```ruby
 widget = Widget.find 42
 
-text = PaperTrailScrapbook::LifeStory.new(widget).story
+text = PaperTrailScrapbook::LifeHistory.new(widget).story
 # On Wednesday, 07 Jun 2017 at 2:37 PM, Rob Owens created the following Widget information:
 #   • email: Tim@example.com
 #   • name: Tim's Widget 
