@@ -10,7 +10,7 @@ module PaperTrailScrapbook
                             'update'  => 'updated',
                             'destroy' => 'destroyed' }.freeze
 
-    SCRUB_COLUMNS     = %w(updated_at created_at id).freeze
+    SCRUB_COLUMNS     = %w[updated_at created_at id].freeze
     UNKNOWN_WHODUNNIT = '*the app*'.freeze
 
     attr_accessor :whodunnit_class,
