@@ -33,7 +33,11 @@ module PaperTrailScrapbook
       author = version.version_author
       if author
         if whodunnit_class
-          whodunnit_class.find(author).to_s
+          if whodunnit_class.respond_to?(:to_whodunnit)
+            whodunnit_class.find(author).to_whodunnit
+          else
+            whodunnit_class.find(author).to_s
+          end
         else
           author
         end

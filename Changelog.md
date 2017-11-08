@@ -15,6 +15,20 @@ recommendations of [keepachangelog.com](http://keepachangelog.com/).
 
 ### Fixed
 
+## 0.1.4 (2017-11-08) Minor Functional Release
+
+### Breaking Changes
+
+- None
+
+### Added
+
+- Added #to_whodunnit as a customizeable fetch of the whodunnit info
+
+### Fixed
+
+- None
+
 ## 0.1.3 (2017-07-05) Bugfix Release
 
 ### Breaking Changes
