@@ -7,12 +7,17 @@ module PaperTrailScrapbook
     include Concord.new(:version)
     include Adamantium::Flat
 
+    delegate :event, to: :version
+
     # Single version historical analysis
     #
     # @return [String] Human readable description of changes
     #
     def story
-      "#{preface}\n#{changes}"
+      updates = changes
+      return unless create? || updates.present? || !config.filter_non_changes
+
+      "#{preface}\n#{updates}"
     end
 
     private
@@ -23,6 +28,10 @@ module PaperTrailScrapbook
 
     def model
       version.item_type
+    end
+
+    def create?
+      event.eql?('create')
     end
 
     def changes
@@ -59,8 +68,8 @@ module PaperTrailScrapbook
     end
 
     def kind
-      config.events[version.event] ||
-        raise(ArgumentError, "incorrect event:#{version.event}")
+      config.events[event] ||
+        raise(ArgumentError, "incorrect event:#{event}")
     end
   end
 end
