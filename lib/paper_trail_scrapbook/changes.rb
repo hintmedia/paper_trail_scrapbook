@@ -26,7 +26,7 @@ module PaperTrailScrapbook
              .compact
              .join("\n")
 
-      text = text.gsub('_id:', ':') if PaperTrailScrapbook.config.drop_id_suffix
+      text = text.gsub(' id:', ':') if PaperTrailScrapbook.config.drop_id_suffix
       text
     end
 
@@ -36,7 +36,7 @@ module PaperTrailScrapbook
       old, new = v
       return if old.nil? && (new.nil? || new.eql?(''))
 
-      "#{BULLET} #{k.gsub('_', ' ')}: #{detailed_analysis(k, new, old)}"
+      "#{BULLET} #{k.gsub('_',' ')}: #{detailed_analysis(k, new, old)}"
     end
 
     def detailed_analysis(k, new, old)

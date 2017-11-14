@@ -50,7 +50,7 @@ module PaperTrailScrapbook
 
     describe '#story' do
       it 'provides a whole story' do
-        expect(subject).to match(/discounted_amount: 29612.0 added/)
+        expect(subject).to match(/discounted amount: 29612.0 added/)
       end
     end
   end

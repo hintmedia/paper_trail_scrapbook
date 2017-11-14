@@ -89,7 +89,7 @@ module PaperTrailScrapbook
 
     describe '#change_log' do
       it 'provides a set of update changes' do
-        expect(subject).to match(/discounted_amount: 29612.0 added/)
+        expect(subject).to match(/discounted amount: 29612.0 added/)
       end
 
       it 'filters the proper columns' do
@@ -101,7 +101,7 @@ module PaperTrailScrapbook
       it 'provides a set of create changes' do
         version.event = 'create'
 
-        expect(subject).to match(/discounted_amount: 29612.0$/)
+        expect(subject).to match(/discounted amount: 29612.0$/)
       end
     end
   end
