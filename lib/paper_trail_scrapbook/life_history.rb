@@ -15,7 +15,7 @@ module PaperTrailScrapbook
     def story
       versions.map do |v|
         Chapter.new(v).story
-      end.join("\n\n")
+      end.compact.join("\n\n")
     end
 
     private
