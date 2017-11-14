@@ -18,15 +18,17 @@ module PaperTrailScrapbook
                   :events,
                   :scrub_columns,
                   :drop_id_suffix,
-                  :unknown_whodunnit
+                  :unknown_whodunnit,
+                  :filter_non_changes
 
     def initialize
-      @whodunnit_class   = nil
-      @time_format       = DEFAULT_TIME_FORMAT
-      @events            = DEFAULT_EVENTS
-      @scrub_columns     = SCRUB_COLUMNS
-      @unknown_whodunnit = UNKNOWN_WHODUNNIT
-      @drop_id_suffix    = true
+      @whodunnit_class    = nil
+      @time_format        = DEFAULT_TIME_FORMAT
+      @events             = DEFAULT_EVENTS
+      @scrub_columns      = SCRUB_COLUMNS
+      @unknown_whodunnit  = UNKNOWN_WHODUNNIT
+      @drop_id_suffix     = true
+      @filter_non_changes = true
     end
   end
 end
