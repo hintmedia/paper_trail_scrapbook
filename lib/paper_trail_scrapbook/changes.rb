@@ -36,7 +36,7 @@ module PaperTrailScrapbook
       old, new = v
       return if old.nil? && (new.nil? || new.eql?(''))
 
-      "#{BULLET} #{k}: #{detailed_analysis(k, new, old)}"
+      "#{BULLET} #{k.gsub('_', ' ')}: #{detailed_analysis(k, new, old)}"
     end
 
     def detailed_analysis(k, new, old)
