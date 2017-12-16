@@ -9,6 +9,7 @@ require 'paper_trail_scrapbook/changes'
 require 'paper_trail_scrapbook/life_history'
 require 'paper_trail_scrapbook/user_journal'
 require 'paper_trail_scrapbook/version'
+require 'paper_trail_scrapbook/version_helpers'
 
 # Library namespace
 #
