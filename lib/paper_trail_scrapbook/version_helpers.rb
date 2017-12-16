@@ -1,5 +1,4 @@
 module PaperTrailScrapbook
-
   # Module VersionHelpers provides methods for extracting common information
   # from a version or PaperTrailScrapbook config
   module VersionHelpers
@@ -31,7 +30,7 @@ module PaperTrailScrapbook
 
     def kind
       config.events[event] ||
-          raise(ArgumentError, "incorrect event:#{event}")
+        raise(ArgumentError, "incorrect event:#{event}")
     end
 
     def who
@@ -54,7 +53,5 @@ module PaperTrailScrapbook
     def whodunnit_class
       config.whodunnit_class
     end
-
   end
-
 end

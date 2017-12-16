@@ -10,7 +10,6 @@ module PaperTrailScrapbook
     include Adamantium::Flat
     include PaperTrailScrapbook::VersionHelpers
 
-
     # Single version historical analysis
     #
     # @return [String] Human readable description of changes
@@ -27,6 +26,5 @@ module PaperTrailScrapbook
     def preface
       "On #{whenn}, #{who} #{kind} the following #{model} info:".squeeze(' ')
     end
-
   end
 end

@@ -3,7 +3,6 @@ require 'ostruct'
 
 module PaperTrailScrapbook
   ::RSpec.describe VersionHelpers do
-
     let(:person) do
       p = Person.new(name: 'The Tim Man')
       p.save!
@@ -20,7 +19,7 @@ module PaperTrailScrapbook
       OpenStruct.new(event: 'create',
                      item_type: 'Book',
                      item_id: book.id,
-                     created_at: DateTime.current,
+                     created_at: Time.current,
                      version_author: person.id)
     end
 
@@ -32,7 +31,6 @@ module PaperTrailScrapbook
       PaperTrailScrapbook.config.whodunnit_class = Person
       PaperTrail.whodunnit = person.id
     end
-
 
     describe '#model' do
       it 'returns expected result' do
@@ -73,7 +71,7 @@ module PaperTrailScrapbook
     describe '#whenn' do
       it 'returns version created_at' do
         expect(subject.whenn)
-            .to eql(version.created_at.strftime(config.time_format))
+          .to eql(version.created_at.strftime(config.time_format))
       end
     end
 

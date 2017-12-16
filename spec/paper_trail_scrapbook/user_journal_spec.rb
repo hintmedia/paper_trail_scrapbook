@@ -2,7 +2,6 @@ require 'spec_helper'
 
 module PaperTrailScrapbook
   ::RSpec.describe UserJournal do
-
     let(:person) do
       who = PaperTrail.whodunnit
       PaperTrail.whodunnit = nil
@@ -49,14 +48,14 @@ module PaperTrailScrapbook
     describe '#story' do
       it 'provides a whole story' do
         expect(subject)
-            .to match(/Between .* and .*, The Tim Man made the following changes:/)
+          .to match(/Between .* and .*, The Tim Man made the following changes:/)
         expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
         expect(subject).to match(/ • title: How the Grinch stole Xmas/)
         expect(subject).to match(/On .*, created Person\[#{author.id}\]:/)
         expect(subject).to match(/ • name: Dr. Seuss/)
         expect(subject).to match(/On .*, created Authorship\[#{target.id}\]:/)
         expect(subject)
-            .to match(/ • book: How the Grinch stole Xmas\[#{book.id}\]/)
+          .to match(/ • book: How the Grinch stole Xmas\[#{book.id}\]/)
       end
 
       it 'provides a whole story missing to_s content' do
@@ -64,18 +63,18 @@ module PaperTrailScrapbook
         book.save!
 
         expect(subject)
-            .to match(/Between .* and .*, The Tim Man made the following changes:/)
+          .to match(/Between .* and .*, The Tim Man made the following changes:/)
         expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
         expect(subject).to match(/ • title: How the Grinch stole Xmas/)
         expect(subject).to match(/On .*, created Person\[#{author.id}\]:/)
         expect(subject).to match(/ • name: Dr. Seuss/)
         expect(subject).to match(/On .*, created Authorship\[#{target.id}\]:/)
         expect(subject)
-            .to match(/ • book: \[#{book.id}\]/)
+          .to match(/ • book: \[#{book.id}\]/)
         expect(subject).to match(/ • author: Dr. Seuss\[#{author.id}\]/)
         expect(subject).to match(/On .*, updated Book\[#{book.id}\]:/)
         expect(subject)
-            .to match(/ • title: How the Grinch stole Xmas was \*removed\*/)
+          .to match(/ • title: How the Grinch stole Xmas was \*removed\*/)
       end
 
       it 'provides a whole story missing reference' do
@@ -96,7 +95,7 @@ module PaperTrailScrapbook
         subject = object.story
 
         expect(subject)
-            .to match(/Between .* and .*, The Tim Man made the following Book changes:/)
+          .to match(/Between .* and .*, The Tim Man made the following Book changes:/)
         expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
         expect(subject).to match(/ • title: How the Grinch stole Xmas/)
         expect(subject).not_to match(/On .*, created Person\[#{author.id}\]:/)
@@ -110,7 +109,7 @@ module PaperTrailScrapbook
         subject = object.story
 
         expect(subject)
-            .to match(/Between #{starts.strftime(format).squeeze(' ')} and .*, The Tim Man made the following Book changes:/)
+          .to match(/Between #{starts.strftime(format).squeeze(' ')} and .*, The Tim Man made the following Book changes:/)
         expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
         expect(subject).to match(/ • title: How the Grinch stole Xmas/)
         expect(subject).not_to match(/On .*, created Person\[#{author.id}\]:/)
@@ -124,7 +123,7 @@ module PaperTrailScrapbook
         subject = object.story
 
         expect(subject)
-            .to match(/Between .* and #{ends.strftime(format).squeeze(' ')}, The Tim Man made the following changes:/)
+          .to match(/Between .* and #{ends.strftime(format).squeeze(' ')}, The Tim Man made the following changes:/)
         expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
         expect(subject).to match(/ • title: How the Grinch stole Xmas/)
         expect(subject).to match(/On .*, created Person\[#{author.id}\]:/)
@@ -143,7 +142,6 @@ module PaperTrailScrapbook
         expect(subject).not_to match(/The Tim Man created the following Author/)
       end
 
-
       it 'provides a story with start and end times' do
         starts  = Time.current.advance(minutes: -4)
         ends    = starts.advance(hours: 1)
@@ -153,14 +151,14 @@ module PaperTrailScrapbook
         subject = object.story
 
         expect(subject)
-            .to match(/Between .* and .*, The Tim Man made the following changes:/)
+          .to match(/Between .* and .*, The Tim Man made the following changes:/)
         expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
         expect(subject).to match(/ • title: How the Grinch stole Xmas/)
         expect(subject).to match(/On .*, created Person\[#{author.id}\]:/)
         expect(subject).to match(/ • name: Dr. Seuss/)
         expect(subject).to match(/On .*, created Authorship\[#{target.id}\]:/)
         expect(subject)
-            .to match(/ • book: How the Grinch stole Xmas\[#{book.id}\]/)
+          .to match(/ • book: How the Grinch stole Xmas\[#{book.id}\]/)
       end
 
       it 'provides a story for provided class with start and end times' do
@@ -173,7 +171,7 @@ module PaperTrailScrapbook
         subject = object.story
 
         expect(subject)
-            .to match(/Between #{starts.strftime(format).squeeze(' ')} and #{ends.strftime(format).squeeze(' ')}, The Tim Man made the following Book changes:/)
+          .to match(/Between #{starts.strftime(format).squeeze(' ')} and #{ends.strftime(format).squeeze(' ')}, The Tim Man made the following Book changes:/)
         expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
         expect(subject).to match(/ • title: How the Grinch stole Xmas/)
         expect(subject).not_to match(/On .*, created Person\[#{author.id}\]:/)
@@ -193,9 +191,8 @@ module PaperTrailScrapbook
         expect(subject).to eql("Between #{starts.strftime(format)} and "\
                                  "#{ends.strftime(format)}, The Tim Man made "\
                                  "the following Book changes:\n\nNo "\
-                                 "history".squeeze(' '))
+                                 'history'.squeeze(' '))
       end
-
     end
   end
 end

@@ -28,6 +28,5 @@ module PaperTrailScrapbook
     def preface
       "On #{whenn}, #{kind} #{model}[#{model_id}]:".squeeze(' ')
     end
-
   end
 end
