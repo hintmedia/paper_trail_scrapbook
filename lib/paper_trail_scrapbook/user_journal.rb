@@ -5,9 +5,14 @@ module PaperTrailScrapbook
   # @author Jason Dinsmore <jason@dinjas.com>
   #
   class UserJournal
+    include Adamantium::Flat
+
     def initialize(user, opts = {})
+      @user     = user
       @user_id  = String(user.id)
       @options  = opts
+      @starts   = options[:start] || Time.at(0).in_time_zone
+      @ends     = options[:end] || Time.current.in_time_zone
 
       @versions = PaperTrail::Version.where(query_params)
     end
@@ -17,20 +22,42 @@ module PaperTrailScrapbook
     # @return [String] analyzed versions
     #
     def story
-      versions.map do |v|
-        Chapter.new(v).story
+      s = versions.map do |v|
+        JournalEntry.new(v).story
       end.compact.join("\n\n")
+
+      "#{preface}#{s.presence || 'No history'}"
     end
 
     private
+
+    def preface
+      "Between #{when_range}, #{user} made the following #{what} changes:\n\n"
+          .squeeze(' ')
+    end
 
     def query_params
       params = { whodunnit: user_id }
       return params if options.empty?
 
-      params.merge(item_type: String(options.fetch(:klass)))
+      params.merge(item_type:  what,
+                   created_at: starts..ends)
+            .delete_if { |_, v| v.presence.nil? }
     end
 
-    attr_reader :versions, :user_id, :options
+    def time_format
+      PaperTrailScrapbook.config.time_format
+    end
+
+    def what
+      String(options.fetch(:klass, nil)).presence
+    end
+
+    def when_range
+      "#{starts.strftime(time_format)} and #{ends.strftime(time_format)}"
+    end
+
+
+    attr_reader :user, :user_id, :versions, :options, :starts, :ends
   end
 end
