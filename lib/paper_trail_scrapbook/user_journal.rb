@@ -33,7 +33,7 @@ module PaperTrailScrapbook
 
     def preface
       "Between #{when_range}, #{user} made the following #{what} changes:\n\n"
-          .squeeze(' ')
+        .squeeze(' ')
     end
 
     def query_params
@@ -56,7 +56,6 @@ module PaperTrailScrapbook
     def when_range
       "#{starts.strftime(time_format)} and #{ends.strftime(time_format)}"
     end
-
 
     attr_reader :user, :user_id, :versions, :options, :starts, :ends
   end
