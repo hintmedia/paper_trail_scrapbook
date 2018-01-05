@@ -4,7 +4,7 @@ require 'ostruct'
 module PaperTrailScrapbook
   RSpec.describe VersionHelpers do
     let(:person) { Person.create!(name: 'The Tim Man') }
-    let(:book) { Book.new(title: 'How the Grinch stole Xmas') }
+    let(:book) { Book.create!(title: 'How the Grinch stole Xmas') }
     let(:version) do
       OpenStruct.new(event: 'create',
                      item_type: 'Book',
