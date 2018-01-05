@@ -38,10 +38,9 @@ module PaperTrailScrapbook
       return config.unknown_whodunnit unless author
       return author unless whodunnit_class
 
-      instance = whodunnit_class.find(author)
-      if instance.respond_to?(:to_whodunnit)
-        return instance.to_whodunnit
-      end
+      instance = whodunnit_class.find(author) rescue config.invalid_whodunnit
+      return instance.to_whoif instance.respond_to?(:to_whodunnit)
+
       instance.to_s
     end
 

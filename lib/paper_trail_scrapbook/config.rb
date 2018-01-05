@@ -12,6 +12,7 @@ module PaperTrailScrapbook
 
     SCRUB_COLUMNS     = %w[updated_at created_at id].freeze
     UNKNOWN_WHODUNNIT = '*the app*'.freeze
+    INVALID_WHODUNNIT = '*missing*'.freeze
 
     attr_accessor :whodunnit_class,
                   :time_format,
