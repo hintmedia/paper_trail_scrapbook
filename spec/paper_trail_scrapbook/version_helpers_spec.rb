@@ -2,19 +2,9 @@ require 'spec_helper'
 require 'ostruct'
 
 module PaperTrailScrapbook
-  ::RSpec.describe VersionHelpers do
-    let(:person) do
-      p = Person.new(name: 'The Tim Man')
-      p.save!
-      p
-    end
-
-    let(:book) do
-      b = Book.new(title: 'How the Grinch stole Xmas')
-      b.save!
-      b
-    end
-
+  RSpec.describe VersionHelpers do
+    let(:person) { Person.create!(name: 'The Tim Man') }
+    let(:book) { Book.new(title: 'How the Grinch stole Xmas') }
     let(:version) do
       OpenStruct.new(event: 'create',
                      item_type: 'Book',
@@ -22,9 +12,7 @@ module PaperTrailScrapbook
                      created_at: Time.current,
                      version_author: person.id)
     end
-
     let(:config) { PaperTrailScrapbook.config }
-
     let(:subject) { JournalEntry.new(version) }
 
     before do
