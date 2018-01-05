@@ -35,19 +35,14 @@ module PaperTrailScrapbook
 
     def who
       author = version.version_author
-      if author
-        if whodunnit_class
-          if whodunnit_class.method_defined?(:to_whodunnit)
-            whodunnit_class.find(author).to_whodunnit
-          else
-            whodunnit_class.find(author).to_s
-          end
-        else
-          author
-        end
-      else
-        config.unknown_whodunnit
+      return config.unknown_whodunnit unless author
+      return author unless whodunnit_class
+
+      instance = whodunnit_class.find(author)
+      if instance.respond_to?(:to_whodunnit)
+        return instance.to_whodunnit
       end
+      instance.to_s
     end
 
     def whodunnit_class
