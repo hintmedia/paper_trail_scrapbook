@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 module PaperTrailScrapbook
-  ::RSpec.describe UserJournal do
+  RSpec.describe UserJournal do
     let(:person) do
       who = PaperTrail.whodunnit
       PaperTrail.whodunnit = nil
@@ -16,32 +16,12 @@ module PaperTrailScrapbook
       PaperTrail.whodunnit = person.id
     end
 
-    let!(:book) do
-      b = Book.new(title: 'How the Grinch stole Xmas')
-      b.save!
-      b
-    end
-
-    let(:book2) do
-      b = Book.new(title: 'Green Eggs and Ham')
-      b.save!
-      b
-    end
-
-    let!(:author) do
-      p = Person.new(name: 'Dr. Seuss')
-      p.save!
-      p
-    end
-
-    let!(:target) do
-      a = Authorship.new(book: book, author: author)
-      a.save!
-      a
-    end
+    let!(:book) { Book.create!(title: 'How the Grinch stole Xmas') }
+    let(:book2) { Book.create!(title: 'Green Eggs and Ham') }
+    let!(:author) { Person.create!(name: 'Dr. Seuss') }
+    let!(:target) { Authorship.create!(book: book, author: author) }
 
     let(:format) { PaperTrailScrapbook.config.time_format }
-
     let(:object) { described_class.new(person, {}) }
     let(:subject) { object.story }
 
@@ -104,12 +84,13 @@ module PaperTrailScrapbook
       end
 
       it 'provides a story with start time' do
-        starts  = Time.current.advance(minutes: -5)
-        object  = described_class.new(person, klass: Book, start: starts)
-        subject = object.story
+        starts   = Time.current.advance(minutes: -5)
+        object   = described_class.new(person, klass: Book, start: starts)
+        subject  = object.story
+        f_starts = starts.strftime(format).squeeze(' ')
 
         expect(subject)
-          .to match(/Between #{starts.strftime(format).squeeze(' ')} and .*, The Tim Man made the following Book changes:/)
+          .to match(/Between #{f_starts} and .*, The Tim Man made the following Book changes:/)
         expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
         expect(subject).to match(/ • title: How the Grinch stole Xmas/)
         expect(subject).not_to match(/On .*, created Person\[#{author.id}\]:/)
@@ -121,9 +102,10 @@ module PaperTrailScrapbook
         ends    = Time.current.advance(minutes: 5)
         object  = described_class.new(person, end: ends)
         subject = object.story
+        f_ends  = ends.strftime(format).squeeze(' ')
 
         expect(subject)
-          .to match(/Between .* and #{ends.strftime(format).squeeze(' ')}, The Tim Man made the following changes:/)
+          .to match(/Between .* and #{f_ends}, The Tim Man made the following changes:/)
         expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
         expect(subject).to match(/ • title: How the Grinch stole Xmas/)
         expect(subject).to match(/On .*, created Person\[#{author.id}\]:/)
@@ -162,16 +144,18 @@ module PaperTrailScrapbook
       end
 
       it 'provides a story for provided class with start and end times' do
-        starts  = Time.current.advance(minutes: -4)
-        ends    = starts.advance(hours: 1)
-        object  = described_class.new(person,
-                                      klass: Book,
-                                      start: starts,
-                                      end:   ends)
-        subject = object.story
+        starts   = Time.current.advance(minutes: -4)
+        ends     = starts.advance(hours: 1)
+        object   = described_class.new(person,
+                                       klass: Book,
+                                       start: starts,
+                                       end:   ends)
+        subject  = object.story
+        f_starts = starts.strftime(format).squeeze(' ')
+        f_ends   = ends.strftime(format).squeeze(' ')
 
         expect(subject)
-          .to match(/Between #{starts.strftime(format).squeeze(' ')} and #{ends.strftime(format).squeeze(' ')}, The Tim Man made the following Book changes:/)
+          .to match(/Between #{f_starts} and #{f_ends}, The Tim Man made the following Book changes:/)
         expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
         expect(subject).to match(/ • title: How the Grinch stole Xmas/)
         expect(subject).not_to match(/On .*, created Person\[#{author.id}\]:/)
