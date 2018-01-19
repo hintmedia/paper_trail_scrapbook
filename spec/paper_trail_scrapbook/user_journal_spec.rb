@@ -2,16 +2,6 @@ require 'spec_helper'
 
 module PaperTrailScrapbook
   RSpec.describe UserJournal do
-
-    let(:person) do
-      who = PaperTrail.whodunnit
-      PaperTrail.whodunnit = nil
-      p = Person.new(name: name)
-      p.save!
-      PaperTrail.whodunnit = who
-      p
-    end
-
     before do
       PaperTrailScrapbook.config.whodunnit_class = Person
       PaperTrail.whodunnit = person.id
@@ -24,16 +14,23 @@ module PaperTrailScrapbook
     let(:a_name) { 'Dr. Seuss' }
     let(:changes) { 'made the following changes:' }
     let(:b_changes) { 'made the following Book changes:' }
+
     let(:book) { Book.create!(title: title) }
     let(:author) { Person.create!(name: a_name) }
     let(:a_ship) { Authorship.create!(book: book, author: author) }
-
+    let(:person) do
+      who = PaperTrail.whodunnit
+      PaperTrail.whodunnit = nil
+      p = Person.new(name: name)
+      p.save!
+      PaperTrail.whodunnit = who
+      p
+    end
     let(:format) { PaperTrailScrapbook.config.time_format }
     let(:object) { described_class.new(person, {}) }
     let(:subject) { object.story }
     let(:f_starts) { starts.strftime(format).squeeze(' ') }
     let(:f_ends) { ends.strftime(format).squeeze(' ') }
-
 
     describe '#story' do
       context 'with a provided user' do
@@ -92,7 +89,7 @@ module PaperTrailScrapbook
           expect(subject).not_to match(/On .*, created Person\[#{author.id}\]:/)
           expect(subject).not_to match(/ • name: #{a_name}/)
           expect(subject)
-              .not_to match(/On .*, created Authorship\[#{a_ship.id}\]:/)
+            .not_to match(/On .*, created Authorship\[#{a_ship.id}\]:/)
         end
       end
 
@@ -169,10 +166,10 @@ module PaperTrailScrapbook
             expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
             expect(subject).to match(/ • title: #{title}/)
             expect(subject)
-                .not_to match(/On .*, created Person\[#{author.id}\]:/)
+              .not_to match(/On .*, created Person\[#{author.id}\]:/)
             expect(subject).not_to match(/ • name: #{a_name}/)
             expect(subject)
-                .not_to match(/On .*, created Authorship\[#{a_ship.id}\]:/)
+              .not_to match(/On .*, created Authorship\[#{a_ship.id}\]:/)
           end
         end
 
