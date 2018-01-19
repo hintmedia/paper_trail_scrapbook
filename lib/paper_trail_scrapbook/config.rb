@@ -12,7 +12,6 @@ module PaperTrailScrapbook
 
     SCRUB_COLUMNS     = %w[updated_at created_at id].freeze
     UNKNOWN_WHODUNNIT = '*the app*'.freeze
-    INVALID_WHODUNNIT = '*missing*'.freeze
 
     attr_accessor :whodunnit_class,
                   :time_format,
@@ -29,7 +28,7 @@ module PaperTrailScrapbook
       @events             = DEFAULT_EVENTS
       @scrub_columns      = SCRUB_COLUMNS
       @unknown_whodunnit  = UNKNOWN_WHODUNNIT
-      @invalid_whodunnit  = INVALID_WHODUNNIT
+      @invalid_whodunnit  = proc { |w| "*missing (#{w})*" }
       @drop_id_suffix     = true
       @filter_non_changes = true
     end

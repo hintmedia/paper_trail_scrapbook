@@ -49,7 +49,7 @@ module PaperTrailScrapbook
       instance = begin
                    whodunnit_class.find(author)
                  rescue StandardError
-                   config.invalid_whodunnit
+                   config.invalid_whodunnit.call(author)
                  end
 
       return instance.to_whodunnit if instance.respond_to?(:to_whodunnit)
