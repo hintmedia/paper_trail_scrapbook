@@ -43,21 +43,13 @@ module PaperTrailScrapbook
           expect(subject).to match(/ • name: #{a_name}/)
           expect(subject).to match(/On .*, created Authorship\[#{a_ship.id}\]:/)
           expect(subject).to match(/ • book: #{title}\[#{book.id}\]/)
+          expect(subject).to match(/ • author: Dr. Seuss\[#{author.id}\]/)
         end
 
         it 'provides a whole story missing to_s content' do
           book.title = nil
           book.save!
 
-          expect(subject)
-            .to match(/Between .* and .*, #{name} #{changes}/)
-          expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
-          expect(subject).to match(/ • title: #{title}/)
-          expect(subject).to match(/On .*, created Person\[#{author.id}\]:/)
-          expect(subject).to match(/ • name: #{a_name}/)
-          expect(subject).to match(/On .*, created Authorship\[#{a_ship.id}\]:/)
-          expect(subject).to match(/ • book: \[#{book.id}\]/)
-          expect(subject).to match(/ • author: Dr. Seuss\[#{author.id}\]/)
           expect(subject).to match(/On .*, updated Book\[#{book.id}\]:/)
           expect(subject).to match(/ • title: #{title} was \*removed\*/)
         end
