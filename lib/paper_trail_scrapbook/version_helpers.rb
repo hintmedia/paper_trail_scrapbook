@@ -47,7 +47,7 @@ module PaperTrailScrapbook
 
     def whodunnit_instance(author)
       instance = begin
-                   whodunnit_class.unscoped.find(author)
+                   whodunnit_class.find(author)
                  rescue StandardError
                    config.invalid_whodunnit
                  end
