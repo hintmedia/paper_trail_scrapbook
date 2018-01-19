@@ -52,9 +52,7 @@ module PaperTrailScrapbook
                    config.invalid_whodunnit
                  end
 
-      if instance.respond_to?(:to_whodunnit)
-        return instance.to_whodunnit
-      end
+      return instance.to_whodunnit if instance.respond_to?(:to_whodunnit)
 
       instance.to_s
     end
