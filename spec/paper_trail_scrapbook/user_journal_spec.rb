@@ -2,10 +2,11 @@ require 'spec_helper'
 
 module PaperTrailScrapbook
   RSpec.describe UserJournal do
+
     let(:person) do
       who = PaperTrail.whodunnit
       PaperTrail.whodunnit = nil
-      p = Person.new(name: 'The Tim Man')
+      p = Person.new(name: name)
       p.save!
       PaperTrail.whodunnit = who
       p
@@ -14,168 +15,175 @@ module PaperTrailScrapbook
     before do
       PaperTrailScrapbook.config.whodunnit_class = Person
       PaperTrail.whodunnit = person.id
+
+      a_ship
     end
 
-    let!(:book) { Book.create!(title: 'How the Grinch stole Xmas') }
-    let(:book2) { Book.create!(title: 'Green Eggs and Ham') }
-    let!(:author) { Person.create!(name: 'Dr. Seuss') }
-    let!(:target) { Authorship.create!(book: book, author: author) }
+    let(:name) { 'The Tim Man' }
+    let(:title) { 'How the Grinch stole Xmas' }
+    let(:a_name) { 'Dr. Seuss' }
+    let(:changes) { 'made the following changes:' }
+    let(:b_changes) { 'made the following Book changes:' }
+    let(:book) { Book.create!(title: title) }
+    let(:author) { Person.create!(name: a_name) }
+    let(:a_ship) { Authorship.create!(book: book, author: author) }
 
     let(:format) { PaperTrailScrapbook.config.time_format }
     let(:object) { described_class.new(person, {}) }
     let(:subject) { object.story }
+    let(:f_starts) { starts.strftime(format).squeeze(' ') }
+    let(:f_ends) { ends.strftime(format).squeeze(' ') }
+
 
     describe '#story' do
-      it 'provides a whole story' do
-        expect(subject)
-          .to match(/Between .* and .*, The Tim Man made the following changes:/)
-        expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
-        expect(subject).to match(/ • title: How the Grinch stole Xmas/)
-        expect(subject).to match(/On .*, created Person\[#{author.id}\]:/)
-        expect(subject).to match(/ • name: Dr. Seuss/)
-        expect(subject).to match(/On .*, created Authorship\[#{target.id}\]:/)
-        expect(subject)
-          .to match(/ • book: How the Grinch stole Xmas\[#{book.id}\]/)
+      context 'with a provided user' do
+        it 'provides a whole story' do
+          expect(subject)
+            .to match(/Between .* and .*, #{name} #{changes}/)
+          expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
+          expect(subject).to match(/ • title: #{title}/)
+          expect(subject).to match(/On .*, created Person\[#{author.id}\]:/)
+          expect(subject).to match(/ • name: #{a_name}/)
+          expect(subject).to match(/On .*, created Authorship\[#{a_ship.id}\]:/)
+          expect(subject).to match(/ • book: #{title}\[#{book.id}\]/)
+        end
+
+        it 'provides a whole story missing to_s content' do
+          book.title = nil
+          book.save!
+
+          expect(subject)
+            .to match(/Between .* and .*, #{name} #{changes}/)
+          expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
+          expect(subject).to match(/ • title: #{title}/)
+          expect(subject).to match(/On .*, created Person\[#{author.id}\]:/)
+          expect(subject).to match(/ • name: #{a_name}/)
+          expect(subject).to match(/On .*, created Authorship\[#{a_ship.id}\]:/)
+          expect(subject).to match(/ • book: \[#{book.id}\]/)
+          expect(subject).to match(/ • author: Dr. Seuss\[#{author.id}\]/)
+          expect(subject).to match(/On .*, updated Book\[#{book.id}\]:/)
+          expect(subject).to match(/ • title: #{title} was \*removed\*/)
+        end
       end
 
-      it 'provides a whole story missing to_s content' do
-        book.title = nil
-        book.save!
+      context 'with missing references' do
+        it 'provides a whole story missing reference' do
+          book.destroy
 
-        expect(subject)
-          .to match(/Between .* and .*, The Tim Man made the following changes:/)
-        expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
-        expect(subject).to match(/ • title: How the Grinch stole Xmas/)
-        expect(subject).to match(/On .*, created Person\[#{author.id}\]:/)
-        expect(subject).to match(/ • name: Dr. Seuss/)
-        expect(subject).to match(/On .*, created Authorship\[#{target.id}\]:/)
-        expect(subject)
-          .to match(/ • book: \[#{book.id}\]/)
-        expect(subject).to match(/ • author: Dr. Seuss\[#{author.id}\]/)
-        expect(subject).to match(/On .*, updated Book\[#{book.id}\]:/)
-        expect(subject)
-          .to match(/ • title: How the Grinch stole Xmas was \*removed\*/)
+          expect(subject).to match(/book: \*not found\*\[/)
+        end
+
+        it 'provides a whole story missing reference' do
+          a_ship.book = nil
+          a_ship.save!
+
+          expect(subject).to match(/#{title}\[1\] was \*removed\*/)
+        end
       end
 
-      it 'provides a whole story missing reference' do
-        book.destroy
+      context 'with a provided class' do
+        let(:object) { described_class.new(person, klass: Book) }
 
-        expect(subject).to match(/book: \*not found\*\[/)
+        it 'provides a story for provided class' do
+          expect(subject)
+            .to match(/Between .* and .*, #{name} #{b_changes}/)
+          expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
+          expect(subject).to match(/ • title: #{title}/)
+          expect(subject).not_to match(/On .*, created Person\[#{author.id}\]:/)
+          expect(subject).not_to match(/ • name: #{a_name}/)
+          expect(subject)
+              .not_to match(/On .*, created Authorship\[#{a_ship.id}\]:/)
+        end
       end
 
-      it 'provides a whole story missing reference' do
-        target.book = nil
-        target.save!
+      context 'with start time and class but no end time' do
+        let(:object) { described_class.new(person, klass: Book, start: starts) }
+        let(:starts) { Time.current.advance(minutes: -5) }
 
-        expect(subject).to match(/How the Grinch stole Xmas\[1\] was \*removed\*/)
+        it 'provides a story with start time' do
+          expect(subject)
+            .to match(/Between #{f_starts} and .*, #{name} #{b_changes}/)
+          expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
+          expect(subject).to match(/ • title: #{title}/)
+          expect(subject).not_to match(/On .*, created Person\[#{author.id}\]:/)
+          expect(subject).not_to match(/ • name: #{a_name}/)
+          expect(subject)
+            .not_to match(/On .*, created Authorship\[#{a_ship.id}\]:/)
+        end
       end
 
-      it 'provides a story for provided class' do
-        object  = described_class.new(person, klass: Book)
-        subject = object.story
+      context 'with end time but no start time and no class' do
+        let(:ends) { Time.current.advance(minutes: 5) }
+        let(:object) { described_class.new(person, end: ends) }
 
-        expect(subject)
-          .to match(/Between .* and .*, The Tim Man made the following Book changes:/)
-        expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
-        expect(subject).to match(/ • title: How the Grinch stole Xmas/)
-        expect(subject).not_to match(/On .*, created Person\[#{author.id}\]:/)
-        expect(subject).not_to match(/ • name: Dr. Seuss/)
-        expect(subject).not_to match(/On .*, created Authorship\[#{target.id}\]:/)
+        it 'provides a story with end time in the future' do
+          expect(subject)
+            .to match(/Between .* and #{f_ends}, #{name} #{changes}/)
+          expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
+          expect(subject).to match(/ • title: #{title}/)
+          expect(subject).to match(/On .*, created Person\[#{author.id}\]:/)
+          expect(subject).to match(/ • name: #{a_name}/)
+          expect(subject).to match(/On .*, created Authorship\[#{a_ship.id}\]:/)
+        end
+
+        describe 'with end time in past' do
+          let(:ends) { Time.current.advance(minutes: -5) }
+
+          it 'provides a story with end time in the past' do
+            expect(subject).not_to match(/#{name} created the following Person/)
+            expect(subject).not_to match(/#{name} created the following Book/)
+            expect(subject).not_to match(/#{title}/)
+            expect(subject).not_to match(/#{name} created the following Author/)
+          end
+        end
       end
 
-      it 'provides a story with start time' do
-        starts   = Time.current.advance(minutes: -5)
-        object   = described_class.new(person, klass: Book, start: starts)
-        subject  = object.story
-        f_starts = starts.strftime(format).squeeze(' ')
+      context 'with start and end times but no class' do
+        let(:starts) { Time.current.advance(minutes: -4) }
+        let(:ends) { starts.advance(hours: 1) }
+        let(:object) { described_class.new(person, start: starts, end: ends) }
 
-        expect(subject)
-          .to match(/Between #{f_starts} and .*, The Tim Man made the following Book changes:/)
-        expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
-        expect(subject).to match(/ • title: How the Grinch stole Xmas/)
-        expect(subject).not_to match(/On .*, created Person\[#{author.id}\]:/)
-        expect(subject).not_to match(/ • name: Dr. Seuss/)
-        expect(subject).not_to match(/On .*, created Authorship\[#{target.id}\]:/)
+        it 'provides a story with start and end times' do
+          expect(subject)
+            .to match(/Between .* and .*, #{name} #{changes}/)
+          expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
+          expect(subject).to match(/ • title: #{title}/)
+          expect(subject).to match(/On .*, created Person\[#{author.id}\]:/)
+          expect(subject).to match(/ • name: #{a_name}/)
+          expect(subject).to match(/On .*, created Authorship\[#{a_ship.id}\]:/)
+          expect(subject).to match(/ • book: #{title}\[#{book.id}\]/)
+        end
       end
 
-      it 'provides a story with end time in the future' do
-        ends    = Time.current.advance(minutes: 5)
-        object  = described_class.new(person, end: ends)
-        subject = object.story
-        f_ends  = ends.strftime(format).squeeze(' ')
+      context 'with start time, end time, and a class' do
+        let(:starts) { Time.current.advance(minutes: -4) }
+        let(:ends) { starts.advance(hours: 1) }
+        let(:object) do
+          described_class.new(person, klass: Book, start: starts, end: ends)
+        end
 
-        expect(subject)
-          .to match(/Between .* and #{f_ends}, The Tim Man made the following changes:/)
-        expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
-        expect(subject).to match(/ • title: How the Grinch stole Xmas/)
-        expect(subject).to match(/On .*, created Person\[#{author.id}\]:/)
-        expect(subject).to match(/ • name: Dr. Seuss/)
-        expect(subject).to match(/On .*, created Authorship\[#{target.id}\]:/)
-      end
+        describe 'when time range covers current time' do
+          it 'provides a story for provided class with start and end times' do
+            expect(subject)
+              .to match(/Between #{f_starts} and #{f_ends}, #{name} #{b_changes}/)
+            expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
+            expect(subject).to match(/ • title: #{title}/)
+            expect(subject)
+                .not_to match(/On .*, created Person\[#{author.id}\]:/)
+            expect(subject).not_to match(/ • name: #{a_name}/)
+            expect(subject)
+                .not_to match(/On .*, created Authorship\[#{a_ship.id}\]:/)
+          end
+        end
 
-      it 'provides a story with end time in the past' do
-        ends    = Time.current.advance(minutes: -5)
-        object  = described_class.new(person, end: ends)
-        subject = object.story
+        describe 'when time range is completely in the future' do
+          let(:starts) { Time.current.advance(minutes: 4) }
 
-        expect(subject).not_to match(/The Tim Man created the following Person/)
-        expect(subject).not_to match(/The Tim Man created the following Book/)
-        expect(subject).not_to match(/How the Grinch stole Xmas/)
-        expect(subject).not_to match(/The Tim Man created the following Author/)
-      end
-
-      it 'provides a story with start and end times' do
-        starts  = Time.current.advance(minutes: -4)
-        ends    = starts.advance(hours: 1)
-        object  = described_class.new(person,
-                                      start: starts,
-                                      end:   ends)
-        subject = object.story
-
-        expect(subject)
-          .to match(/Between .* and .*, The Tim Man made the following changes:/)
-        expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
-        expect(subject).to match(/ • title: How the Grinch stole Xmas/)
-        expect(subject).to match(/On .*, created Person\[#{author.id}\]:/)
-        expect(subject).to match(/ • name: Dr. Seuss/)
-        expect(subject).to match(/On .*, created Authorship\[#{target.id}\]:/)
-        expect(subject)
-          .to match(/ • book: How the Grinch stole Xmas\[#{book.id}\]/)
-      end
-
-      it 'provides a story for provided class with start and end times' do
-        starts   = Time.current.advance(minutes: -4)
-        ends     = starts.advance(hours: 1)
-        object   = described_class.new(person,
-                                       klass: Book,
-                                       start: starts,
-                                       end:   ends)
-        subject  = object.story
-        f_starts = starts.strftime(format).squeeze(' ')
-        f_ends   = ends.strftime(format).squeeze(' ')
-
-        expect(subject)
-          .to match(/Between #{f_starts} and #{f_ends}, The Tim Man made the following Book changes:/)
-        expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
-        expect(subject).to match(/ • title: How the Grinch stole Xmas/)
-        expect(subject).not_to match(/On .*, created Person\[#{author.id}\]:/)
-        expect(subject).not_to match(/ • name: Dr. Seuss/)
-        expect(subject).not_to match(/On .*, created Authorship\[#{target.id}\]:/)
-      end
-
-      it 'provides a story for provided class with future start and end times' do
-        starts  = Time.current.advance(minutes: 4)
-        ends    = starts.advance(hours: 1)
-        object  = described_class.new(person,
-                                      klass: Book,
-                                      start: starts,
-                                      end:   ends)
-        subject = object.story
-
-        expect(subject).to eql("Between #{starts.strftime(format)} and "\
-                                 "#{ends.strftime(format)}, The Tim Man made "\
-                                 "the following Book changes:\n\nNo "\
-                                 'history'.squeeze(' '))
+          it 'provides a story' do
+            expect(subject).to eql("Between #{f_starts} and #{f_ends}, #{name}"\
+                                     " #{b_changes}\n\nNo history".squeeze(' '))
+          end
+        end
       end
     end
   end
