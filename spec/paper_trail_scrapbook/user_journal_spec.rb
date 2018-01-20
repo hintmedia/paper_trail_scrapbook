@@ -27,14 +27,17 @@ module PaperTrailScrapbook
       p
     end
     let(:format) { PaperTrailScrapbook.config.time_format }
-    let(:object) { described_class.new(person, {}) }
+    let(:object) { described_class.new(person) }
     let(:subject) { object.story }
     let(:f_starts) { starts.strftime(format).squeeze(' ') }
     let(:f_ends) { ends.strftime(format).squeeze(' ') }
 
     describe '#story' do
       context 'with a provided user' do
-        it 'provides a whole story' do
+        it 'provides a whole story' do 
+          expect(object.starts).to eql 'Thursday, 01 Jan 1970 at 12:00 AM'
+          expect(object.ends).to eql Time.current.in_time_zone
+          
           expect(subject)
             .to match(/Between .* and .*, #{name} #{changes}/)
           expect(subject).to match(/On .*, created Book\[#{book.id}\]:/)
@@ -171,6 +174,15 @@ module PaperTrailScrapbook
           it 'provides a story' do
             expect(subject).to eql("Between #{f_starts} and #{f_ends}, #{name}"\
                                      " #{b_changes}\n\nNo history".squeeze(' '))
+          end
+        end
+
+        describe 'when no time range' do
+          let(:starts) { nil }
+          let(:ends) { nil }
+          it 'provides a story' do
+            expect(subject).to match("Between Thursday, 01 Jan 1970 at 12:00 AM and #{Time.current.in_time_zone.strftime(format).squeeze(' ')}, #{name}"\
+                                     " #{b_changes}\n\n".squeeze(' '))
           end
         end
       end

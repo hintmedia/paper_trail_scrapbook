@@ -43,24 +43,12 @@ module PaperTrailScrapbook
                                       'order_number:',
                                       '- ',
                                       "- ''",
-                                      'notes:',
-                                      '- ',
-                                      "- ''",
-                                      'internal_notes:',
-                                      '- ',
-                                      "- ' '",
-                                      'other_terms:',
-                                      '- ',
-                                      "- ' '",
-                                      'payment_terms_cd:',
-                                      '- ',
-                                      '- 1',
-                                      'other_payment_terms:',
-                                      '- ',
-                                      "- ' '",
-                                      'sent:',
-                                      '- false',
-                                      '- true',
+                                      'notes:', '- ', "- ''",
+                                      'internal_notes:', '- ', "- ' '",
+                                      'other_terms:', "- ' '", '-',
+                                      'payment_terms_cd:', '- ', '- 1',
+                                      'other_payment_terms:', '- ', "- ' '",
+                                      'sent:', '- false', '- true',
                                       'created_by:',
                                       '- ',
                                       '- 1742',
@@ -89,13 +77,19 @@ module PaperTrailScrapbook
 
     describe '#change_log' do
       it 'provides a set of update changes' do
-        expect(subject).to match(/discounted amount: 29612.0 added/)
+        result = subject
+
+        expect(result).to match(/discounted amount: 29612.0 added/)
+        expect(result).to match(/• status: active -> issued/)
+        expect(result).to match(/other terms:   was \*removed\*/)
       end
 
       it 'filters the proper columns' do
-        expect(subject).not_to match(/created_at:/)
-        expect(subject).not_to match(/updated_at:/)
-        expect(subject).not_to match(/id:/)
+        result = subject
+
+        expect(result).not_to match(/created_at:/)
+        expect(result).not_to match(/updated_at:/)
+        expect(result).not_to match(/id:/)
       end
 
       it 'provides a set of create changes' do

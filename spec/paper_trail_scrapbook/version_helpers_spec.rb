@@ -6,10 +6,10 @@ module PaperTrailScrapbook
     let(:person) { Person.create!(name: 'The Tim Man') }
     let(:book) { Book.create!(title: 'How the Grinch stole Xmas') }
     let(:version) do
-      OpenStruct.new(event: 'create',
-                     item_type: 'Book',
-                     item_id: book.id,
-                     created_at: Time.current,
+      OpenStruct.new(event:          'create',
+                     item_type:      'Book',
+                     item_id:        book.id,
+                     created_at:     Time.current,
                      version_author: person.id)
     end
     let(:config) { PaperTrailScrapbook.config }
@@ -17,7 +17,7 @@ module PaperTrailScrapbook
 
     before do
       PaperTrailScrapbook.config.whodunnit_class = Person
-      PaperTrail.whodunnit = person.id
+      PaperTrail.whodunnit                       = person.id
     end
 
     describe '#model' do
@@ -66,6 +66,15 @@ module PaperTrailScrapbook
     describe '#kind' do
       it 'returns expected value' do
         expect(subject.kind).to eql('created')
+      end
+      
+      context 'garbage' do
+        let(:subject) { JournalEntry.new(version) }
+        it 'returns expected value' do
+          PaperTrailScrapbook.config.events = {}
+
+          expect { subject.kind }.to raise_error(ArgumentError, 'incorrect event:create')
+        end
       end
     end
 

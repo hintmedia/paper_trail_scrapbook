@@ -85,6 +85,14 @@ module PaperTrailScrapbook
           config.invalid_whodunnit = handler
         end
       end
+
+      context 'no papertrail' do
+        let(:target) { Elephant.create! }
+        it 'has none' do
+          target
+          expect(subject).to eql ''
+        end
+      end
     end
   end
 end
