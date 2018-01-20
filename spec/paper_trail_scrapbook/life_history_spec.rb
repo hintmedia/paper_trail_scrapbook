@@ -4,12 +4,10 @@ module PaperTrailScrapbook
   ::RSpec.describe LifeHistory do
     before do
       PaperTrailScrapbook.config.whodunnit_class = Person
-
-      p = Person.new(name: 'The Tim Man')
-      p.save!
-
-      PaperTrail.whodunnit = p.id
+      PaperTrail.whodunnit = person.id
     end
+
+    let(:person) { Person.create(name: 'The Tim Man') }
 
     let(:book) do
       b = Book.new(title: 'How the Grinch stole Xmas')
@@ -57,7 +55,35 @@ module PaperTrailScrapbook
         target.book = nil
         target.save!
 
-        expect(subject).to match(/How the Grinch stole Xmas\[1\] was \*removed\*/)
+        expect(subject)
+          .to match(/How the Grinch stole Xmas\[1\] was \*removed\*/)
+      end
+
+      context 'it handles missing whodunnit record' do
+        it 'provides a whole story with missing whodunnit record' do
+          target
+          pid = person.id
+          person.destroy
+
+          expect(subject)
+            .to match(/\*missing \(#{pid}\)\* created the following/)
+        end
+      end
+
+      context 'with overridden invalid whodunnit handler' do
+        it 'allows for a custom invalid_whodunnit handler' do
+          config = PaperTrailScrapbook.config
+          handler = config.invalid_whodunnit
+          config.invalid_whodunnit = proc { |w| "*WHO (#{w})*" }
+
+          target
+          pid = person.id
+          person.destroy
+
+          expect(subject).to match(/\*WHO \(#{pid}\)\* created the following/)
+
+          config.invalid_whodunnit = handler
+        end
       end
     end
   end

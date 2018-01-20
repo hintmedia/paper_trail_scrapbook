@@ -1,14 +1,16 @@
 require_relative 'version_helpers'
 
 module PaperTrailScrapbook
-  # Class Chapter provides single version history analysis
+  # Class JournalEntry provides single version history analysis
   #
-  # @author Timothy Chambers <tim@possibilogy.com>
+  # @author Jason Dinsmore <jason@dinjas.com>
   #
-  class Chapter
+  class JournalEntry
     include Concord.new(:version)
     include Adamantium::Flat
     include PaperTrailScrapbook::VersionHelpers
+
+    delegate :event, to: :version
 
     # Single version historical analysis
     #
@@ -24,7 +26,7 @@ module PaperTrailScrapbook
     private
 
     def preface
-      "On #{whenn}, #{who} #{kind} the following #{model} info:".squeeze(' ')
+      "On #{whenn}, #{kind} #{model}[#{model_id}]:".squeeze(' ')
     end
   end
 end

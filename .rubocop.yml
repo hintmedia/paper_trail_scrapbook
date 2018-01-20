@@ -18,3 +18,13 @@ Security/YAMLLoad:
 # Limit line length
 Metrics/LineLength:
   Max: 150
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/ModuleLength:
+  Exclude:
+    - 'spec/**/*'
+
+

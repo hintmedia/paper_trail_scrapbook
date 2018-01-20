@@ -19,6 +19,7 @@ module PaperTrailScrapbook
                   :scrub_columns,
                   :drop_id_suffix,
                   :unknown_whodunnit,
+                  :invalid_whodunnit,
                   :filter_non_changes
 
     def initialize
@@ -27,6 +28,7 @@ module PaperTrailScrapbook
       @events             = DEFAULT_EVENTS
       @scrub_columns      = SCRUB_COLUMNS
       @unknown_whodunnit  = UNKNOWN_WHODUNNIT
+      @invalid_whodunnit  = proc { |w| "*missing (#{w})*" }
       @drop_id_suffix     = true
       @filter_non_changes = true
     end

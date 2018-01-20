@@ -6,8 +6,11 @@ require 'pathname'
 require 'paper_trail_scrapbook/config'
 require 'paper_trail_scrapbook/chapter'
 require 'paper_trail_scrapbook/changes'
+require 'paper_trail_scrapbook/journal_entry'
 require 'paper_trail_scrapbook/life_history'
+require 'paper_trail_scrapbook/user_journal'
 require 'paper_trail_scrapbook/version'
+require 'paper_trail_scrapbook/version_helpers'
 
 # Library namespace
 #
