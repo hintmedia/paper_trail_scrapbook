@@ -8,6 +8,12 @@ machine:
 dependencies:
   pre:
     - gem install bundler
+
+database:
+  override:
+    - cd spec/dummy_app
+    - rake db:setup
+    - cd ../..
     
 test:
   override:
