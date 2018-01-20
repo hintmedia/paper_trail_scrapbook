@@ -8,10 +8,6 @@ machine:
 dependencies:
   pre:
     - gem install bundler
-
-database:
-  override:
-    - echo "no db"
     
 test:
   override:
