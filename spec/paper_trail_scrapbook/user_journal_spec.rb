@@ -66,7 +66,7 @@ module PaperTrailScrapbook
           a_ship.book = nil
           a_ship.save!
 
-          expect(subject).to match(/#{title}\[1\] was \*removed\*/)
+          expect(subject).to match(/#{title}\[\d+\] was \*removed\*/)
         end
       end
 

@@ -3,11 +3,7 @@ Bundler::GemHelper.install_tasks
 
 desc 'Set a relevant database.yml for testing'
 task :prepare do
-  ENV['DB'] ||= 'sqlite'
-  FileUtils.cp(
-    "spec/dummy_app/config/database.#{ENV['DB']}.yml",
-    'spec/dummy_app/config/database.yml'
-  )
+  ENV['DB'] ||= 'postgresql'
 end
 
 require 'rspec/core/rake_task'

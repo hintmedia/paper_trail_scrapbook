@@ -56,7 +56,7 @@ module PaperTrailScrapbook
         target.save!
 
         expect(subject)
-          .to match(/How the Grinch stole Xmas\[1\] was \*removed\*/)
+          .to match(/How the Grinch stole Xmas\[\d+\] was \*removed\*/)
       end
 
       context 'it handles missing whodunnit record' do
