@@ -187,7 +187,7 @@ DEPENDENCIES
   paper_trail_scrapbook!
   pg (= 0.18.4)
   railties (>= 4.0, < 5.2)
-  rake
+  rake (~> 12.0)
   rspec-rails (~> 3.6)
   rubocop
   rubocop-rspec
