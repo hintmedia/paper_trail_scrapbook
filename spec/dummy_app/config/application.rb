@@ -26,12 +26,8 @@ module Dummy
     # in rails 5. Oh, how fickle are the gods.
     if ActiveRecord.respond_to?(:gem_version)
       v = ActiveRecord.gem_version
-      if v >= Gem::Version.new('4.2') && v < Gem::Version.new('5.0.0.beta1')
-        config.active_record.raise_in_transactional_callbacks = true
-      end
-      if v >= Gem::Version.new('5.0.0.beta1')
-        config.active_record.time_zone_aware_types = [:datetime]
-      end
+      config.active_record.raise_in_transactional_callbacks = true if v >= Gem::Version.new('4.2') && v < Gem::Version.new('5.0.0.beta1')
+      config.active_record.time_zone_aware_types = [:datetime] if v >= Gem::Version.new('5.0.0.beta1')
     end
   end
 end

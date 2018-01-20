@@ -36,7 +36,7 @@ module PaperTrailScrapbook
       old, new = v
       return if old.nil? && (new.nil? || new.eql?(''))
 
-      "#{BULLET} #{k.gsub('_',' ')}: #{detailed_analysis(k, new, old)}"
+      "#{BULLET} #{k.tr('_', ' ')}: #{detailed_analysis(k, new, old)}"
     end
 
     def detailed_analysis(k, new, old)
@@ -62,7 +62,7 @@ module PaperTrailScrapbook
 
       begin
         assoc[key].find(value).to_s.to_s + "[#{value}]"
-      rescue
+      rescue StandardError
         "*not found*[#{value}]"
       end
     end
@@ -72,7 +72,7 @@ module PaperTrailScrapbook
       return direct_class if direct_class && !direct_class.is_a?(String)
 
       Object.const_get((direct_class || name.to_s).classify)
-    rescue
+    rescue StandardError
       Object.const_set(name.to_s.classify, Class.new)
     end
 
