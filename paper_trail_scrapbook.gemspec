@@ -22,7 +22,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'paper_trail', '>= 5.2'
 
   gem.add_development_dependency 'ffaker', '~> 2.5'
-  gem.add_development_dependency 'rake'
 
   # Why `railties`? Possibly used by `spec/dummy_app` boot up?
   gem.add_development_dependency 'railties', ['>= 4.0', '< 5.2']
