@@ -67,13 +67,16 @@ module PaperTrailScrapbook
       it 'returns expected value' do
         expect(subject.kind).to eql('created')
       end
-      
+
       context 'garbage' do
         let(:subject) { JournalEntry.new(version) }
         it 'returns expected value' do
+          x                                 = PaperTrailScrapbook.config.events
           PaperTrailScrapbook.config.events = {}
 
           expect { subject.kind }.to raise_error(ArgumentError, 'incorrect event:create')
+
+          PaperTrailScrapbook.config.events = x
         end
       end
     end

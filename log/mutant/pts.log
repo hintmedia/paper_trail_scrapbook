@@ -6,109 +6,104 @@ Jobs:            8
 Includes:        []
 Requires:        ["./spec/dummy_app/config/environment.rb"]
 (00/1404) 100% - killtime: 0.00s runtime: 0.00s overhead: 0.00s
-(18/1404)  90% - killtime: 3.19s runtime: 1.01s overhead: -2.19s
-(26/1404)  68% - killtime: 8.08s runtime: 2.02s overhead: -6.06s
-(33/1404)  54% - killtime: 10.98s runtime: 3.02s overhead: -7.96s
-(48/1404)  57% - killtime: 14.06s runtime: 4.05s overhead: -10.01s
-(55/1404)  50% - killtime: 17.22s runtime: 5.05s overhead: -12.16s
-(72/1404)  54% - killtime: 20.52s runtime: 6.07s overhead: -14.44s
-(75/1404)  51% - killtime: 21.93s runtime: 7.08s overhead: -14.86s
-(76/1404)  49% - killtime: 32.27s runtime: 8.09s overhead: -24.18s
-(77/1404)  44% - killtime: 36.04s runtime: 9.09s overhead: -26.95s
-(100/1404)  50% - killtime: 39.51s runtime: 10.13s overhead: -29.38s
-(116/1404)  52% - killtime: 42.60s runtime: 11.13s overhead: -31.47s
-(118/1404)  51% - killtime: 43.72s runtime: 12.13s overhead: -31.59s
-(134/1404)  54% - killtime: 52.85s runtime: 13.14s overhead: -39.71s
-(150/1404)  55% - killtime: 56.39s runtime: 14.15s overhead: -42.24s
-(168/1404)  57% - killtime: 60.77s runtime: 15.16s overhead: -45.61s
-(184/1404)  59% - killtime: 64.29s runtime: 16.17s overhead: -48.12s
-(191/1404)  60% - killtime: 66.78s runtime: 17.18s overhead: -49.61s
-(205/1404)  61% - killtime: 77.36s runtime: 18.18s overhead: -59.17s
-(219/1404)  62% - killtime: 79.98s runtime: 19.19s overhead: -60.79s
-(241/1404)  64% - killtime: 84.06s runtime: 20.19s overhead: -63.87s
-(255/1404)  65% - killtime: 86.91s runtime: 21.20s overhead: -65.71s
-(263/1404)  65% - killtime: 88.20s runtime: 22.21s overhead: -65.99s
-(276/1404)  66% - killtime: 97.76s runtime: 23.22s overhead: -74.54s
-(288/1404)  65% - killtime: 100.88s runtime: 24.23s overhead: -76.66s
-(305/1404)  66% - killtime: 103.97s runtime: 25.23s overhead: -78.74s
-(323/1404)  67% - killtime: 106.95s runtime: 26.23s overhead: -80.72s
-(330/1404)  67% - killtime: 107.90s runtime: 27.25s overhead: -80.65s
-(341/1404)  67% - killtime: 117.44s runtime: 28.26s overhead: -89.18s
-(348/1404)  65% - killtime: 120.35s runtime: 29.27s overhead: -91.08s
-(348/1404)  63% - killtime: 123.04s runtime: 30.28s overhead: -92.76s
-(350/1404)  60% - killtime: 126.03s runtime: 31.28s overhead: -94.74s
-(357/1404)  61% - killtime: 127.34s runtime: 32.29s overhead: -95.05s
-(373/1404)  62% - killtime: 138.16s runtime: 33.31s overhead: -104.86s
-(382/1404)  61% - killtime: 141.51s runtime: 34.33s overhead: -107.17s
-(393/1404)  61% - killtime: 146.07s runtime: 35.34s overhead: -110.73s
-(402/1404)  60% - killtime: 149.26s runtime: 36.34s overhead: -112.91s
-(402/1404)  60% - killtime: 149.69s runtime: 37.36s overhead: -112.33s
-(415/1404)  59% - killtime: 159.69s runtime: 38.37s overhead: -121.32s
-(436/1404)  61% - killtime: 162.69s runtime: 39.37s overhead: -123.31s
-(442/1404)  59% - killtime: 165.43s runtime: 40.37s overhead: -125.06s
-(455/1404)  60% - killtime: 167.52s runtime: 41.39s overhead: -126.13s
-(462/1404)  60% - killtime: 175.60s runtime: 42.39s overhead: -133.21s
-(467/1404)  61% - killtime: 181.52s runtime: 43.39s overhead: -138.13s
-(475/1404)  61% - killtime: 189.73s runtime: 44.41s overhead: -145.33s
-(483/1404)  62% - killtime: 196.60s runtime: 45.41s overhead: -151.19s
-(485/1404)  62% - killtime: 199.53s runtime: 46.41s overhead: -153.12s
-(493/1404)  62% - killtime: 206.78s runtime: 47.42s overhead: -159.36s
-(501/1404)  62% - killtime: 215.05s runtime: 48.43s overhead: -166.62s
-(507/1404)  63% - killtime: 221.19s runtime: 49.44s overhead: -171.75s
-(514/1404)  63% - killtime: 228.64s runtime: 50.45s overhead: -178.19s
-(522/1404)  63% - killtime: 237.28s runtime: 51.45s overhead: -185.83s
-(525/1404)  63% - killtime: 239.93s runtime: 52.46s overhead: -187.47s
-(536/1404)  64% - killtime: 251.08s runtime: 53.47s overhead: -197.60s
-(544/1404)  64% - killtime: 256.40s runtime: 54.48s overhead: -201.92s
-(552/1404)  64% - killtime: 262.40s runtime: 55.49s overhead: -206.91s
-(566/1404)  65% - killtime: 270.85s runtime: 56.49s overhead: -214.36s
-(572/1404)  65% - killtime: 275.90s runtime: 57.50s overhead: -218.41s
-(580/1404)  65% - killtime: 282.35s runtime: 58.50s overhead: -223.85s
-(588/1404)  66% - killtime: 287.70s runtime: 59.51s overhead: -228.19s
-(602/1404)  66% - killtime: 295.08s runtime: 60.51s overhead: -234.56s
-(611/1404)  67% - killtime: 299.56s runtime: 61.53s overhead: -238.03s
-(625/1404)  67% - killtime: 307.03s runtime: 62.54s overhead: -244.49s
-(635/1404)  67% - killtime: 310.95s runtime: 63.54s overhead: -247.41s
-(649/1404)  68% - killtime: 315.81s runtime: 64.55s overhead: -251.27s
-(664/1404)  68% - killtime: 321.57s runtime: 65.56s overhead: -256.01s
-(677/1404)  69% - killtime: 326.54s runtime: 66.58s overhead: -259.96s
-(687/1404)  69% - killtime: 333.53s runtime: 67.58s overhead: -265.95s
-(695/1404)  69% - killtime: 337.47s runtime: 68.59s overhead: -268.88s
-(709/1404)  70% - killtime: 343.47s runtime: 69.60s overhead: -273.87s
-(723/1404)  70% - killtime: 349.39s runtime: 70.60s overhead: -278.78s
-(732/1404)  70% - killtime: 353.13s runtime: 71.63s overhead: -281.50s
-(747/1404)  71% - killtime: 361.79s runtime: 72.63s overhead: -289.16s
-(755/1404)  71% - killtime: 364.94s runtime: 73.64s overhead: -291.31s
-(768/1404)  71% - killtime: 371.19s runtime: 74.64s overhead: -296.55s
-(779/1404)  72% - killtime: 375.80s runtime: 75.64s overhead: -300.16s
-(794/1404)  72% - killtime: 381.93s runtime: 76.64s overhead: -305.29s
-(801/1404)  72% - killtime: 388.51s runtime: 77.66s overhead: -310.85s
-(814/1404)  72% - killtime: 394.83s runtime: 78.67s overhead: -316.17s
-(824/1404)  73% - killtime: 399.46s runtime: 79.68s overhead: -319.78s
-(838/1404)  73% - killtime: 407.20s runtime: 80.69s overhead: -326.51s
-(846/1404)  73% - killtime: 411.67s runtime: 81.69s overhead: -329.97s
-(854/1404)  73% - killtime: 419.59s runtime: 82.70s overhead: -336.89s
-(867/1404)  73% - killtime: 425.78s runtime: 83.70s overhead: -342.07s
-(877/1404)  74% - killtime: 430.96s runtime: 84.72s overhead: -346.24s
-(889/1404)  74% - killtime: 437.02s runtime: 85.73s overhead: -351.29s
-(900/1404)  74% - killtime: 441.75s runtime: 86.74s overhead: -355.01s
-(910/1404)  74% - killtime: 448.55s runtime: 87.76s overhead: -360.78s
-(918/1404)  75% - killtime: 452.73s runtime: 88.77s overhead: -363.95s
-(934/1404)  75% - killtime: 458.73s runtime: 89.80s overhead: -368.93s
-(948/1404)  75% - killtime: 462.93s runtime: 90.80s overhead: -372.13s
-(964/1404)  75% - killtime: 468.21s runtime: 91.82s overhead: -376.40s
-(972/1404)  76% - killtime: 473.39s runtime: 92.82s overhead: -380.57s
-(987/1404)  76% - killtime: 477.85s runtime: 93.82s overhead: -384.03s
-(997/1404)  76% - killtime: 481.81s runtime: 94.82s overhead: -386.99s
-(1003/1404)  75% - killtime: 485.80s runtime: 95.83s overhead: -389.97s
-(1010/1404)  75% - killtime: 488.72s runtime: 96.84s overhead: -391.87s
-(1018/1404)  75% - killtime: 495.66s runtime: 97.85s overhead: -397.81s
-(1031/1404)  76% - killtime: 501.08s runtime: 98.85s overhead: -402.23s
-(1036/1404)  75% - killtime: 505.75s runtime: 99.85s overhead: -405.89s
-(1040/1404)  75% - killtime: 511.00s runtime: 100.87s overhead: -410.13s
-(1044/1404)  75% - killtime: 515.81s runtime: 101.87s overhead: -413.94s
-(1048/1404)  75% - killtime: 522.90s runtime: 102.88s overhead: -420.02s
-(1055/1404)  75% - killtime: 527.76s runtime: 103.88s overhead: -423.88s
+(18/1404)  85% - killtime: 3.02s runtime: 1.01s overhead: -2.02s
+(26/1404)  60% - killtime: 7.79s runtime: 2.01s overhead: -5.77s
+(38/1404)  55% - killtime: 10.82s runtime: 3.01s overhead: -7.81s
+(48/1404)  50% - killtime: 14.18s runtime: 4.02s overhead: -10.16s
+(65/1404)  54% - killtime: 17.66s runtime: 5.02s overhead: -12.64s
+(74/1404)  52% - killtime: 20.89s runtime: 6.03s overhead: -14.86s
+(76/1404)  48% - killtime: 23.09s runtime: 7.04s overhead: -16.05s
+(76/1404)  45% - killtime: 32.27s runtime: 8.04s overhead: -24.23s
+(92/1404)  48% - killtime: 35.67s runtime: 9.06s overhead: -26.61s
+(113/1404)  52% - killtime: 39.10s runtime: 10.06s overhead: -29.04s
+(124/1404)  52% - killtime: 42.66s runtime: 11.07s overhead: -31.59s
+(136/1404)  54% - killtime: 44.36s runtime: 12.08s overhead: -32.28s
+(150/1404)  55% - killtime: 53.55s runtime: 13.09s overhead: -40.46s
+(169/1404)  57% - killtime: 57.43s runtime: 14.09s overhead: -43.34s
+(187/1404)  59% - killtime: 61.40s runtime: 15.10s overhead: -46.30s
+(206/1404)  61% - killtime: 65.48s runtime: 16.12s overhead: -49.37s
+(213/1404)  61% - killtime: 66.71s runtime: 17.12s overhead: -49.59s
+(229/1404)  63% - killtime: 76.01s runtime: 18.15s overhead: -57.86s
+(250/1404)  64% - killtime: 79.37s runtime: 19.15s overhead: -60.22s
+(272/1404)  66% - killtime: 82.91s runtime: 20.17s overhead: -62.74s
+(286/1404)  65% - killtime: 86.14s runtime: 21.17s overhead: -64.97s
+(291/1404)  65% - killtime: 87.13s runtime: 22.18s overhead: -64.95s
+(304/1404)  66% - killtime: 96.58s runtime: 23.19s overhead: -73.38s
+(326/1404)  67% - killtime: 100.17s runtime: 24.21s overhead: -75.96s
+(346/1404)  67% - killtime: 103.90s runtime: 25.22s overhead: -78.68s
+(348/1404)  64% - killtime: 106.57s runtime: 26.22s overhead: -80.35s
+(348/1404)  63% - killtime: 107.30s runtime: 27.23s overhead: -80.07s
+(348/1404)  61% - killtime: 116.13s runtime: 28.23s overhead: -87.90s
+(368/1404)  62% - killtime: 119.65s runtime: 29.24s overhead: -90.41s
+(382/1404)  61% - killtime: 123.06s runtime: 30.24s overhead: -92.82s
+(392/1404)  61% - killtime: 127.02s runtime: 31.24s overhead: -95.78s
+(396/1404)  61% - killtime: 128.15s runtime: 32.25s overhead: -95.90s
+(402/1404)  60% - killtime: 138.38s runtime: 33.25s overhead: -105.13s
+(416/1404)  60% - killtime: 141.07s runtime: 34.26s overhead: -106.81s
+(436/1404)  60% - killtime: 144.60s runtime: 35.27s overhead: -109.33s
+(445/1404)  60% - killtime: 147.47s runtime: 36.28s overhead: -111.19s
+(449/1404)  60% - killtime: 148.18s runtime: 37.29s overhead: -110.89s
+(461/1404)  60% - killtime: 157.16s runtime: 38.29s overhead: -118.87s
+(468/1404)  61% - killtime: 160.48s runtime: 39.30s overhead: -121.18s
+(474/1404)  61% - killtime: 168.38s runtime: 40.30s overhead: -128.08s
+(488/1404)  62% - killtime: 178.30s runtime: 41.30s overhead: -137.00s
+(492/1404)  62% - killtime: 180.33s runtime: 42.32s overhead: -138.01s
+(499/1404)  62% - killtime: 191.38s runtime: 43.32s overhead: -148.06s
+(501/1404)  62% - killtime: 193.35s runtime: 44.33s overhead: -149.02s
+(505/1404)  62% - killtime: 200.69s runtime: 45.33s overhead: -155.36s
+(509/1404)  63% - killtime: 208.79s runtime: 46.35s overhead: -162.44s
+(516/1404)  63% - killtime: 219.41s runtime: 47.37s overhead: -172.04s
+(523/1404)  63% - killtime: 226.44s runtime: 48.39s overhead: -178.05s
+(528/1404)  64% - killtime: 231.02s runtime: 49.40s overhead: -181.61s
+(539/1404)  64% - killtime: 243.43s runtime: 50.43s overhead: -193.00s
+(551/1404)  64% - killtime: 249.94s runtime: 51.44s overhead: -198.50s
+(562/1404)  65% - killtime: 257.60s runtime: 52.44s overhead: -205.16s
+(570/1404)  65% - killtime: 261.22s runtime: 53.45s overhead: -207.77s
+(581/1404)  66% - killtime: 266.68s runtime: 54.46s overhead: -212.22s
+(594/1404)  66% - killtime: 274.18s runtime: 55.47s overhead: -218.71s
+(605/1404)  66% - killtime: 280.11s runtime: 56.47s overhead: -223.63s
+(616/1404)  67% - killtime: 288.50s runtime: 57.48s overhead: -231.02s
+(628/1404)  67% - killtime: 292.88s runtime: 58.48s overhead: -234.40s
+(638/1404)  68% - killtime: 297.22s runtime: 59.48s overhead: -237.74s
+(651/1404)  68% - killtime: 302.96s runtime: 60.49s overhead: -242.47s
+(664/1404)  68% - killtime: 308.89s runtime: 61.49s overhead: -247.40s
+(675/1404)  69% - killtime: 316.44s runtime: 62.50s overhead: -253.95s
+(687/1404)  69% - killtime: 320.51s runtime: 63.50s overhead: -257.01s
+(702/1404)  69% - killtime: 326.79s runtime: 64.51s overhead: -262.28s
+(717/1404)  70% - killtime: 331.68s runtime: 65.51s overhead: -266.17s
+(724/1404)  70% - killtime: 335.14s runtime: 66.53s overhead: -268.61s
+(727/1404)  70% - killtime: 342.26s runtime: 67.53s overhead: -274.73s
+(733/1404)  70% - killtime: 347.36s runtime: 68.54s overhead: -278.82s
+(742/1404)  70% - killtime: 355.04s runtime: 69.56s overhead: -285.48s
+(756/1404)  70% - killtime: 360.99s runtime: 70.56s overhead: -290.43s
+(766/1404)  71% - killtime: 365.39s runtime: 71.56s overhead: -293.82s
+(776/1404)  71% - killtime: 373.13s runtime: 72.57s overhead: -300.56s
+(781/1404)  71% - killtime: 377.20s runtime: 73.57s overhead: -303.62s
+(791/1404)  71% - killtime: 384.19s runtime: 74.60s overhead: -309.59s
+(804/1404)  71% - killtime: 390.77s runtime: 75.60s overhead: -315.17s
+(812/1404)  71% - killtime: 396.84s runtime: 76.61s overhead: -320.23s
+(820/1404)  72% - killtime: 401.80s runtime: 77.62s overhead: -324.18s
+(829/1404)  72% - killtime: 409.86s runtime: 78.63s overhead: -331.23s
+(839/1404)  72% - killtime: 414.81s runtime: 79.64s overhead: -335.17s
+(851/1404)  72% - killtime: 422.40s runtime: 80.64s overhead: -341.76s
+(862/1404)  72% - killtime: 428.23s runtime: 81.65s overhead: -346.59s
+(873/1404)  73% - killtime: 434.92s runtime: 82.65s overhead: -352.27s
+(888/1404)  73% - killtime: 440.73s runtime: 83.66s overhead: -357.07s
+(904/1404)  73% - killtime: 446.89s runtime: 84.67s overhead: -362.22s
+(918/1404)  74% - killtime: 451.33s runtime: 85.69s overhead: -365.65s
+(934/1404)  74% - killtime: 455.82s runtime: 86.69s overhead: -369.13s
+(943/1404)  74% - killtime: 462.10s runtime: 87.71s overhead: -374.39s
+(958/1404)  75% - killtime: 466.32s runtime: 88.71s overhead: -377.60s
+(974/1404)  75% - killtime: 470.77s runtime: 89.72s overhead: -381.05s
+(986/1404)  75% - killtime: 475.07s runtime: 90.72s overhead: -384.35s
+(992/1404)  74% - killtime: 478.87s runtime: 91.73s overhead: -387.14s
+(996/1404)  74% - killtime: 485.24s runtime: 92.73s overhead: -392.51s
+(1011/1404)  75% - killtime: 489.62s runtime: 93.74s overhead: -395.89s
+(1023/1404)  75% - killtime: 493.92s runtime: 94.75s overhead: -399.17s
+(1026/1404)  74% - killtime: 500.55s runtime: 95.75s overhead: -404.79s
+(1034/1404)  74% - killtime: 505.51s runtime: 96.77s overhead: -408.75s
+(1035/1404)  74% - killtime: 512.73s runtime: 97.77s overhead: -414.96s
+(1042/1404)  74% - killtime: 515.57s runtime: 98.78s overhead: -416.79s
 PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70
 - rspec:0:./spec/paper_trail_scrapbook/changes_spec.rb:79/PaperTrailScrapbook::Changes#change_log provides a set of update changes
 - rspec:1:./spec/paper_trail_scrapbook/changes_spec.rb:87/PaperTrailScrapbook::Changes#change_log filters the proper columns
@@ -283,19 +278,6 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
    Object.const_set(name.to_s.classify, Class.new)
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:9fe4d
-@@ -1,10 +1,10 @@
- def assoc_klass(name, options = {})
-   direct_class = options[:class_name]
--  if (direct_class && (!direct_class.is_a?(String)))
-+  if (direct_class && self)
-     return direct_class
-   end
-   Object.const_get((direct_class || name.to_s).classify)
- rescue StandardError
-   Object.const_set(name.to_s.classify, Class.new)
- end
------------------------
 evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:ec5ca
 @@ -1,10 +1,10 @@
  def assoc_klass(name, options = {})
@@ -309,12 +291,12 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
    Object.const_set(name.to_s.classify, Class.new)
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:d0b2f
+evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:3c077
 @@ -1,10 +1,10 @@
  def assoc_klass(name, options = {})
    direct_class = options[:class_name]
 -  if (direct_class && (!direct_class.is_a?(String)))
-+  if (direct_class && (!direct_class.instance_of?(String)))
++  if (direct_class && (!self))
      return direct_class
    end
    Object.const_get((direct_class || name.to_s).classify)
@@ -322,12 +304,25 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
    Object.const_set(name.to_s.classify, Class.new)
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:3c077
+evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:9fe4d
 @@ -1,10 +1,10 @@
  def assoc_klass(name, options = {})
    direct_class = options[:class_name]
 -  if (direct_class && (!direct_class.is_a?(String)))
-+  if (direct_class && (!self))
++  if (direct_class && self)
+     return direct_class
+   end
+   Object.const_get((direct_class || name.to_s).classify)
+ rescue StandardError
+   Object.const_set(name.to_s.classify, Class.new)
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:d0b2f
+@@ -1,10 +1,10 @@
+ def assoc_klass(name, options = {})
+   direct_class = options[:class_name]
+-  if (direct_class && (!direct_class.is_a?(String)))
++  if (direct_class && (!direct_class.instance_of?(String)))
      return direct_class
    end
    Object.const_get((direct_class || name.to_s).classify)
@@ -361,6 +356,19 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
    Object.const_set(name.to_s.classify, Class.new)
  end
 -----------------------
+evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:2f49d
+@@ -1,10 +1,10 @@
+ def assoc_klass(name, options = {})
+   direct_class = options[:class_name]
+-  if (direct_class && (!direct_class.is_a?(String)))
++  if (direct_class && (!direct_class.is_a?(nil)))
+     return direct_class
+   end
+   Object.const_get((direct_class || name.to_s).classify)
+ rescue StandardError
+   Object.const_set(name.to_s.classify, Class.new)
+ end
+-----------------------
 evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:d062c
 @@ -1,10 +1,10 @@
  def assoc_klass(name, options = {})
@@ -380,19 +388,6 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
    direct_class = options[:class_name]
 -  if (direct_class && (!direct_class.is_a?(String)))
 +  if (direct_class && (!direct_class.is_a?(self)))
-     return direct_class
-   end
-   Object.const_get((direct_class || name.to_s).classify)
- rescue StandardError
-   Object.const_set(name.to_s.classify, Class.new)
- end
------------------------
-evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:2f49d
-@@ -1,10 +1,10 @@
- def assoc_klass(name, options = {})
-   direct_class = options[:class_name]
--  if (direct_class && (!direct_class.is_a?(String)))
-+  if (direct_class && (!direct_class.is_a?(nil)))
      return direct_class
    end
    Object.const_get((direct_class || name.to_s).classify)
@@ -439,19 +434,6 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
    Object.const_set(name.to_s.classify, Class.new)
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:bb627
-@@ -1,10 +1,10 @@
- def assoc_klass(name, options = {})
-   direct_class = options[:class_name]
-   if (direct_class && (!direct_class.is_a?(String)))
--    return direct_class
-+    direct_class
-   end
-   Object.const_get((direct_class || name.to_s).classify)
- rescue StandardError
-   Object.const_set(name.to_s.classify, Class.new)
- end
------------------------
 evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:c2dfc
 @@ -1,10 +1,10 @@
  def assoc_klass(name, options = {})
@@ -459,6 +441,19 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
    if (direct_class && (!direct_class.is_a?(String)))
 -    return direct_class
 +    return nil
+   end
+   Object.const_get((direct_class || name.to_s).classify)
+ rescue StandardError
+   Object.const_set(name.to_s.classify, Class.new)
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:bb627
+@@ -1,10 +1,10 @@
+ def assoc_klass(name, options = {})
+   direct_class = options[:class_name]
+   if (direct_class && (!direct_class.is_a?(String)))
+-    return direct_class
++    direct_class
    end
    Object.const_get((direct_class || name.to_s).classify)
  rescue StandardError
@@ -543,6 +538,18 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
    Object.const_set(name.to_s.classify, Class.new)
  end
 -----------------------
+evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:be33c
+@@ -1,10 +1,8 @@
+ def assoc_klass(name, options = {})
+   direct_class = options[:class_name]
+   if (direct_class && (!direct_class.is_a?(String)))
+     return direct_class
+   end
+   Object.const_get((direct_class || name.to_s).classify)
+-rescue StandardError
+-  Object.const_set(name.to_s.classify, Class.new)
+ end
+-----------------------
 evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:37740
 @@ -1,10 +1,10 @@
  def assoc_klass(name, options = {})
@@ -556,18 +563,6 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
 +  nil
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:be33c
-@@ -1,10 +1,8 @@
- def assoc_klass(name, options = {})
-   direct_class = options[:class_name]
-   if (direct_class && (!direct_class.is_a?(String)))
-     return direct_class
-   end
-   Object.const_get((direct_class || name.to_s).classify)
--rescue StandardError
--  Object.const_set(name.to_s.classify, Class.new)
- end
------------------------
 evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:fdee0
 @@ -1,10 +1,10 @@
  def assoc_klass(name, options = {})
@@ -579,6 +574,19 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
  rescue StandardError
 -  Object.const_set(name.to_s.classify, Class.new)
 +  self
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:f578e
+@@ -1,10 +1,10 @@
+ def assoc_klass(name, options = {})
+   direct_class = options[:class_name]
+   if (direct_class && (!direct_class.is_a?(String)))
+     return direct_class
+   end
+   Object.const_get((direct_class || name.to_s).classify)
+ rescue StandardError
+-  Object.const_set(name.to_s.classify, Class.new)
++  Object.const_set
  end
 -----------------------
 evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:07e70
@@ -607,7 +615,7 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
 +  self.const_set(name.to_s.classify, Class.new)
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:f578e
+evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:616f4
 @@ -1,10 +1,10 @@
  def assoc_klass(name, options = {})
    direct_class = options[:class_name]
@@ -617,7 +625,7 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
    Object.const_get((direct_class || name.to_s).classify)
  rescue StandardError
 -  Object.const_set(name.to_s.classify, Class.new)
-+  Object.const_set
++  Object.const_set(nil, Class.new)
  end
 -----------------------
 evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:599c6
@@ -633,19 +641,6 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
 +  Object.const_set(self, Class.new)
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:87fcd
-@@ -1,10 +1,10 @@
- def assoc_klass(name, options = {})
-   direct_class = options[:class_name]
-   if (direct_class && (!direct_class.is_a?(String)))
-     return direct_class
-   end
-   Object.const_get((direct_class || name.to_s).classify)
- rescue StandardError
--  Object.const_set(name.to_s.classify, Class.new)
-+  Object.const_set(name.to_s, Class.new)
- end
------------------------
 evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:26ca4
 @@ -1,10 +1,10 @@
  def assoc_klass(name, options = {})
@@ -659,7 +654,7 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
 +  Object.const_set(self.classify, Class.new)
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:616f4
+evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:87fcd
 @@ -1,10 +1,10 @@
  def assoc_klass(name, options = {})
    direct_class = options[:class_name]
@@ -669,7 +664,7 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
    Object.const_get((direct_class || name.to_s).classify)
  rescue StandardError
 -  Object.const_set(name.to_s.classify, Class.new)
-+  Object.const_set(nil, Class.new)
++  Object.const_set(name.to_s, Class.new)
  end
 -----------------------
 evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:001d3
@@ -698,32 +693,6 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
 +  Object.const_set(name.to_str.classify, Class.new)
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:d9ffb
-@@ -1,10 +1,10 @@
- def assoc_klass(name, options = {})
-   direct_class = options[:class_name]
-   if (direct_class && (!direct_class.is_a?(String)))
-     return direct_class
-   end
-   Object.const_get((direct_class || name.to_s).classify)
- rescue StandardError
--  Object.const_set(name.to_s.classify, Class.new)
-+  Object.const_set(self.to_s.classify, Class.new)
- end
------------------------
-evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:b4365
-@@ -1,10 +1,10 @@
- def assoc_klass(name, options = {})
-   direct_class = options[:class_name]
-   if (direct_class && (!direct_class.is_a?(String)))
-     return direct_class
-   end
-   Object.const_get((direct_class || name.to_s).classify)
- rescue StandardError
--  Object.const_set(name.to_s.classify, Class.new)
-+  Object.const_set(name.to_s.classify, nil)
- end
------------------------
 evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:7daa5
 @@ -1,10 +1,10 @@
  def assoc_klass(name, options = {})
@@ -737,7 +706,7 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
 +  Object.const_set(Class.new)
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:7402a
+evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:d9ffb
 @@ -1,10 +1,10 @@
  def assoc_klass(name, options = {})
    direct_class = options[:class_name]
@@ -747,7 +716,7 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
    Object.const_get((direct_class || name.to_s).classify)
  rescue StandardError
 -  Object.const_set(name.to_s.classify, Class.new)
-+  Object.const_set(name.to_s.classify, Class)
++  Object.const_set(self.to_s.classify, Class.new)
  end
 -----------------------
 evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:e5369
@@ -763,6 +732,19 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
 +  Object.const_set(name.to_s.classify, self)
  end
 -----------------------
+evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:b4365
+@@ -1,10 +1,10 @@
+ def assoc_klass(name, options = {})
+   direct_class = options[:class_name]
+   if (direct_class && (!direct_class.is_a?(String)))
+     return direct_class
+   end
+   Object.const_get((direct_class || name.to_s).classify)
+ rescue StandardError
+-  Object.const_set(name.to_s.classify, Class.new)
++  Object.const_set(name.to_s.classify, nil)
+ end
+-----------------------
 evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:0dcdd
 @@ -1,10 +1,10 @@
  def assoc_klass(name, options = {})
@@ -774,6 +756,19 @@ evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scr
  rescue StandardError
 -  Object.const_set(name.to_s.classify, Class.new)
 +  Object.const_set(name.to_s.classify, self.new)
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:7402a
+@@ -1,10 +1,10 @@
+ def assoc_klass(name, options = {})
+   direct_class = options[:class_name]
+   if (direct_class && (!direct_class.is_a?(String)))
+     return direct_class
+   end
+   Object.const_get((direct_class || name.to_s).classify)
+ rescue StandardError
+-  Object.const_set(name.to_s.classify, Class.new)
++  Object.const_set(name.to_s.classify, Class)
  end
 -----------------------
 evil:PaperTrailScrapbook::Changes#assoc_klass:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:70:1f1f5
@@ -828,17 +823,6 @@ evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_tr
    end]
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:adf57
-@@ -1,8 +1,6 @@
- def build_associations
--  @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
--    a.macro.equal?(:belongs_to)
--  end.map do |x|
-+  @assoc ||= Hash[klass.reflect_on_all_associations.select.map do |x|
-     [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
-   end]
- end
------------------------
 evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:ee128
 @@ -1,8 +1,8 @@
  def build_associations
@@ -846,6 +830,17 @@ evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_tr
 +  @assoc ||= Hash[klass.reflect_on_all_associations do |a|
      a.macro.equal?(:belongs_to)
    end.map do |x|
+     [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
+   end]
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:adf57
+@@ -1,8 +1,6 @@
+ def build_associations
+-  @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
+-    a.macro.equal?(:belongs_to)
+-  end.map do |x|
++  @assoc ||= Hash[klass.reflect_on_all_associations.select.map do |x|
      [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
    end]
  end
@@ -871,17 +866,6 @@ evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_tr
    end]
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:4ccb1
-@@ -1,8 +1,8 @@
- def build_associations
-   @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
--    a.macro.equal?(:belongs_to)
-+    nil
-   end.map do |x|
-     [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
-   end]
- end
------------------------
 evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:27238
 @@ -1,8 +1,8 @@
  def build_associations
@@ -893,12 +877,12 @@ evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_tr
    end]
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:7a935
+evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:4ccb1
 @@ -1,8 +1,8 @@
  def build_associations
    @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
 -    a.macro.equal?(:belongs_to)
-+    a.equal?(:belongs_to)
++    nil
    end.map do |x|
      [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
    end]
@@ -937,6 +921,17 @@ evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_tr
    end]
  end
 -----------------------
+evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:7a935
+@@ -1,8 +1,8 @@
+ def build_associations
+   @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
+-    a.macro.equal?(:belongs_to)
++    a.equal?(:belongs_to)
+   end.map do |x|
+     [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
+   end]
+ end
+-----------------------
 evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:688fb
 @@ -1,8 +1,8 @@
  def build_associations
@@ -948,23 +943,23 @@ evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_tr
    end]
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:a412a
-@@ -1,8 +1,8 @@
- def build_associations
-   @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
--    a.macro.equal?(:belongs_to)
-+    a.macro.equal?(self)
-   end.map do |x|
-     [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
-   end]
- end
------------------------
 evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:221f8
 @@ -1,8 +1,8 @@
  def build_associations
    @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
 -    a.macro.equal?(:belongs_to)
 +    a.macro.equal?(:belongs_to__mutant__)
+   end.map do |x|
+     [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
+   end]
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:a412a
+@@ -1,8 +1,8 @@
+ def build_associations
+   @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
+-    a.macro.equal?(:belongs_to)
++    a.macro.equal?(self)
    end.map do |x|
      [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
    end]
@@ -1013,6 +1008,17 @@ evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_tr
    end]
  end
 -----------------------
+evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:fe034
+@@ -1,8 +1,8 @@
+ def build_associations
+   @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
+     a.macro.equal?(:belongs_to)
+   end.map do |x|
+-    [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
++    nil
+   end]
+ end
+-----------------------
 evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:a2627
 @@ -1,8 +1,8 @@
  def build_associations
@@ -1032,28 +1038,6 @@ evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_tr
    end.map do |x|
 -    [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
 +    []
-   end]
- end
------------------------
-evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:fe034
-@@ -1,8 +1,8 @@
- def build_associations
-   @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
-     a.macro.equal?(:belongs_to)
-   end.map do |x|
--    [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
-+    nil
-   end]
- end
------------------------
-evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:86637
-@@ -1,8 +1,8 @@
- def build_associations
-   @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
-     a.macro.equal?(:belongs_to)
-   end.map do |x|
--    [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
-+    [nil, assoc_klass(x.name, x.options)]
    end]
  end
 -----------------------
@@ -1079,6 +1063,17 @@ evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_tr
    end]
  end
 -----------------------
+evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:86637
+@@ -1,8 +1,8 @@
+ def build_associations
+   @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
+     a.macro.equal?(:belongs_to)
+   end.map do |x|
+-    [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
++    [nil, assoc_klass(x.name, x.options)]
+   end]
+ end
+-----------------------
 evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:eb677
 @@ -1,8 +1,8 @@
  def build_associations
@@ -1087,17 +1082,6 @@ evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_tr
    end.map do |x|
 -    [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
 +    [x.foreign_key, assoc_klass(x.name, x.options)]
-   end]
- end
------------------------
-evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:2aa34
-@@ -1,8 +1,8 @@
- def build_associations
-   @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
-     a.macro.equal?(:belongs_to)
-   end.map do |x|
--    [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
-+    [self.foreign_key.to_s, assoc_klass(x.name, x.options)]
    end]
  end
 -----------------------
@@ -1134,14 +1118,25 @@ evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_tr
    end]
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:47913
+evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:2aa34
 @@ -1,8 +1,8 @@
  def build_associations
    @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
      a.macro.equal?(:belongs_to)
    end.map do |x|
 -    [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
-+    [x.foreign_key.to_s, nil]
++    [self.foreign_key.to_s, assoc_klass(x.name, x.options)]
+   end]
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:86721
+@@ -1,8 +1,8 @@
+ def build_associations
+   @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
+     a.macro.equal?(:belongs_to)
+   end.map do |x|
+-    [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
++    [x.foreign_key.to_s, assoc_klass]
    end]
  end
 -----------------------
@@ -1156,6 +1151,17 @@ evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_tr
    end]
  end
 -----------------------
+evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:47913
+@@ -1,8 +1,8 @@
+ def build_associations
+   @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
+     a.macro.equal?(:belongs_to)
+   end.map do |x|
+-    [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
++    [x.foreign_key.to_s, nil]
+   end]
+ end
+-----------------------
 evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:c1976
 @@ -1,8 +1,8 @@
  def build_associations
@@ -1164,17 +1170,6 @@ evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_tr
    end.map do |x|
 -    [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
 +    [x.foreign_key.to_s, self]
-   end]
- end
------------------------
-evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:86721
-@@ -1,8 +1,8 @@
- def build_associations
-   @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
-     a.macro.equal?(:belongs_to)
-   end.map do |x|
--    [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
-+    [x.foreign_key.to_s, assoc_klass]
    end]
  end
 -----------------------
@@ -1222,17 +1217,6 @@ evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_tr
    end]
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:5ca98
-@@ -1,8 +1,8 @@
- def build_associations
-   @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
-     a.macro.equal?(:belongs_to)
-   end.map do |x|
--    [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
-+    [x.foreign_key.to_s, assoc_klass(self.name, x.options)]
-   end]
- end
------------------------
 evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:7a180
 @@ -1,8 +1,8 @@
  def build_associations
@@ -1241,6 +1225,17 @@ evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_tr
    end.map do |x|
 -    [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
 +    [x.foreign_key.to_s, assoc_klass(x.options)]
+   end]
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:5ca98
+@@ -1,8 +1,8 @@
+ def build_associations
+   @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
+     a.macro.equal?(:belongs_to)
+   end.map do |x|
+-    [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
++    [x.foreign_key.to_s, assoc_klass(self.name, x.options)]
    end]
  end
 -----------------------
@@ -1266,17 +1261,6 @@ evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_tr
    end]
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:4a158
-@@ -1,8 +1,8 @@
- def build_associations
-   @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
-     a.macro.equal?(:belongs_to)
-   end.map do |x|
--    [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
-+    [x.foreign_key.to_s, assoc_klass(x.name, self.options)]
-   end]
- end
------------------------
 evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:d0a5f
 @@ -1,8 +1,8 @@
  def build_associations
@@ -1285,6 +1269,17 @@ evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_tr
    end.map do |x|
 -    [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
 +    [x.foreign_key.to_s, assoc_klass(x.name)]
+   end]
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#build_associations:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:83:4a158
+@@ -1,8 +1,8 @@
+ def build_associations
+   @assoc ||= Hash[klass.reflect_on_all_associations.select do |a|
+     a.macro.equal?(:belongs_to)
+   end.map do |x|
+-    [x.foreign_key.to_s, assoc_klass(x.name, x.options)]
++    [x.foreign_key.to_s, assoc_klass(x.name, self.options)]
    end]
  end
 -----------------------
@@ -1382,19 +1377,6 @@ evil:PaperTrailScrapbook::Changes#change_log:/Users/tj/projects/paper_trail_scra
    text
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#change_log:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:23:2024a
-@@ -1,10 +1,10 @@
- def change_log
-   text = changes.map do |k, v|
-     digest(k, v)
-   end.compact.join("\n")
--  if PaperTrailScrapbook.config.drop_id_suffix
-+  if true
-     text = text.gsub(" id:", ":")
-   end
-   text
- end
------------------------
 evil:PaperTrailScrapbook::Changes#change_log:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:23:fc7ed
 @@ -1,10 +1,10 @@
  def change_log
@@ -1408,7 +1390,20 @@ evil:PaperTrailScrapbook::Changes#change_log:/Users/tj/projects/paper_trail_scra
    text
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#change_log:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:23:93f04
+evil:PaperTrailScrapbook::Changes#change_log:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:23:2024a
+@@ -1,10 +1,10 @@
+ def change_log
+   text = changes.map do |k, v|
+     digest(k, v)
+   end.compact.join("\n")
+-  if PaperTrailScrapbook.config.drop_id_suffix
++  if true
+     text = text.gsub(" id:", ":")
+   end
+   text
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#change_log:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:23:06e4b
 @@ -1,10 +1,10 @@
  def change_log
    text = changes.map do |k, v|
@@ -1416,7 +1411,7 @@ evil:PaperTrailScrapbook::Changes#change_log:/Users/tj/projects/paper_trail_scra
    end.compact.join("\n")
    if PaperTrailScrapbook.config.drop_id_suffix
 -    text = text.gsub(" id:", ":")
-+    nil
++    text__mutant__ = text.gsub(" id:", ":")
    end
    text
  end
@@ -1434,19 +1429,6 @@ evil:PaperTrailScrapbook::Changes#change_log:/Users/tj/projects/paper_trail_scra
    text
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#change_log:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:23:06e4b
-@@ -1,10 +1,10 @@
- def change_log
-   text = changes.map do |k, v|
-     digest(k, v)
-   end.compact.join("\n")
-   if PaperTrailScrapbook.config.drop_id_suffix
--    text = text.gsub(" id:", ":")
-+    text__mutant__ = text.gsub(" id:", ":")
-   end
-   text
- end
------------------------
 evil:PaperTrailScrapbook::Changes#change_log:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:23:f9c55
 @@ -1,10 +1,10 @@
  def change_log
@@ -1456,6 +1438,19 @@ evil:PaperTrailScrapbook::Changes#change_log:/Users/tj/projects/paper_trail_scra
    if PaperTrailScrapbook.config.drop_id_suffix
 -    text = text.gsub(" id:", ":")
 +    self
+   end
+   text
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#change_log:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:23:93f04
+@@ -1,10 +1,10 @@
+ def change_log
+   text = changes.map do |k, v|
+     digest(k, v)
+   end.compact.join("\n")
+   if PaperTrailScrapbook.config.drop_id_suffix
+-    text = text.gsub(" id:", ":")
++    nil
    end
    text
  end
@@ -1501,17 +1496,6 @@ evil:PaperTrailScrapbook::Changes#changes:/Users/tj/projects/paper_trail_scrapbo
    end
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#changes:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:97:67857
-@@ -1,8 +1,8 @@
- def changes
-   @chs ||= if object_changes
--    YAML.load(object_changes).except(*PaperTrailScrapbook.config.scrub_columns)
-+    YAML.load(object_changes)
-   else
-     {}
-   end
- end
------------------------
 evil:PaperTrailScrapbook::Changes#changes:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:97:69ec0
 @@ -1,8 +1,4 @@
  def changes
@@ -1523,23 +1507,12 @@ evil:PaperTrailScrapbook::Changes#changes:/Users/tj/projects/paper_trail_scrapbo
 +  @chs ||= YAML.load(object_changes).except(*PaperTrailScrapbook.config.scrub_columns)
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#changes:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:97:8af47
+evil:PaperTrailScrapbook::Changes#changes:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:97:67857
 @@ -1,8 +1,8 @@
  def changes
    @chs ||= if object_changes
 -    YAML.load(object_changes).except(*PaperTrailScrapbook.config.scrub_columns)
-+    YAML.load(object_changes).except
-   else
-     {}
-   end
- end
------------------------
-evil:PaperTrailScrapbook::Changes#changes:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:97:707b6
-@@ -1,8 +1,8 @@
- def changes
-   @chs ||= if object_changes
--    YAML.load(object_changes).except(*PaperTrailScrapbook.config.scrub_columns)
-+    YAML.load(object_changes).except(nil)
++    YAML.load(object_changes)
    else
      {}
    end
@@ -1556,12 +1529,23 @@ evil:PaperTrailScrapbook::Changes#changes:/Users/tj/projects/paper_trail_scrapbo
    end
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#changes:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:97:b98d8
+evil:PaperTrailScrapbook::Changes#changes:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:97:707b6
 @@ -1,8 +1,8 @@
  def changes
    @chs ||= if object_changes
 -    YAML.load(object_changes).except(*PaperTrailScrapbook.config.scrub_columns)
-+    YAML.load(object_changes).except(*nil)
++    YAML.load(object_changes).except(nil)
+   else
+     {}
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#changes:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:97:8af47
+@@ -1,8 +1,8 @@
+ def changes
+   @chs ||= if object_changes
+-    YAML.load(object_changes).except(*PaperTrailScrapbook.config.scrub_columns)
++    YAML.load(object_changes).except
    else
      {}
    end
@@ -1589,12 +1573,12 @@ evil:PaperTrailScrapbook::Changes#changes:/Users/tj/projects/paper_trail_scrapbo
    end
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#changes:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:97:6aa27
+evil:PaperTrailScrapbook::Changes#changes:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:97:b98d8
 @@ -1,8 +1,8 @@
  def changes
    @chs ||= if object_changes
 -    YAML.load(object_changes).except(*PaperTrailScrapbook.config.scrub_columns)
-+    YAML.load(object_changes).except(PaperTrailScrapbook.config.scrub_columns)
++    YAML.load(object_changes).except(*nil)
    else
      {}
    end
@@ -1611,13 +1595,14 @@ evil:PaperTrailScrapbook::Changes#changes:/Users/tj/projects/paper_trail_scrapbo
    end
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#changes:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:97:379e4
-@@ -1,8 +1,6 @@
+evil:PaperTrailScrapbook::Changes#changes:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:97:6aa27
+@@ -1,8 +1,8 @@
  def changes
    @chs ||= if object_changes
-     YAML.load(object_changes).except(*PaperTrailScrapbook.config.scrub_columns)
--  else
--    {}
+-    YAML.load(object_changes).except(*PaperTrailScrapbook.config.scrub_columns)
++    YAML.load(object_changes).except(PaperTrailScrapbook.config.scrub_columns)
+   else
+     {}
    end
  end
 -----------------------
@@ -1629,6 +1614,16 @@ evil:PaperTrailScrapbook::Changes#changes:/Users/tj/projects/paper_trail_scrapbo
    else
 -    {}
 +    self
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#changes:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:97:379e4
+@@ -1,8 +1,6 @@
+ def changes
+   @chs ||= if object_changes
+     YAML.load(object_changes).except(*PaperTrailScrapbook.config.scrub_columns)
+-  else
+-    {}
    end
  end
 -----------------------
@@ -1750,25 +1745,6 @@ evil:PaperTrailScrapbook::Changes#detailed_analysis:/Users/tj/projects/paper_tra
    end
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#detailed_analysis:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:42:20a76
-@@ -1,16 +1,16 @@
- def detailed_analysis(k, new, old)
-   if creating?
-     find_value(k, new).to_s
-   else
-     if old.nil?
-       "#{find_value(k, new)}#{" added"}"
-     else
-       if new.nil?
--        "#{find_value(k, old)}#{" was *removed*"}"
-+        "#{find_value(self, old)}#{" was *removed*"}"
-       else
-         "#{find_value(k, old)}#{" -> "}#{find_value(k, new)}"
-       end
-     end
-   end
- end
------------------------
 evil:PaperTrailScrapbook::Changes#detailed_analysis:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:42:d2dc3
 @@ -1,16 +1,16 @@
  def detailed_analysis(k, new, old)
@@ -1781,6 +1757,25 @@ evil:PaperTrailScrapbook::Changes#detailed_analysis:/Users/tj/projects/paper_tra
        if new.nil?
 -        "#{find_value(k, old)}#{" was *removed*"}"
 +        "#{find_value(nil, old)}#{" was *removed*"}"
+       else
+         "#{find_value(k, old)}#{" -> "}#{find_value(k, new)}"
+       end
+     end
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#detailed_analysis:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:42:20a76
+@@ -1,16 +1,16 @@
+ def detailed_analysis(k, new, old)
+   if creating?
+     find_value(k, new).to_s
+   else
+     if old.nil?
+       "#{find_value(k, new)}#{" added"}"
+     else
+       if new.nil?
+-        "#{find_value(k, old)}#{" was *removed*"}"
++        "#{find_value(self, old)}#{" was *removed*"}"
        else
          "#{find_value(k, old)}#{" -> "}#{find_value(k, new)}"
        end
@@ -1826,25 +1821,6 @@ evil:PaperTrailScrapbook::Changes#detailed_analysis:/Users/tj/projects/paper_tra
    end
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#detailed_analysis:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:42:6f22d
-@@ -1,16 +1,16 @@
- def detailed_analysis(k, new, old)
-   if creating?
-     find_value(k, new).to_s
-   else
-     if old.nil?
-       "#{find_value(k, new)}#{" added"}"
-     else
-       if new.nil?
-         "#{find_value(k, old)}#{" was *removed*"}"
-       else
--        "#{find_value(k, old)}#{" -> "}#{find_value(k, new)}"
-+        "#{find_value(k, old)}#{" -> "}#{find_value(self, new)}"
-       end
-     end
-   end
- end
------------------------
 evil:PaperTrailScrapbook::Changes#detailed_analysis:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:42:65ae4
 @@ -1,16 +1,16 @@
  def detailed_analysis(k, new, old)
@@ -1859,6 +1835,25 @@ evil:PaperTrailScrapbook::Changes#detailed_analysis:/Users/tj/projects/paper_tra
        else
 -        "#{find_value(k, old)}#{" -> "}#{find_value(k, new)}"
 +        "#{find_value(k, old)}#{" -> "}#{find_value(nil, new)}"
+       end
+     end
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#detailed_analysis:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:42:6f22d
+@@ -1,16 +1,16 @@
+ def detailed_analysis(k, new, old)
+   if creating?
+     find_value(k, new).to_s
+   else
+     if old.nil?
+       "#{find_value(k, new)}#{" added"}"
+     else
+       if new.nil?
+         "#{find_value(k, old)}#{" was *removed*"}"
+       else
+-        "#{find_value(k, old)}#{" -> "}#{find_value(k, new)}"
++        "#{find_value(k, old)}#{" -> "}#{find_value(self, new)}"
        end
      end
    end
@@ -1879,17 +1874,6 @@ evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapboo
    "#{BULLET}#{" "}#{k.tr("_", " ")}#{": "}#{detailed_analysis(k, new, old)}"
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:35:86456
-@@ -1,8 +1,8 @@
- def digest(k, v)
-   old, new = v
--  if (old.nil? && (new.nil? || new.eql?("")))
-+  if nil
-     return
-   end
-   "#{BULLET}#{" "}#{k.tr("_", " ")}#{": "}#{detailed_analysis(k, new, old)}"
- end
------------------------
 evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:35:961ab
 @@ -1,8 +1,6 @@
  def digest(k, v)
@@ -1898,6 +1882,17 @@ evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapboo
 -    return
 -  end
 +  self
+   "#{BULLET}#{" "}#{k.tr("_", " ")}#{": "}#{detailed_analysis(k, new, old)}"
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:35:86456
+@@ -1,8 +1,8 @@
+ def digest(k, v)
+   old, new = v
+-  if (old.nil? && (new.nil? || new.eql?("")))
++  if nil
+     return
+   end
    "#{BULLET}#{" "}#{k.tr("_", " ")}#{": "}#{detailed_analysis(k, new, old)}"
  end
 -----------------------
@@ -1945,17 +1940,6 @@ evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapboo
    "#{BULLET}#{" "}#{k.tr("_", " ")}#{": "}#{detailed_analysis(k, new, old)}"
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:35:8562b
-@@ -1,8 +1,8 @@
- def digest(k, v)
-   old, new = v
--  if (old.nil? && (new.nil? || new.eql?("")))
-+  if (old.nil? && (nil || new.eql?("")))
-     return
-   end
-   "#{BULLET}#{" "}#{k.tr("_", " ")}#{": "}#{detailed_analysis(k, new, old)}"
- end
------------------------
 evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:35:3d861
 @@ -1,8 +1,8 @@
  def digest(k, v)
@@ -1978,12 +1962,12 @@ evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapboo
    "#{BULLET}#{" "}#{k.tr("_", " ")}#{": "}#{detailed_analysis(k, new, old)}"
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:35:f1a31
+evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:35:8562b
 @@ -1,8 +1,8 @@
  def digest(k, v)
    old, new = v
 -  if (old.nil? && (new.nil? || new.eql?("")))
-+  if (old.nil? && (new.nil? || new.equal?("")))
++  if (old.nil? && (nil || new.eql?("")))
      return
    end
    "#{BULLET}#{" "}#{k.tr("_", " ")}#{": "}#{detailed_analysis(k, new, old)}"
@@ -2011,23 +1995,23 @@ evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapboo
    "#{BULLET}#{" "}#{k.tr("_", " ")}#{": "}#{detailed_analysis(k, new, old)}"
  end
 -----------------------
+evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:35:f1a31
+@@ -1,8 +1,8 @@
+ def digest(k, v)
+   old, new = v
+-  if (old.nil? && (new.nil? || new.eql?("")))
++  if (old.nil? && (new.nil? || new.equal?("")))
+     return
+   end
+   "#{BULLET}#{" "}#{k.tr("_", " ")}#{": "}#{detailed_analysis(k, new, old)}"
+ end
+-----------------------
 evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:35:e5283
 @@ -1,8 +1,8 @@
  def digest(k, v)
    old, new = v
 -  if (old.nil? && (new.nil? || new.eql?("")))
 +  if (old.nil? && (new.nil? || self.eql?("")))
-     return
-   end
-   "#{BULLET}#{" "}#{k.tr("_", " ")}#{": "}#{detailed_analysis(k, new, old)}"
- end
------------------------
-evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:35:4d123
-@@ -1,8 +1,8 @@
- def digest(k, v)
-   old, new = v
--  if (old.nil? && (new.nil? || new.eql?("")))
-+  if (old.nil? && (new.nil? || new.eql?(self)))
      return
    end
    "#{BULLET}#{" "}#{k.tr("_", " ")}#{": "}#{detailed_analysis(k, new, old)}"
@@ -2044,12 +2028,12 @@ evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapboo
    "#{BULLET}#{" "}#{k.tr("_", " ")}#{": "}#{detailed_analysis(k, new, old)}"
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:35:0881e
+evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:35:4d123
 @@ -1,8 +1,8 @@
  def digest(k, v)
    old, new = v
 -  if (old.nil? && (new.nil? || new.eql?("")))
-+  if false
++  if (old.nil? && (new.nil? || new.eql?(self)))
      return
    end
    "#{BULLET}#{" "}#{k.tr("_", " ")}#{": "}#{detailed_analysis(k, new, old)}"
@@ -2073,6 +2057,17 @@ evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapboo
    if (old.nil? && (new.nil? || new.eql?("")))
 -    return
 +    self
+   end
+   "#{BULLET}#{" "}#{k.tr("_", " ")}#{": "}#{detailed_analysis(k, new, old)}"
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#digest:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:35:0881e
+@@ -1,8 +1,8 @@
+ def digest(k, v)
+   old, new = v
+-  if (old.nil? && (new.nil? || new.eql?("")))
++  if false
+     return
    end
    "#{BULLET}#{" "}#{k.tr("_", " ")}#{": "}#{detailed_analysis(k, new, old)}"
  end
@@ -2289,23 +2284,6 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    end
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:e86bf
-@@ -1,14 +1,12 @@
- def find_value(key, value)
-   unless assoc.key?(key)
-     return value.to_s
-   end
--  unless value
--    return "*empty*"
--  end
-+  return "*empty*"
-   begin
-     assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
-   rescue StandardError
-     "#{"*not found*["}#{value}#{"]"}"
-   end
- end
------------------------
 evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:69d2a
 @@ -1,14 +1,14 @@
  def find_value(key, value)
@@ -2314,23 +2292,6 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    end
 -  unless value
 +  unless true
-     return "*empty*"
-   end
-   begin
-     assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
-   rescue StandardError
-     "#{"*not found*["}#{value}#{"]"}"
-   end
- end
------------------------
-evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:0f2e3
-@@ -1,14 +1,14 @@
- def find_value(key, value)
-   unless assoc.key?(key)
-     return value.to_s
-   end
--  unless value
-+  if value
      return "*empty*"
    end
    begin
@@ -2357,16 +2318,33 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    end
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:a8e8e
+evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:0f2e3
 @@ -1,14 +1,14 @@
  def find_value(key, value)
    unless assoc.key?(key)
      return value.to_s
    end
-   unless value
--    return "*empty*"
-+    "*empty*"
+-  unless value
++  if value
+     return "*empty*"
    end
+   begin
+     assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
+   rescue StandardError
+     "#{"*not found*["}#{value}#{"]"}"
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:e86bf
+@@ -1,14 +1,12 @@
+ def find_value(key, value)
+   unless assoc.key?(key)
+     return value.to_s
+   end
+-  unless value
+-    return "*empty*"
+-  end
++  return "*empty*"
    begin
      assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
    rescue StandardError
@@ -2408,6 +2386,40 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    end
  end
 -----------------------
+evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:45883
+@@ -1,14 +1,14 @@
+ def find_value(key, value)
+   unless assoc.key?(key)
+     return value.to_s
+   end
+   unless value
+-    return "*empty*"
++    return self
+   end
+   begin
+     assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
+   rescue StandardError
+     "#{"*not found*["}#{value}#{"]"}"
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:a8e8e
+@@ -1,14 +1,14 @@
+ def find_value(key, value)
+   unless assoc.key?(key)
+     return value.to_s
+   end
+   unless value
+-    return "*empty*"
++    "*empty*"
+   end
+   begin
+     assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
+   rescue StandardError
+     "#{"*not found*["}#{value}#{"]"}"
+   end
+ end
+-----------------------
 evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:c98cc
 @@ -1,14 +1,14 @@
  def find_value(key, value)
@@ -2437,23 +2449,6 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    begin
 -    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
 +    nil
-   rescue StandardError
-     "#{"*not found*["}#{value}#{"]"}"
-   end
- end
------------------------
-evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:45883
-@@ -1,14 +1,14 @@
- def find_value(key, value)
-   unless assoc.key?(key)
-     return value.to_s
-   end
-   unless value
--    return "*empty*"
-+    return self
-   end
-   begin
-     assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
    rescue StandardError
      "#{"*not found*["}#{value}#{"]"}"
    end
@@ -2510,40 +2505,6 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    end
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:3b543
-@@ -1,14 +1,14 @@
- def find_value(key, value)
-   unless assoc.key?(key)
-     return value.to_s
-   end
-   unless value
-     return "*empty*"
-   end
-   begin
--    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
-+    self.to_s + "#{"["}#{value}#{"]"}"
-   rescue StandardError
-     "#{"*not found*["}#{value}#{"]"}"
-   end
- end
------------------------
-evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:7251f
-@@ -1,14 +1,14 @@
- def find_value(key, value)
-   unless assoc.key?(key)
-     return value.to_s
-   end
-   unless value
-     return "*empty*"
-   end
-   begin
--    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
-+    assoc[key].find(value).to_str.to_s + "#{"["}#{value}#{"]"}"
-   rescue StandardError
-     "#{"*not found*["}#{value}#{"]"}"
-   end
- end
------------------------
 evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:71691
 @@ -1,14 +1,14 @@
  def find_value(key, value)
@@ -2578,6 +2539,23 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    end
  end
 -----------------------
+evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:7251f
+@@ -1,14 +1,14 @@
+ def find_value(key, value)
+   unless assoc.key?(key)
+     return value.to_s
+   end
+   unless value
+     return "*empty*"
+   end
+   begin
+-    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
++    assoc[key].find(value).to_str.to_s + "#{"["}#{value}#{"]"}"
+   rescue StandardError
+     "#{"*not found*["}#{value}#{"]"}"
+   end
+ end
+-----------------------
 evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:ab2e3
 @@ -1,14 +1,14 @@
  def find_value(key, value)
@@ -2590,6 +2568,23 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    begin
 -    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
 +    assoc[key].find(value).to_s.to_str + "#{"["}#{value}#{"]"}"
+   rescue StandardError
+     "#{"*not found*["}#{value}#{"]"}"
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:3b543
+@@ -1,14 +1,14 @@
+ def find_value(key, value)
+   unless assoc.key?(key)
+     return value.to_s
+   end
+   unless value
+     return "*empty*"
+   end
+   begin
+-    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
++    self.to_s + "#{"["}#{value}#{"]"}"
    rescue StandardError
      "#{"*not found*["}#{value}#{"]"}"
    end
@@ -2629,6 +2624,23 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    end
  end
 -----------------------
+evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:de239
+@@ -1,14 +1,14 @@
+ def find_value(key, value)
+   unless assoc.key?(key)
+     return value.to_s
+   end
+   unless value
+     return "*empty*"
+   end
+   begin
+-    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
++    value.to_s.to_s + "#{"["}#{value}#{"]"}"
+   rescue StandardError
+     "#{"*not found*["}#{value}#{"]"}"
+   end
+ end
+-----------------------
 evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:fb05e
 @@ -1,14 +1,14 @@
  def find_value(key, value)
@@ -2641,57 +2653,6 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    begin
 -    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
 +    self.find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
-   rescue StandardError
-     "#{"*not found*["}#{value}#{"]"}"
-   end
- end
------------------------
-evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:17b1d
-@@ -1,14 +1,14 @@
- def find_value(key, value)
-   unless assoc.key?(key)
-     return value.to_s
-   end
-   unless value
-     return "*empty*"
-   end
-   begin
--    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
-+    assoc.find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
-   rescue StandardError
-     "#{"*not found*["}#{value}#{"]"}"
-   end
- end
------------------------
-evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:e0bcd
-@@ -1,14 +1,14 @@
- def find_value(key, value)
-   unless assoc.key?(key)
-     return value.to_s
-   end
-   unless value
-     return "*empty*"
-   end
-   begin
--    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
-+    assoc.at(key).find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
-   rescue StandardError
-     "#{"*not found*["}#{value}#{"]"}"
-   end
- end
------------------------
-evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:6d4af
-@@ -1,14 +1,14 @@
- def find_value(key, value)
-   unless assoc.key?(key)
-     return value.to_s
-   end
-   unless value
-     return "*empty*"
-   end
-   begin
--    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
-+    assoc.key?(key).find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
    rescue StandardError
      "#{"*not found*["}#{value}#{"]"}"
    end
@@ -2714,7 +2675,7 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    end
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:de239
+evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:e0bcd
 @@ -1,14 +1,14 @@
  def find_value(key, value)
    unless assoc.key?(key)
@@ -2725,7 +2686,41 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    end
    begin
 -    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
-+    value.to_s.to_s + "#{"["}#{value}#{"]"}"
++    assoc.at(key).find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
+   rescue StandardError
+     "#{"*not found*["}#{value}#{"]"}"
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:17b1d
+@@ -1,14 +1,14 @@
+ def find_value(key, value)
+   unless assoc.key?(key)
+     return value.to_s
+   end
+   unless value
+     return "*empty*"
+   end
+   begin
+-    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
++    assoc.find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
+   rescue StandardError
+     "#{"*not found*["}#{value}#{"]"}"
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:6d4af
+@@ -1,14 +1,14 @@
+ def find_value(key, value)
+   unless assoc.key?(key)
+     return value.to_s
+   end
+   unless value
+     return "*empty*"
+   end
+   begin
+-    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
++    assoc.key?(key).find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
    rescue StandardError
      "#{"*not found*["}#{value}#{"]"}"
    end
@@ -2782,23 +2777,6 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    end
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:c236b
-@@ -1,14 +1,14 @@
- def find_value(key, value)
-   unless assoc.key?(key)
-     return value.to_s
-   end
-   unless value
-     return "*empty*"
-   end
-   begin
--    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
-+    assoc[self].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
-   rescue StandardError
-     "#{"*not found*["}#{value}#{"]"}"
-   end
- end
------------------------
 evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:4081f
 @@ -1,14 +1,14 @@
  def find_value(key, value)
@@ -2816,7 +2794,7 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    end
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:b4830
+evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:c236b
 @@ -1,14 +1,14 @@
  def find_value(key, value)
    unless assoc.key?(key)
@@ -2827,7 +2805,7 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    end
    begin
 -    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
-+    assoc[key].find(self).to_s.to_s + "#{"["}#{value}#{"]"}"
++    assoc[self].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
    rescue StandardError
      "#{"*not found*["}#{value}#{"]"}"
    end
@@ -2867,7 +2845,7 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    end
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:e5bc0
+evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:b4830
 @@ -1,14 +1,14 @@
  def find_value(key, value)
    unless assoc.key?(key)
@@ -2878,7 +2856,7 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    end
    begin
 -    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
-+    "#{"["}#{value}#{"]"}"
++    assoc[key].find(self).to_s.to_s + "#{"["}#{value}#{"]"}"
    rescue StandardError
      "#{"*not found*["}#{value}#{"]"}"
    end
@@ -2901,6 +2879,23 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    end
  end
 -----------------------
+evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:e5bc0
+@@ -1,14 +1,14 @@
+ def find_value(key, value)
+   unless assoc.key?(key)
+     return value.to_s
+   end
+   unless value
+     return "*empty*"
+   end
+   begin
+-    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
++    "#{"["}#{value}#{"]"}"
+   rescue StandardError
+     "#{"*not found*["}#{value}#{"]"}"
+   end
+ end
+-----------------------
 evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:8a5f9
 @@ -1,14 +1,14 @@
  def find_value(key, value)
@@ -2913,57 +2908,6 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    begin
 -    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
 +    assoc[key].find(value).to_s.to_s + "#{self}#{value}#{"]"}"
-   rescue StandardError
-     "#{"*not found*["}#{value}#{"]"}"
-   end
- end
------------------------
-evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:e2bf4
-@@ -1,14 +1,14 @@
- def find_value(key, value)
-   unless assoc.key?(key)
-     return value.to_s
-   end
-   unless value
-     return "*empty*"
-   end
-   begin
--    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
-+    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{self}"
-   rescue StandardError
-     "#{"*not found*["}#{value}#{"]"}"
-   end
- end
------------------------
-evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:93e4c
-@@ -1,14 +1,14 @@
- def find_value(key, value)
-   unless assoc.key?(key)
-     return value.to_s
-   end
-   unless value
-     return "*empty*"
-   end
-   begin
--    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
-+    assoc[key].find(value).to_s.to_s + "#{"["}#{self}#{"]"}"
-   rescue StandardError
-     "#{"*not found*["}#{value}#{"]"}"
-   end
- end
------------------------
-evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:e451c
-@@ -1,14 +1,14 @@
- def find_value(key, value)
-   unless assoc.key?(key)
-     return value.to_s
-   end
-   unless value
-     return "*empty*"
-   end
-   begin
--    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
-+    assoc[key].find(value).to_s.to_s + nil
    rescue StandardError
      "#{"*not found*["}#{value}#{"]"}"
    end
@@ -2986,6 +2930,23 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    end
  end
 -----------------------
+evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:93e4c
+@@ -1,14 +1,14 @@
+ def find_value(key, value)
+   unless assoc.key?(key)
+     return value.to_s
+   end
+   unless value
+     return "*empty*"
+   end
+   begin
+-    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
++    assoc[key].find(value).to_s.to_s + "#{"["}#{self}#{"]"}"
+   rescue StandardError
+     "#{"*not found*["}#{value}#{"]"}"
+   end
+ end
+-----------------------
 evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:de806
 @@ -1,14 +1,14 @@
  def find_value(key, value)
@@ -2998,6 +2959,40 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    begin
 -    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
 +    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{nil}"
+   rescue StandardError
+     "#{"*not found*["}#{value}#{"]"}"
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:e2bf4
+@@ -1,14 +1,14 @@
+ def find_value(key, value)
+   unless assoc.key?(key)
+     return value.to_s
+   end
+   unless value
+     return "*empty*"
+   end
+   begin
+-    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
++    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{self}"
+   rescue StandardError
+     "#{"*not found*["}#{value}#{"]"}"
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:e451c
+@@ -1,14 +1,14 @@
+ def find_value(key, value)
+   unless assoc.key?(key)
+     return value.to_s
+   end
+   unless value
+     return "*empty*"
+   end
+   begin
+-    assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
++    assoc[key].find(value).to_s.to_s + nil
    rescue StandardError
      "#{"*not found*["}#{value}#{"]"}"
    end
@@ -3104,7 +3099,7 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    end
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:13f8d
+evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:cdb42
 @@ -1,14 +1,14 @@
  def find_value(key, value)
    unless assoc.key?(key)
@@ -3117,7 +3112,7 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
      assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
    rescue StandardError
 -    "#{"*not found*["}#{value}#{"]"}"
-+    "#{"*not found*["}#{self}#{"]"}"
++    nil
    end
  end
 -----------------------
@@ -3138,7 +3133,7 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    end
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:cdb42
+evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:13f8d
 @@ -1,14 +1,14 @@
  def find_value(key, value)
    unless assoc.key?(key)
@@ -3151,7 +3146,7 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
      assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
    rescue StandardError
 -    "#{"*not found*["}#{value}#{"]"}"
-+    nil
++    "#{"*not found*["}#{self}#{"]"}"
    end
  end
 -----------------------
@@ -3188,23 +3183,6 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
    end
  end
 -----------------------
-evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:2a777
-@@ -1,14 +1,14 @@
- def find_value(key, value)
-   unless assoc.key?(key)
-     return value.to_s
-   end
-   unless value
-     return "*empty*"
-   end
-   begin
-     assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
--  rescue StandardError
-+  rescue self
-     "#{"*not found*["}#{value}#{"]"}"
-   end
- end
------------------------
 evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:5a2ea
 @@ -1,14 +1,10 @@
  def find_value(key, value)
@@ -3220,6 +3198,23 @@ evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scra
 -    "#{"*not found*["}#{value}#{"]"}"
 -  end
 +  nil
+ end
+-----------------------
+evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:2a777
+@@ -1,14 +1,14 @@
+ def find_value(key, value)
+   unless assoc.key?(key)
+     return value.to_s
+   end
+   unless value
+     return "*empty*"
+   end
+   begin
+     assoc[key].find(value).to_s.to_s + "#{"["}#{value}#{"]"}"
+-  rescue StandardError
++  rescue self
+     "#{"*not found*["}#{value}#{"]"}"
+   end
  end
 -----------------------
 evil:PaperTrailScrapbook::Changes#find_value:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/changes.rb:58:d956d
@@ -3268,18 +3263,18 @@ evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbo
 +  " "
  end
 -----------------------
-evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:26:7aa18
-@@ -1,4 +1,4 @@
- def preface
--  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{" info:"}".squeeze(" ")
-+  "#{nil}#{whenn}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{" info:"}".squeeze(" ")
- end
------------------------
 evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:26:4d393
 @@ -1,4 +1,4 @@
  def preface
 -  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{" info:"}".squeeze(" ")
 +  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{" info:"}"
+ end
+-----------------------
+evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:26:7aa18
+@@ -1,4 +1,4 @@
+ def preface
+-  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{" info:"}".squeeze(" ")
++  "#{nil}#{whenn}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{" info:"}".squeeze(" ")
  end
 -----------------------
 evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:26:17d1c
@@ -3289,18 +3284,18 @@ evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbo
 +  "#{self}#{whenn}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{" info:"}".squeeze(" ")
  end
 -----------------------
-evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:26:d67b6
-@@ -1,4 +1,4 @@
- def preface
--  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{" info:"}".squeeze(" ")
-+  "#{"On "}#{nil}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{" info:"}".squeeze(" ")
- end
------------------------
 evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:26:eeb8d
 @@ -1,4 +1,4 @@
  def preface
 -  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{" info:"}".squeeze(" ")
 +  "#{"On "}#{self}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{" info:"}".squeeze(" ")
+ end
+-----------------------
+evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:26:d67b6
+@@ -1,4 +1,4 @@
+ def preface
+-  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{" info:"}".squeeze(" ")
++  "#{"On "}#{nil}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{" info:"}".squeeze(" ")
  end
 -----------------------
 evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:26:c2616
@@ -3352,11 +3347,11 @@ evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbo
 +  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{nil}#{" the following "}#{model}#{" info:"}".squeeze(" ")
  end
 -----------------------
-evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:26:c5c2f
+evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:26:fd95e
 @@ -1,4 +1,4 @@
  def preface
 -  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{" info:"}".squeeze(" ")
-+  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{kind}#{self}#{model}#{" info:"}".squeeze(" ")
++  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{self}#{" the following "}#{model}#{" info:"}".squeeze(" ")
  end
 -----------------------
 evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:26:1d055
@@ -3366,11 +3361,11 @@ evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbo
 +  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{kind}#{nil}#{model}#{" info:"}".squeeze(" ")
  end
 -----------------------
-evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:26:fd95e
+evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:26:c5c2f
 @@ -1,4 +1,4 @@
  def preface
 -  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{" info:"}".squeeze(" ")
-+  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{self}#{" the following "}#{model}#{" info:"}".squeeze(" ")
++  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{kind}#{self}#{model}#{" info:"}".squeeze(" ")
  end
 -----------------------
 evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:26:96f5c
@@ -3387,18 +3382,18 @@ evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbo
 +  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{kind}#{" the following "}#{self}#{" info:"}".squeeze(" ")
  end
 -----------------------
-evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:26:081c1
-@@ -1,4 +1,4 @@
- def preface
--  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{" info:"}".squeeze(" ")
-+  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{nil}".squeeze(" ")
- end
------------------------
 evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:26:18384
 @@ -1,4 +1,4 @@
  def preface
 -  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{" info:"}".squeeze(" ")
 +  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{self}".squeeze(" ")
+ end
+-----------------------
+evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:26:081c1
+@@ -1,4 +1,4 @@
+ def preface
+-  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{" info:"}".squeeze(" ")
++  "#{"On "}#{whenn}#{", "}#{who}#{" "}#{kind}#{" the following "}#{model}#{nil}".squeeze(" ")
  end
 -----------------------
 evil:PaperTrailScrapbook::Chapter#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:26:13576
@@ -3486,23 +3481,23 @@ evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook
    "#{preface}#{"\n"}#{updates}"
  end
 -----------------------
-evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:17:3ecd0
-@@ -1,8 +1,8 @@
- def story
-   updates = changes
--  unless ((create? || updates.present?) || (!config.filter_non_changes))
-+  unless ((nil || updates.present?) || (!config.filter_non_changes))
-     return
-   end
-   "#{preface}#{"\n"}#{updates}"
- end
------------------------
 evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:17:57ea2
 @@ -1,8 +1,8 @@
  def story
    updates = changes
 -  unless ((create? || updates.present?) || (!config.filter_non_changes))
 +  unless ((self || updates.present?) || (!config.filter_non_changes))
+     return
+   end
+   "#{preface}#{"\n"}#{updates}"
+ end
+-----------------------
+evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:17:3ecd0
+@@ -1,8 +1,8 @@
+ def story
+   updates = changes
+-  unless ((create? || updates.present?) || (!config.filter_non_changes))
++  unless ((nil || updates.present?) || (!config.filter_non_changes))
      return
    end
    "#{preface}#{"\n"}#{updates}"
@@ -3541,6 +3536,17 @@ evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook
    "#{preface}#{"\n"}#{updates}"
  end
 -----------------------
+evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:17:5f1fc
+@@ -1,8 +1,8 @@
+ def story
+   updates = changes
+-  unless ((create? || updates.present?) || (!config.filter_non_changes))
++  unless ((create? || updates.present?) || self)
+     return
+   end
+   "#{preface}#{"\n"}#{updates}"
+ end
+-----------------------
 evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:17:b2cdf
 @@ -1,8 +1,8 @@
  def story
@@ -3552,12 +3558,12 @@ evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook
    "#{preface}#{"\n"}#{updates}"
  end
 -----------------------
-evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:17:5f1fc
+evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:17:c36db
 @@ -1,8 +1,8 @@
  def story
    updates = changes
 -  unless ((create? || updates.present?) || (!config.filter_non_changes))
-+  unless ((create? || updates.present?) || self)
++  unless ((create? || updates.present?) || (!self))
      return
    end
    "#{preface}#{"\n"}#{updates}"
@@ -3580,17 +3586,6 @@ evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook
    updates = changes
 -  unless ((create? || updates.present?) || (!config.filter_non_changes))
 +  unless ((create? || updates.present?) || (!config))
-     return
-   end
-   "#{preface}#{"\n"}#{updates}"
- end
------------------------
-evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:17:c36db
-@@ -1,8 +1,8 @@
- def story
-   updates = changes
--  unless ((create? || updates.present?) || (!config.filter_non_changes))
-+  unless ((create? || updates.present?) || (!self))
      return
    end
    "#{preface}#{"\n"}#{updates}"
@@ -3651,7 +3646,7 @@ evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook
 +  "#{nil}#{"\n"}#{updates}"
  end
 -----------------------
-evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:17:254e8
+evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:17:08f8d
 @@ -1,8 +1,8 @@
  def story
    updates = changes
@@ -3659,7 +3654,7 @@ evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook
      return
    end
 -  "#{preface}#{"\n"}#{updates}"
-+  "#{preface}#{nil}#{updates}"
++  "#{preface}#{self}#{updates}"
  end
 -----------------------
 evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:17:0a910
@@ -3673,7 +3668,7 @@ evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook
 +  "#{self}#{"\n"}#{updates}"
  end
 -----------------------
-evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:17:08f8d
+evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/chapter.rb:17:254e8
 @@ -1,8 +1,8 @@
  def story
    updates = changes
@@ -3681,7 +3676,7 @@ evil:PaperTrailScrapbook::Chapter#story:/Users/tj/projects/paper_trail_scrapbook
      return
    end
 -  "#{preface}#{"\n"}#{updates}"
-+  "#{preface}#{self}#{updates}"
++  "#{preface}#{nil}#{updates}"
  end
 -----------------------
 PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/config.rb:25
@@ -3799,6 +3794,22 @@ evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrap
    @filter_non_changes = true
  end
 -----------------------
+evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/config.rb:25:04c54
+@@ -1,13 +1,13 @@
+ def initialize
+   @whodunnit_class = nil
+   @time_format = DEFAULT_TIME_FORMAT
+   @events = DEFAULT_EVENTS
+   @scrub_columns = SCRUB_COLUMNS
+   @unknown_whodunnit = UNKNOWN_WHODUNNIT
+-  @invalid_whodunnit = proc do |w|
++  @invalid_whodunnit = lambda do |w|
+     "#{"*missing ("}#{w}#{")*"}"
+   end
+   @drop_id_suffix = true
+   @filter_non_changes = true
+ end
+-----------------------
 evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/config.rb:25:4239f
 @@ -1,13 +1,11 @@
  def initialize
@@ -3811,22 +3822,6 @@ evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrap
 -    "#{"*missing ("}#{w}#{")*"}"
 -  end
 +  @invalid_whodunnit = self
-   @drop_id_suffix = true
-   @filter_non_changes = true
- end
------------------------
-evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/config.rb:25:7a8e7
-@@ -1,13 +1,13 @@
- def initialize
-   @whodunnit_class = nil
-   @time_format = DEFAULT_TIME_FORMAT
-   @events = DEFAULT_EVENTS
-   @scrub_columns = SCRUB_COLUMNS
-   @unknown_whodunnit = UNKNOWN_WHODUNNIT
--  @invalid_whodunnit = proc do |w|
-+  @invalid_whodunnit = proc do
-     "#{"*missing ("}#{w}#{")*"}"
-   end
    @drop_id_suffix = true
    @filter_non_changes = true
  end
@@ -3847,7 +3842,7 @@ evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrap
    @filter_non_changes = true
  end
 -----------------------
-evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/config.rb:25:04c54
+evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/config.rb:25:7a8e7
 @@ -1,13 +1,13 @@
  def initialize
    @whodunnit_class = nil
@@ -3856,7 +3851,7 @@ evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrap
    @scrub_columns = SCRUB_COLUMNS
    @unknown_whodunnit = UNKNOWN_WHODUNNIT
 -  @invalid_whodunnit = proc do |w|
-+  @invalid_whodunnit = lambda do |w|
++  @invalid_whodunnit = proc do
      "#{"*missing ("}#{w}#{")*"}"
    end
    @drop_id_suffix = true
@@ -3878,22 +3873,6 @@ evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrap
    @filter_non_changes = true
  end
 -----------------------
-evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/config.rb:25:55484
-@@ -1,13 +1,13 @@
- def initialize
-   @whodunnit_class = nil
-   @time_format = DEFAULT_TIME_FORMAT
-   @events = DEFAULT_EVENTS
-   @scrub_columns = SCRUB_COLUMNS
-   @unknown_whodunnit = UNKNOWN_WHODUNNIT
-   @invalid_whodunnit = proc do |w|
--    "#{"*missing ("}#{w}#{")*"}"
-+    "#{nil}#{w}#{")*"}"
-   end
-   @drop_id_suffix = true
-   @filter_non_changes = true
- end
------------------------
 evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/config.rb:25:79b85
 @@ -1,13 +1,13 @@
  def initialize
@@ -3910,7 +3889,7 @@ evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrap
    @filter_non_changes = true
  end
 -----------------------
-evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/config.rb:25:53bbb
+evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/config.rb:25:55484
 @@ -1,13 +1,13 @@
  def initialize
    @whodunnit_class = nil
@@ -3920,7 +3899,23 @@ evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrap
    @unknown_whodunnit = UNKNOWN_WHODUNNIT
    @invalid_whodunnit = proc do |w|
 -    "#{"*missing ("}#{w}#{")*"}"
-+    "#{"*missing ("}#{nil}#{")*"}"
++    "#{nil}#{w}#{")*"}"
+   end
+   @drop_id_suffix = true
+   @filter_non_changes = true
+ end
+-----------------------
+evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/config.rb:25:2dd3e
+@@ -1,13 +1,13 @@
+ def initialize
+   @whodunnit_class = nil
+   @time_format = DEFAULT_TIME_FORMAT
+   @events = DEFAULT_EVENTS
+   @scrub_columns = SCRUB_COLUMNS
+   @unknown_whodunnit = UNKNOWN_WHODUNNIT
+   @invalid_whodunnit = proc do |w|
+-    "#{"*missing ("}#{w}#{")*"}"
++    "#{self}#{w}#{")*"}"
    end
    @drop_id_suffix = true
    @filter_non_changes = true
@@ -3942,6 +3937,22 @@ evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrap
    @filter_non_changes = true
  end
 -----------------------
+evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/config.rb:25:53bbb
+@@ -1,13 +1,13 @@
+ def initialize
+   @whodunnit_class = nil
+   @time_format = DEFAULT_TIME_FORMAT
+   @events = DEFAULT_EVENTS
+   @scrub_columns = SCRUB_COLUMNS
+   @unknown_whodunnit = UNKNOWN_WHODUNNIT
+   @invalid_whodunnit = proc do |w|
+-    "#{"*missing ("}#{w}#{")*"}"
++    "#{"*missing ("}#{nil}#{")*"}"
+   end
+   @drop_id_suffix = true
+   @filter_non_changes = true
+ end
+-----------------------
 evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/config.rb:25:0cc97
 @@ -1,13 +1,13 @@
  def initialize
@@ -3953,22 +3964,6 @@ evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrap
    @invalid_whodunnit = proc do |w|
 -    "#{"*missing ("}#{w}#{")*"}"
 +    "#{"*missing ("}#{self}#{")*"}"
-   end
-   @drop_id_suffix = true
-   @filter_non_changes = true
- end
------------------------
-evil:PaperTrailScrapbook::Config#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/config.rb:25:2dd3e
-@@ -1,13 +1,13 @@
- def initialize
-   @whodunnit_class = nil
-   @time_format = DEFAULT_TIME_FORMAT
-   @events = DEFAULT_EVENTS
-   @scrub_columns = SCRUB_COLUMNS
-   @unknown_whodunnit = UNKNOWN_WHODUNNIT
-   @invalid_whodunnit = proc do |w|
--    "#{"*missing ("}#{w}#{")*"}"
-+    "#{self}#{w}#{")*"}"
    end
    @drop_id_suffix = true
    @filter_non_changes = true
@@ -4057,8 +4052,8 @@ PaperTrailScrapbook::JournalEntry#preface:/Users/tj/projects/paper_trail_scrapbo
 - rspec:31:./spec/paper_trail_scrapbook/version_helpers_spec.rb:60/PaperTrailScrapbook::VersionHelpers#whenn returns version created_at
 - rspec:32:./spec/paper_trail_scrapbook/version_helpers_spec.rb:67/PaperTrailScrapbook::VersionHelpers#kind returns expected value
 - rspec:33:./spec/paper_trail_scrapbook/version_helpers_spec.rb:73/PaperTrailScrapbook::VersionHelpers#kind garbage returns expected value
-- rspec:34:./spec/paper_trail_scrapbook/version_helpers_spec.rb:82/PaperTrailScrapbook::VersionHelpers#who returns expected value
-- rspec:35:./spec/paper_trail_scrapbook/version_helpers_spec.rb:88/PaperTrailScrapbook::VersionHelpers#whodunnit_class returns expected value
+- rspec:34:./spec/paper_trail_scrapbook/version_helpers_spec.rb:85/PaperTrailScrapbook::VersionHelpers#who returns expected value
+- rspec:35:./spec/paper_trail_scrapbook/version_helpers_spec.rb:91/PaperTrailScrapbook::VersionHelpers#whodunnit_class returns expected value
 neutral:PaperTrailScrapbook::JournalEntry#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/journal_entry.rb:28:1ccd3
 --- Neutral failure ---
 Original code was inserted unmutated. And the test did NOT PASS.
@@ -4087,7 +4082,7 @@ def preface
   "#{"On "}#{whenn}#{", "}#{kind}#{" "}#{model}#{"["}#{model_id}#{"]:"}".squeeze(" ")
 end
 Test Result:
-- 36 @ runtime: 1.093317
+- 36 @ runtime: 3.173713
   - rspec:0:./spec/paper_trail_scrapbook/changes_spec.rb:79/PaperTrailScrapbook::Changes#change_log provides a set of update changes
   - rspec:1:./spec/paper_trail_scrapbook/changes_spec.rb:87/PaperTrailScrapbook::Changes#change_log filters the proper columns
   - rspec:2:./spec/paper_trail_scrapbook/changes_spec.rb:95/PaperTrailScrapbook::Changes#change_log provides a set of create changes
@@ -4122,24 +4117,31 @@ Test Result:
   - rspec:31:./spec/paper_trail_scrapbook/version_helpers_spec.rb:60/PaperTrailScrapbook::VersionHelpers#whenn returns version created_at
   - rspec:32:./spec/paper_trail_scrapbook/version_helpers_spec.rb:67/PaperTrailScrapbook::VersionHelpers#kind returns expected value
   - rspec:33:./spec/paper_trail_scrapbook/version_helpers_spec.rb:73/PaperTrailScrapbook::VersionHelpers#kind garbage returns expected value
-  - rspec:34:./spec/paper_trail_scrapbook/version_helpers_spec.rb:82/PaperTrailScrapbook::VersionHelpers#who returns expected value
-  - rspec:35:./spec/paper_trail_scrapbook/version_helpers_spec.rb:88/PaperTrailScrapbook::VersionHelpers#whodunnit_class returns expected value
+  - rspec:34:./spec/paper_trail_scrapbook/version_helpers_spec.rb:85/PaperTrailScrapbook::VersionHelpers#who returns expected value
+  - rspec:35:./spec/paper_trail_scrapbook/version_helpers_spec.rb:91/PaperTrailScrapbook::VersionHelpers#whodunnit_class returns expected value
 Test Output:
 Run options: include {:focus=>true}
 
 All examples were filtered out; ignoring {:focus=>true}
 
-Randomized with seed 41106
-...........F
+Randomized with seed 29215
+...............................F
 
 Failures:
 
-  1) PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-     Failure/Error: expect(object.starts).to eql 'Thursday, 01 Jan 1970 at 12:00 AM'
+  1) PaperTrailScrapbook::LifeHistory#story no papertrail has none
+     Failure/Error: expect(subject).to eql ''
 
-     NoMethodError:
-       private method `starts' called for #<PaperTrailScrapbook::UserJournal:0x007f9152881b58>
-     # ./spec/paper_trail_scrapbook/user_journal_spec.rb:38:in `block (4 levels) in <module:PaperTrailScrapbook>'
+       expected: ""
+            got: "On Saturday, 20 Jan 2018 at 11:15 PM, The Tim Man created the following Animal info:\n • species: Elephant"
+
+       (compared using eql?)
+
+       Diff:
+       @@ -1 +1,3 @@
+       +On Saturday, 20 Jan 2018 at 11:15 PM, The Tim Man created the following Animal info:
+       + • species: Elephant
+     # ./spec/paper_trail_scrapbook/life_history_spec.rb:93:in `block (4 levels) in <module:PaperTrailScrapbook>'
      # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-rspec-0.8.14/lib/mutant/integration/rspec.rb:63:in `call'
      # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:48:in `block in run_mutation_tests'
      # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:66:in `block in result'
@@ -4163,14 +4165,14 @@ Failures:
      # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/master.rb:43:in `block (2 levels) in run'
      # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/actor/env.rb:14:in `block in spawn'
 
-Finished in 0.86771 seconds (files took 44.49 seconds to load)
-12 examples, 1 failure
+Finished in 3.07 seconds (files took 39.37 seconds to load)
+32 examples, 1 failure
 
 Failed examples:
 
-rspec ./spec/paper_trail_scrapbook/user_journal_spec.rb:37 # PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
+rspec ./spec/paper_trail_scrapbook/life_history_spec.rb:91 # PaperTrailScrapbook::LifeHistory#story no papertrail has none
 
-Randomized with seed 41106
+Randomized with seed 29215
 
 -----------------------
 PaperTrailScrapbook::JournalEntry#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/journal_entry.rb:19
@@ -4208,8 +4210,8 @@ PaperTrailScrapbook::JournalEntry#story:/Users/tj/projects/paper_trail_scrapbook
 - rspec:31:./spec/paper_trail_scrapbook/version_helpers_spec.rb:60/PaperTrailScrapbook::VersionHelpers#whenn returns version created_at
 - rspec:32:./spec/paper_trail_scrapbook/version_helpers_spec.rb:67/PaperTrailScrapbook::VersionHelpers#kind returns expected value
 - rspec:33:./spec/paper_trail_scrapbook/version_helpers_spec.rb:73/PaperTrailScrapbook::VersionHelpers#kind garbage returns expected value
-- rspec:34:./spec/paper_trail_scrapbook/version_helpers_spec.rb:82/PaperTrailScrapbook::VersionHelpers#who returns expected value
-- rspec:35:./spec/paper_trail_scrapbook/version_helpers_spec.rb:88/PaperTrailScrapbook::VersionHelpers#whodunnit_class returns expected value
+- rspec:34:./spec/paper_trail_scrapbook/version_helpers_spec.rb:85/PaperTrailScrapbook::VersionHelpers#who returns expected value
+- rspec:35:./spec/paper_trail_scrapbook/version_helpers_spec.rb:91/PaperTrailScrapbook::VersionHelpers#whodunnit_class returns expected value
 neutral:PaperTrailScrapbook::JournalEntry#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/journal_entry.rb:19:d4bd8
 --- Neutral failure ---
 Original code was inserted unmutated. And the test did NOT PASS.
@@ -4245,7 +4247,7 @@ def story
   "#{preface}#{"\n"}#{updates}"
 end
 Test Result:
-- 36 @ runtime: 0.966464
+- 36 @ runtime: 2.052524
   - rspec:0:./spec/paper_trail_scrapbook/changes_spec.rb:79/PaperTrailScrapbook::Changes#change_log provides a set of update changes
   - rspec:1:./spec/paper_trail_scrapbook/changes_spec.rb:87/PaperTrailScrapbook::Changes#change_log filters the proper columns
   - rspec:2:./spec/paper_trail_scrapbook/changes_spec.rb:95/PaperTrailScrapbook::Changes#change_log provides a set of create changes
@@ -4280,24 +4282,31 @@ Test Result:
   - rspec:31:./spec/paper_trail_scrapbook/version_helpers_spec.rb:60/PaperTrailScrapbook::VersionHelpers#whenn returns version created_at
   - rspec:32:./spec/paper_trail_scrapbook/version_helpers_spec.rb:67/PaperTrailScrapbook::VersionHelpers#kind returns expected value
   - rspec:33:./spec/paper_trail_scrapbook/version_helpers_spec.rb:73/PaperTrailScrapbook::VersionHelpers#kind garbage returns expected value
-  - rspec:34:./spec/paper_trail_scrapbook/version_helpers_spec.rb:82/PaperTrailScrapbook::VersionHelpers#who returns expected value
-  - rspec:35:./spec/paper_trail_scrapbook/version_helpers_spec.rb:88/PaperTrailScrapbook::VersionHelpers#whodunnit_class returns expected value
+  - rspec:34:./spec/paper_trail_scrapbook/version_helpers_spec.rb:85/PaperTrailScrapbook::VersionHelpers#who returns expected value
+  - rspec:35:./spec/paper_trail_scrapbook/version_helpers_spec.rb:91/PaperTrailScrapbook::VersionHelpers#whodunnit_class returns expected value
 Test Output:
 Run options: include {:focus=>true}
 
 All examples were filtered out; ignoring {:focus=>true}
 
-Randomized with seed 41106
-...........F
+Randomized with seed 29215
+...............................F
 
 Failures:
 
-  1) PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-     Failure/Error: expect(object.starts).to eql 'Thursday, 01 Jan 1970 at 12:00 AM'
+  1) PaperTrailScrapbook::LifeHistory#story no papertrail has none
+     Failure/Error: expect(subject).to eql ''
 
-     NoMethodError:
-       private method `starts' called for #<PaperTrailScrapbook::UserJournal:0x007f91509ece40>
-     # ./spec/paper_trail_scrapbook/user_journal_spec.rb:38:in `block (4 levels) in <module:PaperTrailScrapbook>'
+       expected: ""
+            got: "On Saturday, 20 Jan 2018 at 11:15 PM, The Tim Man created the following Animal info:\n • species: Elephant"
+
+       (compared using eql?)
+
+       Diff:
+       @@ -1 +1,3 @@
+       +On Saturday, 20 Jan 2018 at 11:15 PM, The Tim Man created the following Animal info:
+       + • species: Elephant
+     # ./spec/paper_trail_scrapbook/life_history_spec.rb:93:in `block (4 levels) in <module:PaperTrailScrapbook>'
      # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-rspec-0.8.14/lib/mutant/integration/rspec.rb:63:in `call'
      # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:48:in `block in run_mutation_tests'
      # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:66:in `block in result'
@@ -4321,14 +4330,14 @@ Failures:
      # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/master.rb:43:in `block (2 levels) in run'
      # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/actor/env.rb:14:in `block in spawn'
 
-Finished in 0.65171 seconds (files took 48.49 seconds to load)
-12 examples, 1 failure
+Finished in 1.91 seconds (files took 43.36 seconds to load)
+32 examples, 1 failure
 
 Failed examples:
 
-rspec ./spec/paper_trail_scrapbook/user_journal_spec.rb:37 # PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
+rspec ./spec/paper_trail_scrapbook/life_history_spec.rb:91 # PaperTrailScrapbook::LifeHistory#story no papertrail has none
 
-Randomized with seed 41106
+Randomized with seed 29215
 
 -----------------------
 PaperTrailScrapbook::LifeHistory#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/life_history.rb:7
@@ -4355,7 +4364,7 @@ def initialize(object)
   @versions = object.versions
 end
 Test Result:
-- 7 @ runtime: 1.18471
+- 7 @ runtime: 0.834035
   - rspec:6:./spec/paper_trail_scrapbook/life_history_spec.rb:34/PaperTrailScrapbook::LifeHistory#story provides a whole story
   - rspec:7:./spec/paper_trail_scrapbook/life_history_spec.rb:41/PaperTrailScrapbook::LifeHistory#story provides a whole story missing to_s content
   - rspec:8:./spec/paper_trail_scrapbook/life_history_spec.rb:48/PaperTrailScrapbook::LifeHistory#story provides a whole story missing reference
@@ -4368,8 +4377,8 @@ Run options: include {:focus=>true}
 
 All examples were filtered out; ignoring {:focus=>true}
 
-Randomized with seed 41106
-.....F
+Randomized with seed 29215
+....F
 
 Failures:
 
@@ -4377,13 +4386,13 @@ Failures:
      Failure/Error: expect(subject).to eql ''
 
        expected: ""
-            got: "On Saturday, 20 Jan 2018 at 11:05 PM, The Tim Man created the following Animal info:\n • species: Elephant"
+            got: "On Saturday, 20 Jan 2018 at 11:15 PM, The Tim Man created the following Animal info:\n • species: Elephant"
 
        (compared using eql?)
 
        Diff:
        @@ -1 +1,3 @@
-       +On Saturday, 20 Jan 2018 at 11:05 PM, The Tim Man created the following Animal info:
+       +On Saturday, 20 Jan 2018 at 11:15 PM, The Tim Man created the following Animal info:
        + • species: Elephant
      # ./spec/paper_trail_scrapbook/life_history_spec.rb:93:in `block (4 levels) in <module:PaperTrailScrapbook>'
      # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-rspec-0.8.14/lib/mutant/integration/rspec.rb:63:in `call'
@@ -4409,14 +4418,14 @@ Failures:
      # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/master.rb:43:in `block (2 levels) in run'
      # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/actor/env.rb:14:in `block in spawn'
 
-Finished in 1.14 seconds (files took 56.57 seconds to load)
-6 examples, 1 failure
+Finished in 0.77173 seconds (files took 52.03 seconds to load)
+5 examples, 1 failure
 
 Failed examples:
 
 rspec ./spec/paper_trail_scrapbook/life_history_spec.rb:91 # PaperTrailScrapbook::LifeHistory#story no papertrail has none
 
-Randomized with seed 41106
+Randomized with seed 29215
 
 -----------------------
 PaperTrailScrapbook::LifeHistory#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/life_history.rb:15
@@ -4453,7 +4462,7 @@ def story
   end.compact.join("\n\n")
 end
 Test Result:
-- 7 @ runtime: 1.246753
+- 7 @ runtime: 0.910125
   - rspec:6:./spec/paper_trail_scrapbook/life_history_spec.rb:34/PaperTrailScrapbook::LifeHistory#story provides a whole story
   - rspec:7:./spec/paper_trail_scrapbook/life_history_spec.rb:41/PaperTrailScrapbook::LifeHistory#story provides a whole story missing to_s content
   - rspec:8:./spec/paper_trail_scrapbook/life_history_spec.rb:48/PaperTrailScrapbook::LifeHistory#story provides a whole story missing reference
@@ -4466,8 +4475,8 @@ Run options: include {:focus=>true}
 
 All examples were filtered out; ignoring {:focus=>true}
 
-Randomized with seed 41106
-.....F
+Randomized with seed 29215
+....F
 
 Failures:
 
@@ -4475,13 +4484,13 @@ Failures:
      Failure/Error: expect(subject).to eql ''
 
        expected: ""
-            got: "On Saturday, 20 Jan 2018 at 11:06 PM, The Tim Man created the following Animal info:\n • species: Elephant"
+            got: "On Saturday, 20 Jan 2018 at 11:15 PM, The Tim Man created the following Animal info:\n • species: Elephant"
 
        (compared using eql?)
 
        Diff:
        @@ -1 +1,3 @@
-       +On Saturday, 20 Jan 2018 at 11:06 PM, The Tim Man created the following Animal info:
+       +On Saturday, 20 Jan 2018 at 11:15 PM, The Tim Man created the following Animal info:
        + • species: Elephant
      # ./spec/paper_trail_scrapbook/life_history_spec.rb:93:in `block (4 levels) in <module:PaperTrailScrapbook>'
      # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-rspec-0.8.14/lib/mutant/integration/rspec.rb:63:in `call'
@@ -4507,14 +4516,14 @@ Failures:
      # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/master.rb:43:in `block (2 levels) in run'
      # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/actor/env.rb:14:in `block in spawn'
 
-Finished in 1.02 seconds (files took 57.62 seconds to load)
-6 examples, 1 failure
+Finished in 0.8597 seconds (files took 53.14 seconds to load)
+5 examples, 1 failure
 
 Failed examples:
 
 rspec ./spec/paper_trail_scrapbook/life_history_spec.rb:91 # PaperTrailScrapbook::LifeHistory#story no papertrail has none
 
-Randomized with seed 41106
+Randomized with seed 29215
 
 -----------------------
 PaperTrailScrapbook::UserJournal#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:10
@@ -4530,218 +4539,41 @@ PaperTrailScrapbook::UserJournal#initialize:/Users/tj/projects/paper_trail_scrap
 - rspec:22:./spec/paper_trail_scrapbook/user_journal_spec.rb:158/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range covers current time provides a story for provided class with start and end times
 - rspec:23:./spec/paper_trail_scrapbook/user_journal_spec.rb:174/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range is completely in the future provides a story
 - rspec:24:./spec/paper_trail_scrapbook/user_journal_spec.rb:183/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when no time range provides a story
-neutral:PaperTrailScrapbook::UserJournal#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:10:1bf56
---- Neutral failure ---
-Original code was inserted unmutated. And the test did NOT PASS.
-Your tests do not pass initially or you found a bug in mutant / unparser.
-Subject AST:
-s(:def, :initialize,
-  s(:args,
-    s(:arg, :user),
-    s(:optarg, :opts,
-      s(:hash))),
-  s(:begin,
-    s(:ivasgn, :@user,
-      s(:lvar, :user)),
-    s(:ivasgn, :@user_id,
-      s(:send, nil, :String,
-        s(:send,
-          s(:lvar, :user), :id))),
-    s(:ivasgn, :@options,
-      s(:lvar, :opts)),
-    s(:ivasgn, :@starts,
-      s(:or,
-        s(:send,
-          s(:send, nil, :options), :[],
-          s(:sym, :start)),
-        s(:send,
-          s(:send,
-            s(:const, nil, :Time), :at,
-            s(:int, 0)), :in_time_zone))),
-    s(:ivasgn, :@ends,
-      s(:or,
-        s(:send,
-          s(:send, nil, :options), :[],
-          s(:sym, :end)),
-        s(:send,
-          s(:send,
-            s(:const, nil, :Time), :current), :in_time_zone))),
-    s(:ivasgn, :@versions,
-      s(:send,
-        s(:const,
-          s(:const, nil, :PaperTrail), :Version), :where,
-        s(:send, nil, :query_params)))))
-Unparsed Source:
-def initialize(user, opts = {})
-  @user = user
-  @user_id = String(user.id)
-  @options = opts
-  @starts = (options[:start] || Time.at(0).in_time_zone)
-  @ends = (options[:end] || Time.current.in_time_zone)
-  @versions = PaperTrail::Version.where(query_params)
-end
-Test Result:
-- 12 @ runtime: 0.516643
-  - rspec:13:./spec/paper_trail_scrapbook/user_journal_spec.rb:37/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-  - rspec:14:./spec/paper_trail_scrapbook/user_journal_spec.rb:52/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story missing to_s content
-  - rspec:15:./spec/paper_trail_scrapbook/user_journal_spec.rb:62/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-  - rspec:16:./spec/paper_trail_scrapbook/user_journal_spec.rb:68/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-  - rspec:17:./spec/paper_trail_scrapbook/user_journal_spec.rb:79/PaperTrailScrapbook::UserJournal#story with a provided class provides a story for provided class
-  - rspec:18:./spec/paper_trail_scrapbook/user_journal_spec.rb:95/PaperTrailScrapbook::UserJournal#story with start time and class but no end time provides a story with start time
-  - rspec:19:./spec/paper_trail_scrapbook/user_journal_spec.rb:111/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class provides a story with end time in the future
-  - rspec:20:./spec/paper_trail_scrapbook/user_journal_spec.rb:124/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class with end time in past provides a story with end time in the past
-  - rspec:21:./spec/paper_trail_scrapbook/user_journal_spec.rb:138/PaperTrailScrapbook::UserJournal#story with start and end times but no class provides a story with start and end times
-  - rspec:22:./spec/paper_trail_scrapbook/user_journal_spec.rb:158/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range covers current time provides a story for provided class with start and end times
-  - rspec:23:./spec/paper_trail_scrapbook/user_journal_spec.rb:174/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range is completely in the future provides a story
-  - rspec:24:./spec/paper_trail_scrapbook/user_journal_spec.rb:183/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when no time range provides a story
-Test Output:
-Run options: include {:focus=>true}
-
-All examples were filtered out; ignoring {:focus=>true}
-
-Randomized with seed 41106
-F
-
-Failures:
-
-  1) PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-     Failure/Error: expect(object.starts).to eql 'Thursday, 01 Jan 1970 at 12:00 AM'
-
-     NoMethodError:
-       private method `starts' called for #<PaperTrailScrapbook::UserJournal:0x007f91504d16b8>
-     # ./spec/paper_trail_scrapbook/user_journal_spec.rb:38:in `block (4 levels) in <module:PaperTrailScrapbook>'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-rspec-0.8.14/lib/mutant/integration/rspec.rb:63:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:48:in `block in run_mutation_tests'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:66:in `block in result'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant.rb:223:in `open'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant.rb:223:in `block in <class:Config>'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:63:in `result'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:55:in `child'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:37:in `block in parent'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:36:in `fork'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:36:in `parent'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:23:in `block in call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:22:in `pipe'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:22:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:46:in `run_mutation_tests'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:25:in `kill'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:60:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:60:in `handle_job'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:45:in `handle'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:31:in `run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:17:in `run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/master.rb:43:in `block (2 levels) in run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/actor/env.rb:14:in `block in spawn'
-
-Finished in 0.38812 seconds (files took 1 minute 1.29 seconds to load)
-1 example, 1 failure
-
-Failed examples:
-
-rspec ./spec/paper_trail_scrapbook/user_journal_spec.rb:37 # PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-
-Randomized with seed 41106
-
+evil:PaperTrailScrapbook::UserJournal#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:10:5b896
+@@ -1,9 +1,9 @@
+ def initialize(user, opts = {})
+   @user = user
+-  @user_id = String(user.id)
++  @user_id = user.id
+   @options = opts
+   @starts = (options[:start] || Time.at(0).in_time_zone)
+   @ends = (options[:end] || Time.current.in_time_zone)
+   @versions = PaperTrail::Version.where(query_params)
+ end
 -----------------------
-PaperTrailScrapbook::UserJournal#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:34
-- rspec:13:./spec/paper_trail_scrapbook/user_journal_spec.rb:37/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-- rspec:14:./spec/paper_trail_scrapbook/user_journal_spec.rb:52/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story missing to_s content
-- rspec:15:./spec/paper_trail_scrapbook/user_journal_spec.rb:62/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-- rspec:16:./spec/paper_trail_scrapbook/user_journal_spec.rb:68/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-- rspec:17:./spec/paper_trail_scrapbook/user_journal_spec.rb:79/PaperTrailScrapbook::UserJournal#story with a provided class provides a story for provided class
-- rspec:18:./spec/paper_trail_scrapbook/user_journal_spec.rb:95/PaperTrailScrapbook::UserJournal#story with start time and class but no end time provides a story with start time
-- rspec:19:./spec/paper_trail_scrapbook/user_journal_spec.rb:111/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class provides a story with end time in the future
-- rspec:20:./spec/paper_trail_scrapbook/user_journal_spec.rb:124/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class with end time in past provides a story with end time in the past
-- rspec:21:./spec/paper_trail_scrapbook/user_journal_spec.rb:138/PaperTrailScrapbook::UserJournal#story with start and end times but no class provides a story with start and end times
-- rspec:22:./spec/paper_trail_scrapbook/user_journal_spec.rb:158/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range covers current time provides a story for provided class with start and end times
-- rspec:23:./spec/paper_trail_scrapbook/user_journal_spec.rb:174/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range is completely in the future provides a story
-- rspec:24:./spec/paper_trail_scrapbook/user_journal_spec.rb:183/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when no time range provides a story
-neutral:PaperTrailScrapbook::UserJournal#preface:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:34:6c6df
---- Neutral failure ---
-Original code was inserted unmutated. And the test did NOT PASS.
-Your tests do not pass initially or you found a bug in mutant / unparser.
-Subject AST:
-s(:def, :preface,
-  s(:args),
-  s(:send,
-    s(:dstr,
-      s(:str, "Between "),
-      s(:begin,
-        s(:send, nil, :when_range)),
-      s(:str, ", "),
-      s(:begin,
-        s(:send, nil, :user)),
-      s(:str, " made the following "),
-      s(:begin,
-        s(:send, nil, :what)),
-      s(:str, " changes:\n\n")), :squeeze,
-    s(:str, " ")))
-Unparsed Source:
-def preface
-  "#{"Between "}#{when_range}#{", "}#{user}#{" made the following "}#{what}#{" changes:\n\n"}".squeeze(" ")
-end
-Test Result:
-- 12 @ runtime: 0.432921
-  - rspec:13:./spec/paper_trail_scrapbook/user_journal_spec.rb:37/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-  - rspec:14:./spec/paper_trail_scrapbook/user_journal_spec.rb:52/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story missing to_s content
-  - rspec:15:./spec/paper_trail_scrapbook/user_journal_spec.rb:62/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-  - rspec:16:./spec/paper_trail_scrapbook/user_journal_spec.rb:68/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-  - rspec:17:./spec/paper_trail_scrapbook/user_journal_spec.rb:79/PaperTrailScrapbook::UserJournal#story with a provided class provides a story for provided class
-  - rspec:18:./spec/paper_trail_scrapbook/user_journal_spec.rb:95/PaperTrailScrapbook::UserJournal#story with start time and class but no end time provides a story with start time
-  - rspec:19:./spec/paper_trail_scrapbook/user_journal_spec.rb:111/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class provides a story with end time in the future
-  - rspec:20:./spec/paper_trail_scrapbook/user_journal_spec.rb:124/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class with end time in past provides a story with end time in the past
-  - rspec:21:./spec/paper_trail_scrapbook/user_journal_spec.rb:138/PaperTrailScrapbook::UserJournal#story with start and end times but no class provides a story with start and end times
-  - rspec:22:./spec/paper_trail_scrapbook/user_journal_spec.rb:158/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range covers current time provides a story for provided class with start and end times
-  - rspec:23:./spec/paper_trail_scrapbook/user_journal_spec.rb:174/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range is completely in the future provides a story
-  - rspec:24:./spec/paper_trail_scrapbook/user_journal_spec.rb:183/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when no time range provides a story
-Test Output:
-Run options: include {:focus=>true}
-
-All examples were filtered out; ignoring {:focus=>true}
-
-Randomized with seed 41106
-F
-
-Failures:
-
-  1) PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-     Failure/Error: expect(object.starts).to eql 'Thursday, 01 Jan 1970 at 12:00 AM'
-
-     NoMethodError:
-       private method `starts' called for #<PaperTrailScrapbook::UserJournal:0x007f915170ee20>
-     # ./spec/paper_trail_scrapbook/user_journal_spec.rb:38:in `block (4 levels) in <module:PaperTrailScrapbook>'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-rspec-0.8.14/lib/mutant/integration/rspec.rb:63:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:48:in `block in run_mutation_tests'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:66:in `block in result'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant.rb:223:in `open'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant.rb:223:in `block in <class:Config>'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:63:in `result'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:55:in `child'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:37:in `block in parent'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:36:in `fork'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:36:in `parent'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:23:in `block in call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:22:in `pipe'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:22:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:46:in `run_mutation_tests'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:25:in `kill'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:60:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:60:in `handle_job'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:45:in `handle'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:31:in `run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:17:in `run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/master.rb:43:in `block (2 levels) in run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/actor/env.rb:14:in `block in spawn'
-
-Finished in 0.28134 seconds (files took 1 minute 11.31 seconds to load)
-1 example, 1 failure
-
-Failed examples:
-
-rspec ./spec/paper_trail_scrapbook/user_journal_spec.rb:37 # PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-
-Randomized with seed 41106
-
+evil:PaperTrailScrapbook::UserJournal#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:10:7b25a
+@@ -1,9 +1,9 @@
+ def initialize(user, opts = {})
+   @user = user
+   @user_id = String(user.id)
+   @options = opts
+-  @starts = (options[:start] || Time.at(0).in_time_zone)
++  @starts = (options[:start] || Time.at(1).in_time_zone)
+   @ends = (options[:end] || Time.current.in_time_zone)
+   @versions = PaperTrail::Version.where(query_params)
+ end
+-----------------------
+evil:PaperTrailScrapbook::UserJournal#initialize:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:10:0dbe9
+@@ -1,9 +1,9 @@
+ def initialize(user, opts = {})
+   @user = user
+   @user_id = String(user.id)
+   @options = opts
+   @starts = (options[:start] || Time.at(0).in_time_zone)
+-  @ends = (options[:end] || Time.current.in_time_zone)
++  @ends = (options[:end] || Time.current)
+   @versions = PaperTrail::Version.where(query_params)
+ end
 -----------------------
 PaperTrailScrapbook::UserJournal#query_params:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:39
 - rspec:13:./spec/paper_trail_scrapbook/user_journal_spec.rb:37/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
@@ -4756,115 +4588,161 @@ PaperTrailScrapbook::UserJournal#query_params:/Users/tj/projects/paper_trail_scr
 - rspec:22:./spec/paper_trail_scrapbook/user_journal_spec.rb:158/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range covers current time provides a story for provided class with start and end times
 - rspec:23:./spec/paper_trail_scrapbook/user_journal_spec.rb:174/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range is completely in the future provides a story
 - rspec:24:./spec/paper_trail_scrapbook/user_journal_spec.rb:183/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when no time range provides a story
-neutral:PaperTrailScrapbook::UserJournal#query_params:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:39:397a7
---- Neutral failure ---
-Original code was inserted unmutated. And the test did NOT PASS.
-Your tests do not pass initially or you found a bug in mutant / unparser.
-Subject AST:
-s(:def, :query_params,
-  s(:args),
-  s(:begin,
-    s(:lvasgn, :params,
-      s(:hash,
-        s(:pair,
-          s(:sym, :whodunnit),
-          s(:send, nil, :user_id)))),
-    s(:if,
-      s(:send,
-        s(:send, nil, :options), :empty?),
-      s(:return,
-        s(:lvar, :params)), nil),
-    s(:block,
-      s(:send,
-        s(:send,
-          s(:lvar, :params), :merge,
-          s(:hash,
-            s(:pair,
-              s(:sym, :item_type),
-              s(:send, nil, :what)),
-            s(:pair,
-              s(:sym, :created_at),
-              s(:irange,
-                s(:send, nil, :starts),
-                s(:send, nil, :ends))))), :delete_if),
-      s(:args,
-        s(:arg, :_),
-        s(:arg, :v)),
-      s(:send,
-        s(:send,
-          s(:lvar, :v), :presence), :nil?))))
-Unparsed Source:
-def query_params
-  params = { whodunnit: user_id }
-  if options.empty?
-    return params
-  end
-  params.merge(item_type: what, created_at: (starts..ends)).delete_if do |_, v|
-    v.presence.nil?
-  end
-end
-Test Result:
-- 12 @ runtime: 0.419935
-  - rspec:13:./spec/paper_trail_scrapbook/user_journal_spec.rb:37/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-  - rspec:14:./spec/paper_trail_scrapbook/user_journal_spec.rb:52/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story missing to_s content
-  - rspec:15:./spec/paper_trail_scrapbook/user_journal_spec.rb:62/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-  - rspec:16:./spec/paper_trail_scrapbook/user_journal_spec.rb:68/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-  - rspec:17:./spec/paper_trail_scrapbook/user_journal_spec.rb:79/PaperTrailScrapbook::UserJournal#story with a provided class provides a story for provided class
-  - rspec:18:./spec/paper_trail_scrapbook/user_journal_spec.rb:95/PaperTrailScrapbook::UserJournal#story with start time and class but no end time provides a story with start time
-  - rspec:19:./spec/paper_trail_scrapbook/user_journal_spec.rb:111/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class provides a story with end time in the future
-  - rspec:20:./spec/paper_trail_scrapbook/user_journal_spec.rb:124/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class with end time in past provides a story with end time in the past
-  - rspec:21:./spec/paper_trail_scrapbook/user_journal_spec.rb:138/PaperTrailScrapbook::UserJournal#story with start and end times but no class provides a story with start and end times
-  - rspec:22:./spec/paper_trail_scrapbook/user_journal_spec.rb:158/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range covers current time provides a story for provided class with start and end times
-  - rspec:23:./spec/paper_trail_scrapbook/user_journal_spec.rb:174/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range is completely in the future provides a story
-  - rspec:24:./spec/paper_trail_scrapbook/user_journal_spec.rb:183/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when no time range provides a story
-Test Output:
-Run options: include {:focus=>true}
-
-All examples were filtered out; ignoring {:focus=>true}
-
-Randomized with seed 41106
-F
-
-Failures:
-
-  1) PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-     Failure/Error: expect(object.starts).to eql 'Thursday, 01 Jan 1970 at 12:00 AM'
-
-     NoMethodError:
-       private method `starts' called for #<PaperTrailScrapbook::UserJournal:0x007f9153304d00>
-     # ./spec/paper_trail_scrapbook/user_journal_spec.rb:38:in `block (4 levels) in <module:PaperTrailScrapbook>'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-rspec-0.8.14/lib/mutant/integration/rspec.rb:63:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:48:in `block in run_mutation_tests'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:66:in `block in result'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant.rb:223:in `open'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant.rb:223:in `block in <class:Config>'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:63:in `result'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:55:in `child'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:37:in `block in parent'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:36:in `fork'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:36:in `parent'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:23:in `block in call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:22:in `pipe'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:22:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:46:in `run_mutation_tests'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:25:in `kill'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:60:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:60:in `handle_job'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:45:in `handle'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:31:in `run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:17:in `run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/master.rb:43:in `block (2 levels) in run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/actor/env.rb:14:in `block in spawn'
-
-Finished in 0.24505 seconds (files took 1 minute 13.17 seconds to load)
-1 example, 1 failure
-
-Failed examples:
-
-rspec ./spec/paper_trail_scrapbook/user_journal_spec.rb:37 # PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-
-Randomized with seed 41106
-
+evil:PaperTrailScrapbook::UserJournal#query_params:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:39:38a04
+@@ -1,10 +1,10 @@
+ def query_params
+-  params = { whodunnit: user_id }
++  params = {}
+   if options.empty?
+     return params
+   end
+   params.merge(item_type: what, created_at: (starts..ends)).delete_if do |_, v|
+     v.presence.nil?
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::UserJournal#query_params:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:39:15332
+@@ -1,10 +1,8 @@
+ def query_params
+   params = { whodunnit: user_id }
+-  if options.empty?
+-    return params
+-  end
++  nil
+   params.merge(item_type: what, created_at: (starts..ends)).delete_if do |_, v|
+     v.presence.nil?
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::UserJournal#query_params:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:39:b3a63
+@@ -1,10 +1,8 @@
+ def query_params
+   params = { whodunnit: user_id }
+-  if options.empty?
+-    return params
+-  end
++  self
+   params.merge(item_type: what, created_at: (starts..ends)).delete_if do |_, v|
+     v.presence.nil?
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::UserJournal#query_params:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:39:a40cd
+@@ -1,10 +1,10 @@
+ def query_params
+   params = { whodunnit: user_id }
+-  if options.empty?
++  if nil
+     return params
+   end
+   params.merge(item_type: what, created_at: (starts..ends)).delete_if do |_, v|
+     v.presence.nil?
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::UserJournal#query_params:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:39:5c1ec
+@@ -1,10 +1,10 @@
+ def query_params
+   params = { whodunnit: user_id }
+-  if options.empty?
++  if false
+     return params
+   end
+   params.merge(item_type: what, created_at: (starts..ends)).delete_if do |_, v|
+     v.presence.nil?
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::UserJournal#query_params:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:39:5b712
+@@ -1,10 +1,10 @@
+ def query_params
+   params = { whodunnit: user_id }
+   if options.empty?
+-    return params
++    nil
+   end
+   params.merge(item_type: what, created_at: (starts..ends)).delete_if do |_, v|
+     v.presence.nil?
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::UserJournal#query_params:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:39:6850d
+@@ -1,10 +1,10 @@
+ def query_params
+   params = { whodunnit: user_id }
+   if options.empty?
+-    return params
++    self
+   end
+   params.merge(item_type: what, created_at: (starts..ends)).delete_if do |_, v|
+     v.presence.nil?
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::UserJournal#query_params:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:39:40b6d
+@@ -1,10 +1,10 @@
+ def query_params
+   params = { whodunnit: user_id }
+   if options.empty?
+-    return params
++    params
+   end
+   params.merge(item_type: what, created_at: (starts..ends)).delete_if do |_, v|
+     v.presence.nil?
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::UserJournal#query_params:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:39:fbb69
+@@ -1,10 +1,10 @@
+ def query_params
+   params = { whodunnit: user_id }
+   if options.empty?
+-    return params
++    return nil
+   end
+   params.merge(item_type: what, created_at: (starts..ends)).delete_if do |_, v|
+     v.presence.nil?
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::UserJournal#query_params:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:39:e1e3a
+@@ -1,10 +1,10 @@
+ def query_params
+   params = { whodunnit: user_id }
+   if options.empty?
+     return params
+   end
+-  params.merge(item_type: what, created_at: (starts..ends)).delete_if do |_, v|
++  { item_type: what, created_at: (starts..ends) }.delete_if do |_, v|
+     v.presence.nil?
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::UserJournal#query_params:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:39:26272
+@@ -1,10 +1,10 @@
+ def query_params
+   params = { whodunnit: user_id }
+   if options.empty?
+     return params
+   end
+-  params.merge(item_type: what, created_at: (starts..ends)).delete_if do |_, v|
++  params.merge(item_type: what, created_at: (starts...ends)).delete_if do |_, v|
+     v.presence.nil?
+   end
+ end
+-----------------------
+evil:PaperTrailScrapbook::UserJournal#query_params:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:39:88f8c
+@@ -1,10 +1,10 @@
+ def query_params
+   params = { whodunnit: user_id }
+   if options.empty?
+     return params
+   end
+   params.merge(item_type: what, created_at: (starts..ends)).delete_if do |_, v|
+-    v.presence.nil?
++    v.nil?
+   end
+ end
 -----------------------
 PaperTrailScrapbook::UserJournal#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:24
 - rspec:13:./spec/paper_trail_scrapbook/user_journal_spec.rb:37/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
@@ -4879,194 +4757,45 @@ PaperTrailScrapbook::UserJournal#story:/Users/tj/projects/paper_trail_scrapbook/
 - rspec:22:./spec/paper_trail_scrapbook/user_journal_spec.rb:158/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range covers current time provides a story for provided class with start and end times
 - rspec:23:./spec/paper_trail_scrapbook/user_journal_spec.rb:174/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range is completely in the future provides a story
 - rspec:24:./spec/paper_trail_scrapbook/user_journal_spec.rb:183/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when no time range provides a story
-neutral:PaperTrailScrapbook::UserJournal#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:24:6fc16
---- Neutral failure ---
-Original code was inserted unmutated. And the test did NOT PASS.
-Your tests do not pass initially or you found a bug in mutant / unparser.
-Subject AST:
-s(:def, :story,
-  s(:args),
-  s(:begin,
-    s(:lvasgn, :s,
-      s(:send,
-        s(:send,
-          s(:block,
-            s(:send,
-              s(:send, nil, :versions), :map),
-            s(:args,
-              s(:arg, :v)),
-            s(:send,
-              s(:send,
-                s(:const, nil, :JournalEntry), :new,
-                s(:lvar, :v)), :story)), :compact), :join,
-        s(:str, "\n\n"))),
-    s(:dstr,
-      s(:begin,
-        s(:send, nil, :preface)),
-      s(:begin,
-        s(:or,
-          s(:send,
-            s(:lvar, :s), :presence),
-          s(:str, "No history"))))))
-Unparsed Source:
-def story
-  s = versions.map do |v|
-    JournalEntry.new(v).story
-  end.compact.join("\n\n")
-  "#{preface}#{s.presence || "No history"}"
-end
-Test Result:
-- 12 @ runtime: 0.363357
-  - rspec:13:./spec/paper_trail_scrapbook/user_journal_spec.rb:37/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-  - rspec:14:./spec/paper_trail_scrapbook/user_journal_spec.rb:52/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story missing to_s content
-  - rspec:15:./spec/paper_trail_scrapbook/user_journal_spec.rb:62/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-  - rspec:16:./spec/paper_trail_scrapbook/user_journal_spec.rb:68/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-  - rspec:17:./spec/paper_trail_scrapbook/user_journal_spec.rb:79/PaperTrailScrapbook::UserJournal#story with a provided class provides a story for provided class
-  - rspec:18:./spec/paper_trail_scrapbook/user_journal_spec.rb:95/PaperTrailScrapbook::UserJournal#story with start time and class but no end time provides a story with start time
-  - rspec:19:./spec/paper_trail_scrapbook/user_journal_spec.rb:111/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class provides a story with end time in the future
-  - rspec:20:./spec/paper_trail_scrapbook/user_journal_spec.rb:124/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class with end time in past provides a story with end time in the past
-  - rspec:21:./spec/paper_trail_scrapbook/user_journal_spec.rb:138/PaperTrailScrapbook::UserJournal#story with start and end times but no class provides a story with start and end times
-  - rspec:22:./spec/paper_trail_scrapbook/user_journal_spec.rb:158/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range covers current time provides a story for provided class with start and end times
-  - rspec:23:./spec/paper_trail_scrapbook/user_journal_spec.rb:174/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range is completely in the future provides a story
-  - rspec:24:./spec/paper_trail_scrapbook/user_journal_spec.rb:183/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when no time range provides a story
-Test Output:
-Run options: include {:focus=>true}
-
-All examples were filtered out; ignoring {:focus=>true}
-
-Randomized with seed 41106
-F
-
-Failures:
-
-  1) PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-     Failure/Error: expect(object.starts).to eql 'Thursday, 01 Jan 1970 at 12:00 AM'
-
-     NoMethodError:
-       private method `starts' called for #<PaperTrailScrapbook::UserJournal:0x007f914ffb6098>
-     # ./spec/paper_trail_scrapbook/user_journal_spec.rb:38:in `block (4 levels) in <module:PaperTrailScrapbook>'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-rspec-0.8.14/lib/mutant/integration/rspec.rb:63:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:48:in `block in run_mutation_tests'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:66:in `block in result'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant.rb:223:in `open'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant.rb:223:in `block in <class:Config>'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:63:in `result'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:55:in `child'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:37:in `block in parent'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:36:in `fork'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:36:in `parent'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:23:in `block in call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:22:in `pipe'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:22:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:46:in `run_mutation_tests'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:25:in `kill'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:60:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:60:in `handle_job'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:45:in `handle'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:31:in `run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:17:in `run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/master.rb:43:in `block (2 levels) in run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/actor/env.rb:14:in `block in spawn'
-
-Finished in 0.2226 seconds (files took 1 minute 19.16 seconds to load)
-1 example, 1 failure
-
-Failed examples:
-
-rspec ./spec/paper_trail_scrapbook/user_journal_spec.rb:37 # PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-
-Randomized with seed 41106
-
+evil:PaperTrailScrapbook::UserJournal#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:24:165c8
+@@ -1,7 +1,7 @@
+ def story
+   s = versions.map do |v|
+     JournalEntry.new(v).story
+-  end.compact.join("\n\n")
++  end.compact
+   "#{preface}#{s.presence || "No history"}"
+ end
 -----------------------
-PaperTrailScrapbook::UserJournal#time_format:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:48
-- rspec:13:./spec/paper_trail_scrapbook/user_journal_spec.rb:37/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-- rspec:14:./spec/paper_trail_scrapbook/user_journal_spec.rb:52/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story missing to_s content
-- rspec:15:./spec/paper_trail_scrapbook/user_journal_spec.rb:62/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-- rspec:16:./spec/paper_trail_scrapbook/user_journal_spec.rb:68/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-- rspec:17:./spec/paper_trail_scrapbook/user_journal_spec.rb:79/PaperTrailScrapbook::UserJournal#story with a provided class provides a story for provided class
-- rspec:18:./spec/paper_trail_scrapbook/user_journal_spec.rb:95/PaperTrailScrapbook::UserJournal#story with start time and class but no end time provides a story with start time
-- rspec:19:./spec/paper_trail_scrapbook/user_journal_spec.rb:111/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class provides a story with end time in the future
-- rspec:20:./spec/paper_trail_scrapbook/user_journal_spec.rb:124/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class with end time in past provides a story with end time in the past
-- rspec:21:./spec/paper_trail_scrapbook/user_journal_spec.rb:138/PaperTrailScrapbook::UserJournal#story with start and end times but no class provides a story with start and end times
-- rspec:22:./spec/paper_trail_scrapbook/user_journal_spec.rb:158/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range covers current time provides a story for provided class with start and end times
-- rspec:23:./spec/paper_trail_scrapbook/user_journal_spec.rb:174/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range is completely in the future provides a story
-- rspec:24:./spec/paper_trail_scrapbook/user_journal_spec.rb:183/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when no time range provides a story
-neutral:PaperTrailScrapbook::UserJournal#time_format:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:48:87d9a
---- Neutral failure ---
-Original code was inserted unmutated. And the test did NOT PASS.
-Your tests do not pass initially or you found a bug in mutant / unparser.
-Subject AST:
-s(:def, :time_format,
-  s(:args),
-  s(:send,
-    s(:send,
-      s(:const, nil, :PaperTrailScrapbook), :config), :time_format))
-Unparsed Source:
-def time_format
-  PaperTrailScrapbook.config.time_format
-end
-Test Result:
-- 12 @ runtime: 0.594109
-  - rspec:13:./spec/paper_trail_scrapbook/user_journal_spec.rb:37/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-  - rspec:14:./spec/paper_trail_scrapbook/user_journal_spec.rb:52/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story missing to_s content
-  - rspec:15:./spec/paper_trail_scrapbook/user_journal_spec.rb:62/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-  - rspec:16:./spec/paper_trail_scrapbook/user_journal_spec.rb:68/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-  - rspec:17:./spec/paper_trail_scrapbook/user_journal_spec.rb:79/PaperTrailScrapbook::UserJournal#story with a provided class provides a story for provided class
-  - rspec:18:./spec/paper_trail_scrapbook/user_journal_spec.rb:95/PaperTrailScrapbook::UserJournal#story with start time and class but no end time provides a story with start time
-  - rspec:19:./spec/paper_trail_scrapbook/user_journal_spec.rb:111/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class provides a story with end time in the future
-  - rspec:20:./spec/paper_trail_scrapbook/user_journal_spec.rb:124/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class with end time in past provides a story with end time in the past
-  - rspec:21:./spec/paper_trail_scrapbook/user_journal_spec.rb:138/PaperTrailScrapbook::UserJournal#story with start and end times but no class provides a story with start and end times
-  - rspec:22:./spec/paper_trail_scrapbook/user_journal_spec.rb:158/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range covers current time provides a story for provided class with start and end times
-  - rspec:23:./spec/paper_trail_scrapbook/user_journal_spec.rb:174/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range is completely in the future provides a story
-  - rspec:24:./spec/paper_trail_scrapbook/user_journal_spec.rb:183/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when no time range provides a story
-Test Output:
-Run options: include {:focus=>true}
-
-All examples were filtered out; ignoring {:focus=>true}
-
-Randomized with seed 41106
-F
-
-Failures:
-
-  1) PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-     Failure/Error: expect(object.starts).to eql 'Thursday, 01 Jan 1970 at 12:00 AM'
-
-     NoMethodError:
-       private method `starts' called for #<PaperTrailScrapbook::UserJournal:0x007f915345f5d8>
-     # ./spec/paper_trail_scrapbook/user_journal_spec.rb:38:in `block (4 levels) in <module:PaperTrailScrapbook>'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-rspec-0.8.14/lib/mutant/integration/rspec.rb:63:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:48:in `block in run_mutation_tests'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:66:in `block in result'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant.rb:223:in `open'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant.rb:223:in `block in <class:Config>'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:63:in `result'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:55:in `child'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:37:in `block in parent'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:36:in `fork'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:36:in `parent'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:23:in `block in call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:22:in `pipe'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:22:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:46:in `run_mutation_tests'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:25:in `kill'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:60:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:60:in `handle_job'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:45:in `handle'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:31:in `run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:17:in `run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/master.rb:43:in `block (2 levels) in run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/actor/env.rb:14:in `block in spawn'
-
-Finished in 0.25165 seconds (files took 1 minute 23.76 seconds to load)
-1 example, 1 failure
-
-Failed examples:
-
-rspec ./spec/paper_trail_scrapbook/user_journal_spec.rb:37 # PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-
-Randomized with seed 41106
-
+evil:PaperTrailScrapbook::UserJournal#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:24:f10ca
+@@ -1,7 +1,7 @@
+ def story
+   s = versions.map do |v|
+     JournalEntry.new(v).story
+-  end.compact.join("\n\n")
++  end.join("\n\n")
+   "#{preface}#{s.presence || "No history"}"
+ end
+-----------------------
+evil:PaperTrailScrapbook::UserJournal#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:24:821d2
+@@ -1,7 +1,7 @@
+ def story
+   s = versions.map do |v|
+     JournalEntry.new(v).story
+-  end.compact.join("\n\n")
++  end.compact.join
+   "#{preface}#{s.presence || "No history"}"
+ end
+-----------------------
+evil:PaperTrailScrapbook::UserJournal#story:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:24:47757
+@@ -1,7 +1,7 @@
+ def story
+   s = versions.map do |v|
+     JournalEntry.new(v).story
+-  end.compact.join("\n\n")
++  end.compact.join(nil)
+   "#{preface}#{s.presence || "No history"}"
+ end
 -----------------------
 PaperTrailScrapbook::UserJournal#what:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:52
 - rspec:13:./spec/paper_trail_scrapbook/user_journal_spec.rb:37/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
@@ -5081,185 +4810,15 @@ PaperTrailScrapbook::UserJournal#what:/Users/tj/projects/paper_trail_scrapbook/l
 - rspec:22:./spec/paper_trail_scrapbook/user_journal_spec.rb:158/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range covers current time provides a story for provided class with start and end times
 - rspec:23:./spec/paper_trail_scrapbook/user_journal_spec.rb:174/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range is completely in the future provides a story
 - rspec:24:./spec/paper_trail_scrapbook/user_journal_spec.rb:183/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when no time range provides a story
-neutral:PaperTrailScrapbook::UserJournal#what:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:52:dc178
---- Neutral failure ---
-Original code was inserted unmutated. And the test did NOT PASS.
-Your tests do not pass initially or you found a bug in mutant / unparser.
-Subject AST:
-s(:def, :what,
-  s(:args),
-  s(:send,
-    s(:send, nil, :String,
-      s(:send,
-        s(:send, nil, :options), :fetch,
-        s(:sym, :klass),
-        s(:nil))), :presence))
-Unparsed Source:
-def what
-  String(options.fetch(:klass, nil)).presence
-end
-Test Result:
-- 12 @ runtime: 0.409227
-  - rspec:13:./spec/paper_trail_scrapbook/user_journal_spec.rb:37/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-  - rspec:14:./spec/paper_trail_scrapbook/user_journal_spec.rb:52/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story missing to_s content
-  - rspec:15:./spec/paper_trail_scrapbook/user_journal_spec.rb:62/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-  - rspec:16:./spec/paper_trail_scrapbook/user_journal_spec.rb:68/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-  - rspec:17:./spec/paper_trail_scrapbook/user_journal_spec.rb:79/PaperTrailScrapbook::UserJournal#story with a provided class provides a story for provided class
-  - rspec:18:./spec/paper_trail_scrapbook/user_journal_spec.rb:95/PaperTrailScrapbook::UserJournal#story with start time and class but no end time provides a story with start time
-  - rspec:19:./spec/paper_trail_scrapbook/user_journal_spec.rb:111/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class provides a story with end time in the future
-  - rspec:20:./spec/paper_trail_scrapbook/user_journal_spec.rb:124/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class with end time in past provides a story with end time in the past
-  - rspec:21:./spec/paper_trail_scrapbook/user_journal_spec.rb:138/PaperTrailScrapbook::UserJournal#story with start and end times but no class provides a story with start and end times
-  - rspec:22:./spec/paper_trail_scrapbook/user_journal_spec.rb:158/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range covers current time provides a story for provided class with start and end times
-  - rspec:23:./spec/paper_trail_scrapbook/user_journal_spec.rb:174/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range is completely in the future provides a story
-  - rspec:24:./spec/paper_trail_scrapbook/user_journal_spec.rb:183/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when no time range provides a story
-Test Output:
-Run options: include {:focus=>true}
-
-All examples were filtered out; ignoring {:focus=>true}
-
-Randomized with seed 41106
-F
-
-Failures:
-
-  1) PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-     Failure/Error: expect(object.starts).to eql 'Thursday, 01 Jan 1970 at 12:00 AM'
-
-     NoMethodError:
-       private method `starts' called for #<PaperTrailScrapbook::UserJournal:0x007f9153065c98>
-     # ./spec/paper_trail_scrapbook/user_journal_spec.rb:38:in `block (4 levels) in <module:PaperTrailScrapbook>'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-rspec-0.8.14/lib/mutant/integration/rspec.rb:63:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:48:in `block in run_mutation_tests'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:66:in `block in result'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant.rb:223:in `open'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant.rb:223:in `block in <class:Config>'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:63:in `result'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:55:in `child'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:37:in `block in parent'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:36:in `fork'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:36:in `parent'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:23:in `block in call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:22:in `pipe'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:22:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:46:in `run_mutation_tests'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:25:in `kill'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:60:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:60:in `handle_job'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:45:in `handle'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:31:in `run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:17:in `run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/master.rb:43:in `block (2 levels) in run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/actor/env.rb:14:in `block in spawn'
-
-Finished in 0.22174 seconds (files took 1 minute 24.74 seconds to load)
-1 example, 1 failure
-
-Failed examples:
-
-rspec ./spec/paper_trail_scrapbook/user_journal_spec.rb:37 # PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-
-Randomized with seed 41106
-
------------------------
-PaperTrailScrapbook::UserJournal#when_range:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:56
-- rspec:13:./spec/paper_trail_scrapbook/user_journal_spec.rb:37/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-- rspec:14:./spec/paper_trail_scrapbook/user_journal_spec.rb:52/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story missing to_s content
-- rspec:15:./spec/paper_trail_scrapbook/user_journal_spec.rb:62/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-- rspec:16:./spec/paper_trail_scrapbook/user_journal_spec.rb:68/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-- rspec:17:./spec/paper_trail_scrapbook/user_journal_spec.rb:79/PaperTrailScrapbook::UserJournal#story with a provided class provides a story for provided class
-- rspec:18:./spec/paper_trail_scrapbook/user_journal_spec.rb:95/PaperTrailScrapbook::UserJournal#story with start time and class but no end time provides a story with start time
-- rspec:19:./spec/paper_trail_scrapbook/user_journal_spec.rb:111/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class provides a story with end time in the future
-- rspec:20:./spec/paper_trail_scrapbook/user_journal_spec.rb:124/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class with end time in past provides a story with end time in the past
-- rspec:21:./spec/paper_trail_scrapbook/user_journal_spec.rb:138/PaperTrailScrapbook::UserJournal#story with start and end times but no class provides a story with start and end times
-- rspec:22:./spec/paper_trail_scrapbook/user_journal_spec.rb:158/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range covers current time provides a story for provided class with start and end times
-- rspec:23:./spec/paper_trail_scrapbook/user_journal_spec.rb:174/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range is completely in the future provides a story
-- rspec:24:./spec/paper_trail_scrapbook/user_journal_spec.rb:183/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when no time range provides a story
-neutral:PaperTrailScrapbook::UserJournal#when_range:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:56:12363
---- Neutral failure ---
-Original code was inserted unmutated. And the test did NOT PASS.
-Your tests do not pass initially or you found a bug in mutant / unparser.
-Subject AST:
-s(:def, :when_range,
-  s(:args),
-  s(:dstr,
-    s(:begin,
-      s(:send,
-        s(:send, nil, :starts), :strftime,
-        s(:send, nil, :time_format))),
-    s(:str, " and "),
-    s(:begin,
-      s(:send,
-        s(:send, nil, :ends), :strftime,
-        s(:send, nil, :time_format)))))
-Unparsed Source:
-def when_range
-  "#{starts.strftime(time_format)}#{" and "}#{ends.strftime(time_format)}"
-end
-Test Result:
-- 12 @ runtime: 0.515732
-  - rspec:13:./spec/paper_trail_scrapbook/user_journal_spec.rb:37/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-  - rspec:14:./spec/paper_trail_scrapbook/user_journal_spec.rb:52/PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story missing to_s content
-  - rspec:15:./spec/paper_trail_scrapbook/user_journal_spec.rb:62/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-  - rspec:16:./spec/paper_trail_scrapbook/user_journal_spec.rb:68/PaperTrailScrapbook::UserJournal#story with missing references provides a whole story missing reference
-  - rspec:17:./spec/paper_trail_scrapbook/user_journal_spec.rb:79/PaperTrailScrapbook::UserJournal#story with a provided class provides a story for provided class
-  - rspec:18:./spec/paper_trail_scrapbook/user_journal_spec.rb:95/PaperTrailScrapbook::UserJournal#story with start time and class but no end time provides a story with start time
-  - rspec:19:./spec/paper_trail_scrapbook/user_journal_spec.rb:111/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class provides a story with end time in the future
-  - rspec:20:./spec/paper_trail_scrapbook/user_journal_spec.rb:124/PaperTrailScrapbook::UserJournal#story with end time but no start time and no class with end time in past provides a story with end time in the past
-  - rspec:21:./spec/paper_trail_scrapbook/user_journal_spec.rb:138/PaperTrailScrapbook::UserJournal#story with start and end times but no class provides a story with start and end times
-  - rspec:22:./spec/paper_trail_scrapbook/user_journal_spec.rb:158/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range covers current time provides a story for provided class with start and end times
-  - rspec:23:./spec/paper_trail_scrapbook/user_journal_spec.rb:174/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when time range is completely in the future provides a story
-  - rspec:24:./spec/paper_trail_scrapbook/user_journal_spec.rb:183/PaperTrailScrapbook::UserJournal#story with start time, end time, and a class when no time range provides a story
-Test Output:
-Run options: include {:focus=>true}
-
-All examples were filtered out; ignoring {:focus=>true}
-
-Randomized with seed 41106
-F
-
-Failures:
-
-  1) PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-     Failure/Error: expect(object.starts).to eql 'Thursday, 01 Jan 1970 at 12:00 AM'
-
-     NoMethodError:
-       private method `starts' called for #<PaperTrailScrapbook::UserJournal:0x007f9156406b38>
-     # ./spec/paper_trail_scrapbook/user_journal_spec.rb:38:in `block (4 levels) in <module:PaperTrailScrapbook>'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-rspec-0.8.14/lib/mutant/integration/rspec.rb:63:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:48:in `block in run_mutation_tests'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:66:in `block in result'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant.rb:223:in `open'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant.rb:223:in `block in <class:Config>'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:63:in `result'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:55:in `child'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:37:in `block in parent'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:36:in `fork'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:36:in `parent'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:23:in `block in call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:22:in `pipe'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/isolation/fork.rb:22:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:46:in `run_mutation_tests'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/env.rb:25:in `kill'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:60:in `call'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:60:in `handle_job'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:45:in `handle'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:31:in `run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/worker.rb:17:in `run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/parallel/master.rb:43:in `block (2 levels) in run'
-     # /Users/tj/.rvm/gems/ruby-2.4.1@global/gems/mutant-0.8.14/lib/mutant/actor/env.rb:14:in `block in spawn'
-
-Finished in 0.37682 seconds (files took 1 minute 26.94 seconds to load)
-1 example, 1 failure
-
-Failed examples:
-
-rspec ./spec/paper_trail_scrapbook/user_journal_spec.rb:37 # PaperTrailScrapbook::UserJournal#story with a provided user provides a whole story
-
-Randomized with seed 41106
-
+evil:PaperTrailScrapbook::UserJournal#what:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/user_journal.rb:52:fa18e
+@@ -1,4 +1,4 @@
+ def what
+-  String(options.fetch(:klass, nil)).presence
++  String(options.fetch(:klass, nil))
+ end
 -----------------------
 PaperTrailScrapbook::VersionHelpers#who:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/version_helpers.rb:36
-- rspec:34:./spec/paper_trail_scrapbook/version_helpers_spec.rb:82/PaperTrailScrapbook::VersionHelpers#who returns expected value
+- rspec:34:./spec/paper_trail_scrapbook/version_helpers_spec.rb:85/PaperTrailScrapbook::VersionHelpers#who returns expected value
 evil:PaperTrailScrapbook::VersionHelpers#who:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/version_helpers.rb:36:f0515
 @@ -1,11 +1,9 @@
  def who
@@ -5372,20 +4931,6 @@ evil:PaperTrailScrapbook::VersionHelpers#who:/Users/tj/projects/paper_trail_scra
    whodunnit_instance(author)
  end
 -----------------------
-evil:PaperTrailScrapbook::VersionHelpers#who:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/version_helpers.rb:36:153c4
-@@ -1,11 +1,11 @@
- def who
-   author = version.version_author
-   unless author
--    return config.unknown_whodunnit
-+    return nil
-   end
-   unless whodunnit_class
-     return author
-   end
-   whodunnit_instance(author)
- end
------------------------
 evil:PaperTrailScrapbook::VersionHelpers#who:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/version_helpers.rb:36:c66d5
 @@ -1,11 +1,11 @@
  def who
@@ -5393,6 +4938,20 @@ evil:PaperTrailScrapbook::VersionHelpers#who:/Users/tj/projects/paper_trail_scra
    unless author
 -    return config.unknown_whodunnit
 +    return self.unknown_whodunnit
+   end
+   unless whodunnit_class
+     return author
+   end
+   whodunnit_instance(author)
+ end
+-----------------------
+evil:PaperTrailScrapbook::VersionHelpers#who:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/version_helpers.rb:36:153c4
+@@ -1,11 +1,11 @@
+ def who
+   author = version.version_author
+   unless author
+-    return config.unknown_whodunnit
++    return nil
    end
    unless whodunnit_class
      return author
@@ -5522,8 +5081,8 @@ PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/paper_
 - rspec:31:./spec/paper_trail_scrapbook/version_helpers_spec.rb:60/PaperTrailScrapbook::VersionHelpers#whenn returns version created_at
 - rspec:32:./spec/paper_trail_scrapbook/version_helpers_spec.rb:67/PaperTrailScrapbook::VersionHelpers#kind returns expected value
 - rspec:33:./spec/paper_trail_scrapbook/version_helpers_spec.rb:73/PaperTrailScrapbook::VersionHelpers#kind garbage returns expected value
-- rspec:34:./spec/paper_trail_scrapbook/version_helpers_spec.rb:82/PaperTrailScrapbook::VersionHelpers#who returns expected value
-- rspec:35:./spec/paper_trail_scrapbook/version_helpers_spec.rb:88/PaperTrailScrapbook::VersionHelpers#whodunnit_class returns expected value
+- rspec:34:./spec/paper_trail_scrapbook/version_helpers_spec.rb:85/PaperTrailScrapbook::VersionHelpers#who returns expected value
+- rspec:35:./spec/paper_trail_scrapbook/version_helpers_spec.rb:91/PaperTrailScrapbook::VersionHelpers#whodunnit_class returns expected value
 evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/version_helpers.rb:48:22654
 @@ -1,12 +1,10 @@
  def whodunnit_instance(author)
@@ -5598,21 +5157,6 @@ evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/p
    instance.to_s
  end
 -----------------------
-evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/version_helpers.rb:48:c0628
-@@ -1,12 +1,12 @@
- def whodunnit_instance(author)
-   instance = begin
-     whodunnit_class.find(author)
-   rescue StandardError
--    config.invalid_whodunnit.call(author)
-+    config.call(author)
-   end
-   if instance.respond_to?(:to_whodunnit)
-     return instance.to_whodunnit
-   end
-   instance.to_s
- end
------------------------
 evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/version_helpers.rb:48:df35f
 @@ -1,12 +1,12 @@
  def whodunnit_instance(author)
@@ -5621,6 +5165,21 @@ evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/p
    rescue StandardError
 -    config.invalid_whodunnit.call(author)
 +    self.call(author)
+   end
+   if instance.respond_to?(:to_whodunnit)
+     return instance.to_whodunnit
+   end
+   instance.to_s
+ end
+-----------------------
+evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/version_helpers.rb:48:c0628
+@@ -1,12 +1,12 @@
+ def whodunnit_instance(author)
+   instance = begin
+     whodunnit_class.find(author)
+   rescue StandardError
+-    config.invalid_whodunnit.call(author)
++    config.call(author)
    end
    if instance.respond_to?(:to_whodunnit)
      return instance.to_whodunnit
@@ -5718,21 +5277,6 @@ evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/p
    instance.to_s
  end
 -----------------------
-evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/version_helpers.rb:48:2e83e
-@@ -1,12 +1,10 @@
- def whodunnit_instance(author)
-   instance = begin
-     whodunnit_class.find(author)
-   rescue StandardError
-     config.invalid_whodunnit.call(author)
-   end
--  if instance.respond_to?(:to_whodunnit)
--    return instance.to_whodunnit
--  end
-+  self
-   instance.to_s
- end
------------------------
 evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/version_helpers.rb:48:042cb
 @@ -1,12 +1,12 @@
  def whodunnit_instance(author)
@@ -5745,6 +5289,21 @@ evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/p
 +  if nil
      return instance.to_whodunnit
    end
+   instance.to_s
+ end
+-----------------------
+evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/version_helpers.rb:48:2e83e
+@@ -1,12 +1,10 @@
+ def whodunnit_instance(author)
+   instance = begin
+     whodunnit_class.find(author)
+   rescue StandardError
+     config.invalid_whodunnit.call(author)
+   end
+-  if instance.respond_to?(:to_whodunnit)
+-    return instance.to_whodunnit
+-  end
++  self
    instance.to_s
  end
 -----------------------
@@ -5778,21 +5337,6 @@ evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/p
    instance.to_s
  end
 -----------------------
-evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/version_helpers.rb:48:38a08
-@@ -1,12 +1,12 @@
- def whodunnit_instance(author)
-   instance = begin
-     whodunnit_class.find(author)
-   rescue StandardError
-     config.invalid_whodunnit.call(author)
-   end
-   if instance.respond_to?(:to_whodunnit)
--    return instance.to_whodunnit
-+    nil
-   end
-   instance.to_s
- end
------------------------
 evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/version_helpers.rb:48:0f2b0
 @@ -1,12 +1,12 @@
  def whodunnit_instance(author)
@@ -5804,6 +5348,21 @@ evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/p
 -  if instance.respond_to?(:to_whodunnit)
 +  if false
      return instance.to_whodunnit
+   end
+   instance.to_s
+ end
+-----------------------
+evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/version_helpers.rb:48:38a08
+@@ -1,12 +1,12 @@
+ def whodunnit_instance(author)
+   instance = begin
+     whodunnit_class.find(author)
+   rescue StandardError
+     config.invalid_whodunnit.call(author)
+   end
+   if instance.respond_to?(:to_whodunnit)
+-    return instance.to_whodunnit
++    nil
    end
    instance.to_s
  end
@@ -5823,21 +5382,6 @@ evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/p
    instance.to_s
  end
 -----------------------
-evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/version_helpers.rb:48:60bfc
-@@ -1,12 +1,12 @@
- def whodunnit_instance(author)
-   instance = begin
-     whodunnit_class.find(author)
-   rescue StandardError
-     config.invalid_whodunnit.call(author)
-   end
-   if instance.respond_to?(:to_whodunnit)
--    return instance.to_whodunnit
-+    return nil
-   end
-   instance.to_s
- end
------------------------
 evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/version_helpers.rb:48:69e3a
 @@ -1,12 +1,12 @@
  def whodunnit_instance(author)
@@ -5849,6 +5393,21 @@ evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/p
    if instance.respond_to?(:to_whodunnit)
 -    return instance.to_whodunnit
 +    instance.to_whodunnit
+   end
+   instance.to_s
+ end
+-----------------------
+evil:PaperTrailScrapbook::VersionHelpers#whodunnit_instance:/Users/tj/projects/paper_trail_scrapbook/lib/paper_trail_scrapbook/version_helpers.rb:48:60bfc
+@@ -1,12 +1,12 @@
+ def whodunnit_instance(author)
+   instance = begin
+     whodunnit_class.find(author)
+   rescue StandardError
+     config.invalid_whodunnit.call(author)
+   end
+   if instance.respond_to?(:to_whodunnit)
+-    return instance.to_whodunnit
++    return nil
    end
    instance.to_s
  end
@@ -5907,11 +5466,11 @@ Requires:        ["./spec/dummy_app/config/environment.rb"]
 Subjects:        35
 Mutations:       1404
 Results:         1404
-Kills:           1055
-Alive:           349
-Runtime:         103.88s
-Killtime:        527.76s
-Overhead:        -80.32%
-Mutations/s:     13.52
-Coverage:        75.14%
+Kills:           1042
+Alive:           362
+Runtime:         98.78s
+Killtime:        515.57s
+Overhead:        -80.84%
+Mutations/s:     14.21
+Coverage:        74.22%
 Coverage report generated for RSpec to /Users/tj/projects/paper_trail_scrapbook/coverage. 0.0 / 0.0 LOC (100.0%) covered.

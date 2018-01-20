@@ -5,7 +5,7 @@ module PaperTrailScrapbook
     describe '.instance' do
       it 'returns the singleton instance' do
         expect { described_class.instance }.not_to raise_error
-        expect(described_class.instance.whodunnit_class).to be_nil
+        expect(described_class.instance.whodunnit_class).to equal(Person).or be_nil
         expect(described_class.instance.time_format)
           .to eql(described_class::DEFAULT_TIME_FORMAT)
         expect(described_class.instance.events)
