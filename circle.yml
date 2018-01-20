@@ -12,8 +12,8 @@ dependencies:
 database:
   override:
     - echo "no db"
+    
 test:
-  
   override:
     - bundle exec rake spec
     - CODECLIMATE_REPO_TOKEN=e0db6fd6beb8208980b2908947735982fb5a4e8a9a3cb742dc194e00df79f388 bundle exec codeclimate-test-reporter
