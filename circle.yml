@@ -11,7 +11,6 @@ dependencies:
 
 database:
   override:
-    - bundle update rake
     - rake -T -f spec/dummy_app/Rakefile
     - bundle exec rake -f spec/dummy_app/Rakefile db:setup
     
