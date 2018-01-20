@@ -12,6 +12,7 @@ dependencies:
 database:
   override:
     - cd spec/dummy_app
+    - rake -T
     - bundle exec rake db:setup
     - cd ../..
     
