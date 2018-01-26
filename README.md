@@ -9,27 +9,37 @@ Human Readable audit reporting for users of [PaperTrail](https://github.com/airb
 
 Add PaperTrailScrapBook to your `Gemfile`.
 
-    `gem 'paper_trail_scrapbook'`
+`gem 'paper_trail_scrapbook'`
 
 ## Basic Usage
 
 ### Configuration
 
-If you are using a ID of some sort to a class (i.e. _User_) for whodunnit in PaperTrail
-then you should configure this into the scrapbook so it can locate and provide a human readable value for the whodunnit.
+If you are using an ID reference to a class (i.e. _User_) for whodunnit in
+PaperTrail, then you should configure this into PaperTrailScrapbook so it can
+locate and provide a human readable value for the whodunnit.
 
 Create an initializer i.e. _config/initializers/paper_trail_scrapbook.rb
 ```ruby
  PaperTrailScrapbook.configure do |config|
-   config.whodunnit_class = User
+   config.whodunnit_class = WhoDidIt
  end
-
 ```
 
-This gem will call `find` on that class, and translate the result to a 
-String via `to_s`, so it can be a simple Rails model, or a custom Ruby class that has `find` class method and 
-expects the `whodunnit` value. For example
+You can also set the scope of your class here:
+```ruby
+ config.whodunnit_class = User.where(active: true)
+```
 
+And can configure a Proc to use if the user cannot be found:
+```ruby
+ config.invalid_whodunnit = proc { |id| "** missing #{id}**"}
+```
+
+This gem will call `find` on the whodunnit class, and translate the result to a
+String via `to_s`. The whodunnit class can be a simple Rails model, or a custom
+Ruby class that has `find` class method and expects the `whodunnit` value.
+For example:
 ```ruby
 class WhoDidIt
   def self.find(email)
@@ -39,10 +49,12 @@ end
 
 
 PaperTrailScrapbook.config.whodunnit_class = WhoDidIt
-
 ```
 
 ### Life Story
+
+The `LifeStory` module provides a complete history of an object (limited by the
+availability of its PaperTrail versions):
 ```ruby
 widget = Widget.find 42
 
@@ -57,18 +69,85 @@ text = PaperTrailScrapbook::LifeHistory.new(widget).story
 #   • discounted_price: 29612.0 
 ```
 
+### User Journal
+
+The `UserJournal` module provides a list of changes made by a particular
+whodunnit:
+```ruby
+who = WhoDidIt.find 42
+
+text = PaperTrailScrapbook::UserJournal.new(who).story
+# Between Wednesday, 31 Dec 1969 at 4:00 PM PST and Friday, 26 Jan 2018 at 10:35 AM PST, Rob Owens made the following changes:
+#
+# On Wednesday, 07 Jan 2018 at 2:37 PM, Rob Owens created the following Widget information:
+#   • email: Tim@example.com
+#   • name: Tim's Widget
+#   • built: true
+#   • created_by: Rob Owens[1742]
+#   • provider: RedCharge[3113]
+#   • cost: 29612.0
+#   • discounted_price: 29612.0
+#   •: 123
+#
+# On Thursday, 23 Oct 2017 at 7:55 AM PDT, updated Timer[595]:
+#  • reset_at: 2017-10-23 15:55:22 UTC was *removed*
+#  • job reference: 354524 was *removed*
+#
+# On Friday, 22 Oct 2017 at 12:43 PM PDT, updated Prospect[5124]:
+#  • business: 1189 added
+#
+# On Friday, 07 Oct 2017 at 12:43 PM PDT, created Prospect[5952]:
+#  • name: Car Scrub
+#  • first_contact: 2017-10-07
+#  • created by: Rob Owens[42]
+```
+
+You can also scope the change list to a specific class:
+```ruby
+text = PaperTrailScrapbook::UserJournal.new(who, klass: Widget).story
+# Between Wednesday, 31 Dec 1969 at 4:00 PM PST and Friday, 26 Jan 2018 at 10:35 AM PST, Rob Owens made the following Widget changes:
+#
+# On Wednesday, 07 Jan 2018 at 2:37 PM, Rob Owens created Widget[123]:
+#   • email: Tim@example.com
+#   • name: Tim's Widget
+#   • built: true
+#   • created_by: Rob Owens[1742]
+#   • provider: RedCharge[3113]
+#   • cost: 29612.0
+#   • discounted_price: 29612.0
+#   •: 123
+```
+
+Or view changes in a time range:
+```ruby
+text = PaperTrailScrapbook::UserJournal.new(who, start: 1.month.ago, end: Time.now).story
+# Between Tuesday, 26 Dec 2017 at 4:00 PM PST and Friday, 26 Jan 2018 at 4:00 PM PST, Rob Owens made the following changes:
+#
+# On Wednesday, 07 Jan 2018 at 2:37 PM, Rob Owens created the following Widget information:
+#   • email: Tim@example.com
+#   • name: Tim's Widget
+#   • built: true
+#   • created_by: Rob Owens[1742]
+#   • provider: RedCharge[3113]
+#   • cost: 29612.0
+#   • discounted_price: 29612.0
+#   •: 123
+```
+
 ## Problems
 
 Please use GitHub's [issue tracker](http://github.com/tjchambers/paper_trail_scrapbook/issues).
 
+
 ## Contributors
 
-Created by Tim Chambers in 2017.
+- Created by [Tim Chambers](https://github.com/tjchambers) in 2017
+- [Jason Dinsmore](https://github.com/dinjas)
+- [All other contributors](https://github.com/tjchambers/paper_trail_scrapbook/graphs/contributors)
 
-https://github.com/tjchambers/paper_trail_scrapbook/graphs/contributors
-
-Acknowledgement and kudos to Andy Stewart, Ben Atkins, Jared Beck, and all the other contributors to the PaperTrail gem. 
-Without them this would not be possible.
+Acknowledgement and kudos to Andy Stewart, Ben Atkins, Jared Beck, and all the
+other contributors to the PaperTrail gem. Without them this would not be
+possible.
 
 
 ## Intellectual Property
