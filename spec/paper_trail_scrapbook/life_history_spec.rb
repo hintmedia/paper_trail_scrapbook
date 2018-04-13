@@ -4,10 +4,10 @@ module PaperTrailScrapbook
   ::RSpec.describe LifeHistory do
     before do
       PaperTrailScrapbook.config.whodunnit_class = Person
-      PaperTrail.whodunnit = person.id
+      PaperTrail.request.whodunnit = person.id
     end
 
-    let(:person) { Person.create(name: 'The Tim Man') }
+    let(:person) {Person.create(name: 'The Tim Man')}
 
     let(:book) do
       b = Book.new(title: 'How the Grinch stole Xmas')
@@ -27,8 +27,8 @@ module PaperTrailScrapbook
       a
     end
 
-    let(:object) { described_class.new(target) }
-    let(:subject) { object.story }
+    let(:object) {described_class.new(target)}
+    let(:subject) {object.story}
 
     describe '#story' do
       it 'provides a whole story' do
@@ -56,7 +56,7 @@ module PaperTrailScrapbook
         target.save!
 
         expect(subject)
-          .to match(/How the Grinch stole Xmas\[\d+\] was \*removed\*/)
+            .to match(/How the Grinch stole Xmas\[\d+\] was \*removed\*/)
       end
 
       context 'it handles missing whodunnit record' do
@@ -66,7 +66,7 @@ module PaperTrailScrapbook
           person.destroy
 
           expect(subject)
-            .to match(/\*missing \(#{pid}\)\* created the following/)
+              .to match(/\*missing \(#{pid}\)\* created the following/)
         end
       end
 
@@ -74,7 +74,7 @@ module PaperTrailScrapbook
         it 'allows for a custom invalid_whodunnit handler' do
           config = PaperTrailScrapbook.config
           handler = config.invalid_whodunnit
-          config.invalid_whodunnit = proc { |w| "*WHO (#{w})*" }
+          config.invalid_whodunnit = proc {|w| "*WHO (#{w})*"}
 
           target
           pid = person.id
@@ -87,7 +87,7 @@ module PaperTrailScrapbook
       end
 
       context 'no papertrail' do
-        let(:target) { Elephant.create! }
+        let(:target) {Elephant.create!}
         it 'has none' do
           target
           expect(subject).to eql ''

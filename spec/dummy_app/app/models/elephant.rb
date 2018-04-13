@@ -1,3 +1,3 @@
 class Elephant < Animal
-  paper_trail.disable
+  PaperTrail.request.disable_model(Elephant)
 end
