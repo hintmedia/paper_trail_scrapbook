@@ -1,7 +1,7 @@
 ---
 machine:
   ruby:
-    version: '2.2.7'
+    version: '2.3.0'
   environment:
     CC_TEST_REPORTER_ID: e0db6fd6beb8208980b2908947735982fb5a4e8a9a3cb742dc194e00df79f388
 
