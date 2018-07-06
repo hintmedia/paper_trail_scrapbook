@@ -69,6 +69,32 @@ text = PaperTrailScrapbook::LifeHistory.new(widget).story
 #   • discounted_price: 29612.0 
 ```
 
+If desired, you can implement a `trailed_related_content` method in your model
+that returns a collection of related objects to include in the history.
+
+```ruby
+class Widget < ApplicationRecord
+  has_paper_trail
+
+  def trailed_related_content
+    abilities | [manufacturer]
+  end
+
+  has_many :abilities
+  has_one  :manufacturer
+end
+```
+
+This will allow `Ability` and `Manufacturer` history associated with your model to have their histories included in the history.
+
+It would be used like this:
+
+
+```ruby
+
+
+```
+
 ### User Journal
 
 The `UserJournal` module provides a list of changes made by a particular
