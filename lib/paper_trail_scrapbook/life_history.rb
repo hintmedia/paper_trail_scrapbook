@@ -13,7 +13,7 @@ module PaperTrailScrapbook
         end
       end
 
-      @versions.sort_by!(&:created_at)
+      @versions.to_a.sort_by!(&:created_at)
     end
 
     # Retries textual historical analysis of versions
