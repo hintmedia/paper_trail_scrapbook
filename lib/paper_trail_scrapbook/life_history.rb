@@ -5,10 +5,11 @@ module PaperTrailScrapbook
   #
   class LifeHistory
     def initialize(object)
+      @object   = object
       @versions = object.versions
 
       if object.respond_to?(:trailed_related_content)
-        object.trailed_related_content.each do |trc|
+        object.trailed_related_content.compact.each do |trc|
           @versions |= trc.versions
         end
       end
@@ -22,12 +23,17 @@ module PaperTrailScrapbook
     #
     def story
       versions.map do |v|
-        Chapter.new(v).story
+        Chapter.new(v, !primary?(v)).story
       end.compact.join("\n\n")
     end
 
     private
 
-    attr_reader :versions
+    def primary?(version)
+      version.item_type.eql?(object.class.name) &&
+        version.item_id.equal?(object.id)
+    end
+
+    attr_reader :object, :versions
   end
 end

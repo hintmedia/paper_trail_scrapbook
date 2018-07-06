@@ -16,6 +16,10 @@ module PaperTrailScrapbook
       event.eql?('create')
     end
 
+    def destroy?
+      event.eql?('destroy')
+    end
+
     def changes
       Changes.new(version).change_log
     end

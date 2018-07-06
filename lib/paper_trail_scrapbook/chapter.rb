@@ -6,7 +6,7 @@ module PaperTrailScrapbook
   # @author Timothy Chambers <tim@possibilogy.com>
   #
   class Chapter
-    include Concord.new(:version)
+    include Concord.new(:version, :show_id)
     include Adamantium::Flat
     include PaperTrailScrapbook::VersionHelpers
 
@@ -16,15 +16,34 @@ module PaperTrailScrapbook
     #
     def story
       updates = changes
-      return unless create? || updates.present? || !config.filter_non_changes
+      return unless tell_story?(updates)
 
-      "#{preface}\n#{updates}"
+      [preface, (updates unless destroy?)].compact.join("\n")
     end
 
     private
 
     def preface
-      "On #{whenn}, #{who} #{kind} the following #{model} info:".squeeze(' ')
+      "On #{whenn}, #{who} #{kind} #{what}".squeeze(' ')
     end
+
+    def what
+      if destroy?
+        "#{model}#{item_id}"
+      else
+        "the following #{model}#{item_id} info:"
+      end
+    end
+
+    def item_id
+      return unless show_id
+
+      "[#{model_id}]"
+    end
+
+    def tell_story?(updates)
+      create? || destroy? || updates.present? || !config.filter_non_changes
+    end
+
   end
 end
