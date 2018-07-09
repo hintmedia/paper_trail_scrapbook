@@ -107,7 +107,6 @@ module PaperTrailScrapbook
         end
 
         it 'includes related content history' do
-          puts subject
           expect(subject).to match(/created the following Person\[\d+\] info/)
           expect(subject).to match(/name: Dr\. Seuss/)
 
