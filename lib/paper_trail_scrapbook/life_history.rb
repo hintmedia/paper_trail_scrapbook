@@ -7,7 +7,6 @@ module PaperTrailScrapbook
     def initialize(object)
       @object   = object
       @versions = object.versions
-
       if object.respond_to?(:trailed_related_content)
         object.trailed_related_content.compact.each do |trc|
           @versions |= trc.versions
@@ -23,7 +22,11 @@ module PaperTrailScrapbook
     #
     def story
       versions.map do |v|
-        Chapter.new(v, !primary?(v)).story
+        if primary?(v)
+          Chapter
+        else
+          SecondaryChapter
+        end.new(v).story
       end.compact.join("\n\n")
     end
 

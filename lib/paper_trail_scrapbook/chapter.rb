@@ -6,7 +6,7 @@ module PaperTrailScrapbook
   # @author Timothy Chambers <tim@possibilogy.com>
   #
   class Chapter
-    include Concord.new(:version, :show_id)
+    include Concord.new(:version)
     include Adamantium::Flat
     include PaperTrailScrapbook::VersionHelpers
 
@@ -36,14 +36,11 @@ module PaperTrailScrapbook
     end
 
     def item_id
-      return unless show_id
 
-      "[#{model_id}]"
     end
 
     def tell_story?(updates)
       create? || destroy? || updates.present? || !config.filter_non_changes
     end
-
   end
 end
