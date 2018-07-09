@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 module PaperTrailScrapbook
-  ::RSpec.describe Chapter do
+  ::RSpec.describe SecondaryChapter do
     let(:version) do
       OpenStruct.new(id:             2_674_798,
                      item_type:      'Widget',
@@ -50,7 +50,7 @@ module PaperTrailScrapbook
 
     describe '#story' do
       it 'provides a whole story' do
-        expect(subject).to match(/updated the following Widget info/)
+        expect(subject).to match(/updated the following Widget\[\d+\] info/)
         expect(subject).to match(/email: tim@redbox.com added/)
         expect(subject).to match(/name: Tim Chambers added/)
         expect(subject).to match(/sent: false -> true/)

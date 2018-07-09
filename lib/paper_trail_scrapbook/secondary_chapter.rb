@@ -1,7 +1,6 @@
 module PaperTrailScrapbook
-  # Class Chapter provides single version history analysis
-  #
-  # @author Timothy Chambers <tim@possibilogy.com>
+  # Class SecondaryChapter provides single version history analysis for data
+  # related to the main subject
   #
   class SecondaryChapter < Chapter
 
