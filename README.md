@@ -94,7 +94,7 @@ widget = Widget.find 42
 
 text = PaperTrailScrapbook::LifeHistory.new(widget).story
 
-# On Monday, 05 Jun 2017 at 12:37 PM, Rob Owens created the following Manufacturer information:
+# On Monday, 05 Jun 2017 at 12:37 PM, Rob Owens created the following Manufacturer[411] information:
 #   • email: widgetsrus@example.com
 #   • name: WidgetsAreUs
 #   •: 411
@@ -108,7 +108,7 @@ text = PaperTrailScrapbook::LifeHistory.new(widget).story
 # On Thursday, 23 Oct 2017 at 7:55 AM PDT, Rob Owens updated Manufacturer[411]:
 #  • name: WidgetsRUs
 # 
-# On Friday, 24 Oct 2017 at 10:10 AM PDT, Rob Owens created the following Attachment information:
+# On Friday, 24 Oct 2017 at 10:10 AM PDT, Rob Owens created the following Attachment[212] information:
 #  • name: Electromagnet
 #  • widget: Tim's Widget[1234]
 #  •: 212
