@@ -69,6 +69,52 @@ text = PaperTrailScrapbook::LifeHistory.new(widget).story
 #   • discounted_price: 29612.0 
 ```
 
+If desired, you can implement a `trailed_related_content` method in your model
+that returns a collection of related objects to include in the history.
+
+The following would, for example, cause version information for the `attachments` and `manufacturer` to be included when viewing the life story of a `Widget`:
+
+```ruby
+class Widget < ApplicationRecord
+  has_paper_trail
+
+  def trailed_related_content
+    attachments | [manufacturer]
+  end
+
+  has_many :attachments
+  has_one  :manufacturer
+end
+```
+
+A history leveraging this feature might look like this:
+
+```ruby
+widget = Widget.find 42
+
+text = PaperTrailScrapbook::LifeHistory.new(widget).story
+
+# On Monday, 05 Jun 2017 at 12:37 PM, Rob Owens created the following Manufacturer[411] information:
+#   • email: widgetsrus@example.com
+#   • name: WidgetsAreUs
+#   •: 411
+#
+# On Wednesday, 07 Jun 2017 at 2:37 PM, Rob Owens created the following Widget information:
+#   • email: Tim@example.com
+#   • name: Tim's Widget 
+#   • manufacturer: WidgetsAreUs[411]
+#   •: 1234
+#   
+# On Thursday, 23 Oct 2017 at 7:55 AM PDT, Rob Owens updated Manufacturer[411]:
+#  • name: WidgetsRUs
+# 
+# On Friday, 24 Oct 2017 at 10:10 AM PDT, Rob Owens created the following Attachment[212] information:
+#  • name: Electromagnet
+#  • widget: Tim's Widget[1234]
+#  •: 212
+# 
+```
+
 ### User Journal
 
 The `UserJournal` module provides a list of changes made by a particular
@@ -79,7 +125,7 @@ who = WhoDidIt.find 42
 text = PaperTrailScrapbook::UserJournal.new(who).story
 # Between Wednesday, 31 Dec 1969 at 4:00 PM PST and Friday, 26 Jan 2018 at 10:35 AM PST, Rob Owens made the following changes:
 #
-# On Wednesday, 07 Jan 2018 at 2:37 PM, Rob Owens created the following Widget information:
+# On Wednesday, 07 Jan 2018 at 2:37 PM, created the following Widget information:
 #   • email: Tim@example.com
 #   • name: Tim's Widget
 #   • built: true
@@ -107,7 +153,7 @@ You can also scope the change list to a specific class:
 text = PaperTrailScrapbook::UserJournal.new(who, klass: Widget).story
 # Between Wednesday, 31 Dec 1969 at 4:00 PM PST and Friday, 26 Jan 2018 at 10:35 AM PST, Rob Owens made the following Widget changes:
 #
-# On Wednesday, 07 Jan 2018 at 2:37 PM, Rob Owens created Widget[123]:
+# On Wednesday, 07 Jan 2018 at 2:37 PM, created Widget[123]:
 #   • email: Tim@example.com
 #   • name: Tim's Widget
 #   • built: true
@@ -123,7 +169,7 @@ Or view changes in a time range:
 text = PaperTrailScrapbook::UserJournal.new(who, start: 1.month.ago, end: Time.now).story
 # Between Tuesday, 26 Dec 2017 at 4:00 PM PST and Friday, 26 Jan 2018 at 4:00 PM PST, Rob Owens made the following changes:
 #
-# On Wednesday, 07 Jan 2018 at 2:37 PM, Rob Owens created the following Widget information:
+# On Wednesday, 07 Jan 2018 at 2:37 PM, created the following Widget information:
 #   • email: Tim@example.com
 #   • name: Tim's Widget
 #   • built: true

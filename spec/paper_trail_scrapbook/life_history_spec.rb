@@ -87,10 +87,35 @@ module PaperTrailScrapbook
       end
 
       context 'no papertrail' do
-        let(:target) {Elephant.create!}
+        let(:target) { Elephant.create! }
+
         it 'has none' do
           target
           expect(subject).to eql ''
+        end
+      end
+
+      context 'with related data' do
+        before do
+          author
+          book
+          target
+
+          def target.trailed_related_content
+            [book, author]
+          end
+        end
+
+        it 'includes related content history' do
+          expect(subject).to match(/created the following Person\[\d+\] info/)
+          expect(subject).to match(/name: Dr\. Seuss/)
+
+          expect(subject).to match(/created the following Book\[\d+\] info/)
+          expect(subject).to match(/title: How the Grinch stole Xmas/)
+
+          expect(subject).to match(/created the following Authorship info/)
+          expect(subject).to match(/book: How the Grinch stole Xmas\[\d+\]/)
+          expect(subject).to match(/author: Dr\. Seuss\[\d+\]/)
         end
       end
     end
