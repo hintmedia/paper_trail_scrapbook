@@ -3,12 +3,10 @@ module PaperTrailScrapbook
   # related to the main subject
   #
   class SecondaryChapter < Chapter
-
     private
 
     def item_id
       "[#{model_id}]"
     end
-
   end
 end

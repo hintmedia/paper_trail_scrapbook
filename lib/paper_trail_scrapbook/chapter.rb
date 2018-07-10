@@ -35,9 +35,7 @@ module PaperTrailScrapbook
       end
     end
 
-    def item_id
-
-    end
+    def item_id; end
 
     def tell_story?(updates)
       create? || destroy? || updates.present? || !config.filter_non_changes
