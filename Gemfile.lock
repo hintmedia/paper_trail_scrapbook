@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    paper_trail_scrapbook (0.1.8)
+    paper_trail_scrapbook (0.1.9)
       activerecord (>= 4.0, < 5.2)
       adamantium
       concord
@@ -100,9 +100,11 @@ GEM
       rspec-core (>= 3.4.0, < 3.7.0)
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
-    paper_trail (9.0.0)
+    paper_trail (9.2.0)
       activerecord (>= 4.2, < 5.3)
+      paper_trail-association_tracking (< 2)
       request_store (~> 1.1)
+    paper_trail-association_tracking (1.0.0)
     parallel (1.12.1)
     parser (2.4.0.2)
       ast (~> 2.3)
