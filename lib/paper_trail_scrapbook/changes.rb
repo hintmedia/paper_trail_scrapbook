@@ -32,22 +32,22 @@ module PaperTrailScrapbook
 
     private
 
-    def digest(k, v)
-      old, new = v
+    def digest(key, values)
+      old, new = values
       return if old.nil? && (new.nil? || new.eql?(''))
 
-      "#{BULLET} #{k.tr('_', ' ')}: #{detailed_analysis(k, new, old)}"
+      "#{BULLET} #{key.tr('_', ' ')}: #{detailed_analysis(key, new, old)}"
     end
 
-    def detailed_analysis(k, new, old)
+    def detailed_analysis(key, new, old)
       if creating?
-        find_value(k, new).to_s
+        find_value(key, new).to_s
       elsif old.nil?
-        "#{find_value(k, new)} added"
+        "#{find_value(key, new)} added"
       elsif new.nil?
-        "#{find_value(k, old)} was *removed*"
+        "#{find_value(key, old)} was *removed*"
       else
-        "#{find_value(k, old)} -> #{find_value(k, new)}"
+        "#{find_value(key, old)} -> #{find_value(key, new)}"
       end
     end
 
@@ -56,12 +56,12 @@ module PaperTrailScrapbook
     end
 
     def find_value(key, value)
-      return value.to_s unless assoc.key?(key)
+      return value.to_s unless build_associations.key?(key)
 
       return '*empty*' unless value
 
       begin
-        assoc[key].find(value).to_s.to_s + "[#{value}]"
+        build_associations[key].find(value).to_s.to_s + "[#{value}]"
       rescue StandardError
         "*not found*[#{value}]"
       end
@@ -81,7 +81,7 @@ module PaperTrailScrapbook
     end
 
     def build_associations
-      @assoc ||=
+      @build_associations ||=
         Hash[
           klass
         .reflect_on_all_associations
@@ -95,15 +95,13 @@ module PaperTrailScrapbook
     end
 
     def changes
-      @chs ||= if object_changes
-                 YAML
-                   .load(object_changes)
-                   .except(*PaperTrailScrapbook.config.scrub_columns)
-               else
-                 {}
-               end
+      @changes ||= if object_changes
+                     YAML
+                       .load(object_changes)
+                       .except(*PaperTrailScrapbook.config.scrub_columns)
+                   else
+                     {}
+                   end
     end
-
-    attr_reader :assoc, :chs
   end
 end

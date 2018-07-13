@@ -4,7 +4,7 @@ module PaperTrailScrapbook
   RSpec.describe UserJournal do
     before do
       PaperTrailScrapbook.config.whodunnit_class = Person
-      PaperTrail.request.whodunnit = person.id
+      PaperTrail.request.whodunnit               = person.id
 
       a_ship
     end
@@ -19,9 +19,9 @@ module PaperTrailScrapbook
     let(:author) { Person.create!(name: a_name) }
     let(:a_ship) { Authorship.create!(book: book, author: author) }
     let(:person) do
-      who = PaperTrail.request.whodunnit
+      who                          = PaperTrail.request.whodunnit
       PaperTrail.request.whodunnit = nil
-      p = Person.new(name: name)
+      p                            = Person.new(name: name)
       p.save!
       PaperTrail.request.whodunnit = who
       p
@@ -181,7 +181,9 @@ module PaperTrailScrapbook
           let(:starts) { nil }
           let(:ends) { nil }
           it 'provides a story' do
-            expect(subject).to match("Between Thursday, 01 Jan 1970 at 12:00 AM and #{Time.current.in_time_zone.strftime(format).squeeze(' ')}, #{name}"\
+            expect(subject)
+              .to match('Between Thursday, 01 Jan 1970 at 12:00 AM ' \
+                          "and #{Time.current.in_time_zone.strftime(format).squeeze(' ')}, #{name}"\
                                      " #{b_changes}\n\n".squeeze(' '))
           end
         end
