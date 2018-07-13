@@ -28,6 +28,9 @@ jobs:
           paths:
             - vendor/bundle
       - run:
+          name: Database setup
+          command: bin/rails db:create db:schema:load --trace
+      - run:
           name: Setup CodeClimate test-reporter
           command: |
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > cc-test-reporter
