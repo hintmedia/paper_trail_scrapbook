@@ -147,6 +147,8 @@ GEM
       rspec-mocks (~> 3.6.0)
       rspec-support (~> 3.6.0)
     rspec-support (3.6.0)
+    rspec_junit_formatter (0.4.1)
+      rspec-core (>= 2, < 4, != 2.12.0)
     rubocop (0.52.1)
       parallel (~> 1.10)
       parser (>= 2.4.0.2, < 3.0)
@@ -192,6 +194,7 @@ DEPENDENCIES
   railties (>= 4.0, < 5.2)
   rake (~> 10.4.2)
   rspec-rails (~> 3.6)
+  rspec_junit_formatter
   rubocop
   rubocop-rspec
   simplecov
