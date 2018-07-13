@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'singleton'
 
 module PaperTrailScrapbook
@@ -5,13 +7,13 @@ module PaperTrailScrapbook
   class Config
     include Singleton
 
-    DEFAULT_TIME_FORMAT = '%A, %d %b %Y at %l:%M %p'.freeze
+    DEFAULT_TIME_FORMAT = '%A, %d %b %Y at %l:%M %p'
     DEFAULT_EVENTS      = { 'create'  => 'created',
                             'update'  => 'updated',
                             'destroy' => 'destroyed' }.freeze
 
     SCRUB_COLUMNS     = %w[updated_at created_at id].freeze
-    UNKNOWN_WHODUNNIT = '*the app*'.freeze
+    UNKNOWN_WHODUNNIT = '*the app*'
 
     attr_accessor :whodunnit_class,
                   :time_format,

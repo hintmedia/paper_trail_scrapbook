@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module PaperTrailScrapbook
   # Class SecondaryChapter provides single version history analysis for data
   # related to the main subject

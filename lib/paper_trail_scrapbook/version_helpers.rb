@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module PaperTrailScrapbook
   # Module VersionHelpers provides methods for extracting common information
   # from a version or PaperTrailScrapbook config
