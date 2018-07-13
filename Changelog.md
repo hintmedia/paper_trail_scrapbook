@@ -11,7 +11,7 @@ recommendations of [keepachangelog.com](http://keepachangelog.com/).
 
 ### Added
 
-- None
+- Switched from CodeClimate v1 to version 2.
 
 ### Fixed
 
