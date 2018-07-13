@@ -3,8 +3,8 @@ require 'ostruct'
 
 module PaperTrailScrapbook
   RSpec.describe VersionHelpers do
-    let(:person) {Person.create!(name: 'The Tim Man')}
-    let(:book) {Book.create!(title: 'How the Grinch stole Xmas')}
+    let(:person) { Person.create!(name: 'The Tim Man') }
+    let(:book) { Book.create!(title: 'How the Grinch stole Xmas') }
     let(:version) do
       OpenStruct.new(event: 'create',
                      item_type: 'Book',
@@ -12,8 +12,8 @@ module PaperTrailScrapbook
                      created_at: Time.current,
                      version_author: person.id)
     end
-    let(:config) {PaperTrailScrapbook.config}
-    let(:subject) {JournalEntry.new(version)}
+    let(:config) { PaperTrailScrapbook.config }
+    let(:subject) { JournalEntry.new(version) }
 
     before do
       PaperTrailScrapbook.config.whodunnit_class = Person
@@ -59,7 +59,7 @@ module PaperTrailScrapbook
     describe '#whenn' do
       it 'returns version created_at' do
         expect(subject.whenn)
-            .to eql(version.created_at.strftime(config.time_format))
+          .to eql(version.created_at.strftime(config.time_format))
       end
     end
 
@@ -69,12 +69,12 @@ module PaperTrailScrapbook
       end
 
       context 'garbage' do
-        let(:subject) {JournalEntry.new(version)}
+        let(:subject) { JournalEntry.new(version) }
         it 'returns expected value' do
           x = PaperTrailScrapbook.config.events
           PaperTrailScrapbook.config.events = {}
 
-          expect {subject.kind}.to raise_error(ArgumentError, 'incorrect event:create')
+          expect { subject.kind }.to raise_error(ArgumentError, 'incorrect event:create')
 
           PaperTrailScrapbook.config.events = x
         end
