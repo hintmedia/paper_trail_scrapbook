@@ -34,6 +34,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'mutant-rspec'
   gem.add_development_dependency 'pg', '= 0.18.4'
   gem.add_development_dependency 'rspec-rails', '~> 3.6'
+  gem.add_development_dependency 'rspec_junit_formatter'
   gem.add_development_dependency 'rubocop'
   gem.add_development_dependency 'rubocop-rspec'
   gem.add_development_dependency 'simplecov'
