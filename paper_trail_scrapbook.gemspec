@@ -1,4 +1,4 @@
-require File.expand_path('../lib/paper_trail_scrapbook/version', __FILE__)
+require File.expand_path('lib/paper_trail_scrapbook/version', __dir__)
 
 Gem::Specification.new do |gem|
   gem.name        = 'paper_trail_scrapbook'

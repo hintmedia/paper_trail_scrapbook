@@ -12,7 +12,7 @@ require 'rubygems'
 # we should keep the ability to specify BUNDLE_GEMFILE because the same
 # situation could come up in the future.
 unless ENV.key?('BUNDLE_GEMFILE')
-  gemfile = File.expand_path('../../../../Gemfile', __FILE__)
+  gemfile = File.expand_path('../../../Gemfile', __dir__)
   if File.exist?(gemfile)
     puts "Booting PT test dummy app: Using gemfile: #{gemfile}"
     ENV['BUNDLE_GEMFILE'] = gemfile
@@ -21,4 +21,4 @@ end
 require 'bundler'
 Bundler.setup
 
-$LOAD_PATH.unshift(File.expand_path('../../../../lib', __FILE__))
+$LOAD_PATH.unshift(File.expand_path('../../../lib', __dir__))

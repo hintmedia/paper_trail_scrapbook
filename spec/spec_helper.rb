@@ -54,7 +54,7 @@ def params_wrapper(args)
   end
 end
 
-require File.expand_path('../dummy_app/config/environment', __FILE__)
+require File.expand_path('dummy_app/config/environment', __dir__)
 require 'rspec/rails'
 require 'ffaker'
 require 'timecop'
