@@ -29,7 +29,7 @@ jobs:
             - vendor/bundle
       - run:
           name: Database setup
-          command: bin/rails db:create db:schema:load --trace
+          command: bin/rake db:create db:schema:load --trace
       - run:
           name: Setup CodeClimate test-reporter
           command: |
