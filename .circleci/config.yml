@@ -3,13 +3,13 @@ defaults: &defaults
       - image: circleci/ruby:2.5.0-node-browsers
         environment:
           PG_HOST: localhost
-          PG_USER: root
+          PG_USER: circleci
           RAILS_ENV: test
           RACK_ENV: test
       - image: circleci/postgres:9.5-alpine
         environment:
-          POSTGRES_USER: root
-          POSTGRES_DB: circle-test_test
+          POSTGRES_USER: circleci
+          POSTGRES_DB: pts_db
 version: 2
 jobs:
   build:
