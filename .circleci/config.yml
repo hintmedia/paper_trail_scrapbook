@@ -10,6 +10,7 @@ defaults: &defaults
         environment:
           POSTGRES_USER: circleci
           POSTGRES_DB: pts_db
+
 version: 2
 jobs:
   build:
