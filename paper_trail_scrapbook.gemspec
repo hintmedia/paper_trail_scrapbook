@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require File.expand_path('lib/paper_trail_scrapbook/version', __dir__)
 
 Gem::Specification.new do |gem|
@@ -13,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.license     = 'MIT'
 
   gem.required_rubygems_version = '>= 1.3.6'
-  gem.required_ruby_version = '>= 2.2.0'
+  gem.required_ruby_version = '>= 2.3.0'
 
   # Rails does not follow semver, makes breaking changes in minor versions.
   gem.add_dependency 'activerecord', ['>= 4.0', '< 5.2']

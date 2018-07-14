@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module PaperTrailScrapbook
   # Class Changes provides detailed attribute by attribute analysis
   #
@@ -13,7 +15,7 @@ module PaperTrailScrapbook
       changes
     end
 
-    BULLET = ' •'.freeze
+    BULLET = ' •'
 
     # Attribute change analysis
     #

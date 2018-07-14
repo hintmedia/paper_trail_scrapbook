@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module PaperTrailScrapbook
   # Class UserJournal provides history for a user, optionally scoped by
   # object class and/or date range

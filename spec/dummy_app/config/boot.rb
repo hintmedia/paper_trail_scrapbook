@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rubygems'
 
 # We normally use the root project Gemfile (and gemspec), but when we run rake

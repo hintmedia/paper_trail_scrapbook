@@ -7,7 +7,7 @@ recommendations of [keepachangelog.com](http://keepachangelog.com/).
 
 ### Breaking Changes
 
-- None
+- Mandate use of Ruby 2.3+
 
 ### Added
 

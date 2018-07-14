@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Translation < ActiveRecord::Base
   has_paper_trail(
     if: proc { |t| t.language_code == 'US' },

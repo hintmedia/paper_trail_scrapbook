@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'adamantium'
 require 'concord'
 require 'equalizer'
@@ -26,9 +28,5 @@ module PaperTrailScrapbook
       @config
     end
     alias configure config
-
-    def version
-      VERSION::STRING
-    end
   end
 end
