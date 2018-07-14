@@ -1,0 +1,5 @@
+---
+logroot: 'log/mutant/'
+analysis_csv: 'log/mutant/analysis.tsv'
+
+exclusions:

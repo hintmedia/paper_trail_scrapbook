@@ -34,6 +34,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'loofah', '~> 2.2.1'
   gem.add_development_dependency 'mutant'
   gem.add_development_dependency 'mutant-rspec'
+  gem.add_development_dependency 'mutator_rails'
   gem.add_development_dependency 'pg', '= 0.18.4'
   gem.add_development_dependency 'rspec-rails', '~> 3.6'
   gem.add_development_dependency 'rspec_junit_formatter'
