@@ -36,7 +36,7 @@ module PaperTrailScrapbook
 
     def digest(key, values)
       old, new = values
-      return if old.nil? && (new.nil? || new.eql?(''))
+      return if old.nil? && (new.nil? || new.eql?('')) || (old == new)
 
       "#{BULLET} #{key.tr('_', ' ')}: #{detailed_analysis(key, new, old)}"
     end
