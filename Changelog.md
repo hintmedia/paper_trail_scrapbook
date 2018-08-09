@@ -5,15 +5,21 @@ recommendations of [keepachangelog.com](http://keepachangelog.com/).
 
 ## Unreleased
 
+## 0.1.11 (2018-08-09)  Functional Release
+
 ### Breaking Changes
 
 - Mandate use of Ruby 2.3+
 
 ### Added
 
+- Filter out unchanged items from display
 - Switched from CodeClimate v1 to version 2.
 
 ### Fixed
+
+- None
+
 
 ## 0.1.7 (2018-01-19)  Functional Release
 
