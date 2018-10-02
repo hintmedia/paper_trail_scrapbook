@@ -3,7 +3,7 @@
 [![CircleCI](https://circleci.com/gh/tjchambers/paper_trail_scrapbook/tree/master.svg?style=svg)](https://circleci.com/gh/tjchambers/paper_trail_scrapbook/tree/master)
 [![Gem Version](https://badge.fury.io/rb/paper_trail_scrapbook.svg)](https://badge.fury.io/rb/paper_trail_scrapbook)
 
-Human Readable audit reporting for users of [PaperTrail](https://github.com/airblade/paper_trail) gem.
+Human Readable audit reporting for users of [PaperTrail](https://github.com/paper-trail-gem/paper_trail) gem.
 
 ## Installation
 
@@ -14,6 +14,15 @@ Add PaperTrailScrapBook to your `Gemfile`.
 ## Basic Usage
 
 ### Configuration
+
+This gem is dependent on [PaperTrail](https://github.com/paper-trail-gem/paper_trail),
+and specifically, on the `object_changes` column in the `PaperTrail::Version` 
+table. If your `PaperTrail` installation does not include this column, you can
+add it manually, or re-runthe `PaperTrail` generator:
+
+```
+bundle exec rake generate paper_trail:install --with_changes
+```
 
 If you are using an ID reference to a class (i.e. _User_) for whodunnit in
 PaperTrail, then you should configure this into PaperTrailScrapbook so it can
