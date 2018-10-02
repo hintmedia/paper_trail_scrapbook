@@ -6,7 +6,6 @@ PATH
       adamantium
       concord
       paper_trail (>= 5.2, <= 9.2.0)
-      paper_trail-association_tracking
 
 GEM
   remote: https://rubygems.org/
