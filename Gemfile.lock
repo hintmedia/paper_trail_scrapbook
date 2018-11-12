@@ -186,7 +186,7 @@ DEPENDENCIES
   codeclimate-test-reporter (~> 1.0.7)
   database_cleaner (~> 1.2)
   ffaker (~> 2.5)
-  loofah (~> 2.2.1)
+  loofah (~> 2.2.2)
   mutant
   mutant-rspec
   paper_trail_scrapbook!
