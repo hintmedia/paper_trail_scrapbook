@@ -62,7 +62,7 @@ GEM
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
     json (2.1.0)
-    loofah (2.2.2)
+    loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     memoizable (0.4.2)
@@ -98,7 +98,7 @@ GEM
     mutant-rspec (0.8.14)
       mutant (~> 0.8.14)
       rspec-core (>= 3.4.0, < 3.7.0)
-    nokogiri (1.8.4)
+    nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
     paper_trail (9.2.0)
       activerecord (>= 4.2, < 5.3)
@@ -186,7 +186,7 @@ DEPENDENCIES
   codeclimate-test-reporter (~> 1.0.7)
   database_cleaner (~> 1.2)
   ffaker (~> 2.5)
-  loofah (~> 2.2.2)
+  loofah (~> 2.2.3)
   mutant
   mutant-rspec
   paper_trail_scrapbook!
@@ -201,4 +201,4 @@ DEPENDENCIES
   timecop (~> 0.8.0)
 
 BUNDLED WITH
-   1.16.4
+   1.17.1
