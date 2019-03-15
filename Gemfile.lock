@@ -6,6 +6,7 @@ PATH
       adamantium
       concord
       paper_trail (>= 5.2, <= 9.2.0)
+      paper_trail-association_tracking (= 1.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -104,7 +105,7 @@ GEM
       activerecord (>= 4.2, < 5.3)
       paper_trail-association_tracking (< 2)
       request_store (~> 1.1)
-    paper_trail-association_tracking (1.1.1)
+    paper_trail-association_tracking (1.0.0)
     parallel (1.12.1)
     parser (2.4.0.2)
       ast (~> 2.3)
