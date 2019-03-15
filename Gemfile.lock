@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    paper_trail_scrapbook (0.1.12)
+    paper_trail_scrapbook (0.1.13)
       activerecord (>= 4.0, <= 5.3)
       adamantium
       concord
@@ -104,7 +104,7 @@ GEM
       activerecord (>= 4.2, < 5.3)
       paper_trail-association_tracking (< 2)
       request_store (~> 1.1)
-    paper_trail-association_tracking (1.0.0)
+    paper_trail-association_tracking (1.1.1)
     parallel (1.12.1)
     parser (2.4.0.2)
       ast (~> 2.3)
@@ -202,4 +202,4 @@ DEPENDENCIES
   timecop (~> 0.8.0)
 
 BUNDLED WITH
-   1.17.1
+   2.0.1
