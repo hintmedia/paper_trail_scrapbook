@@ -194,7 +194,7 @@ DEPENDENCIES
   rack (>= 2.0.6)
   railties (= 5.2.2.1)
   rake (~> 10.4.2)
-  rspec-rails (~> 3.6)
+  rspec-rails
   rspec_junit_formatter
   rubocop
   rubocop-rspec
