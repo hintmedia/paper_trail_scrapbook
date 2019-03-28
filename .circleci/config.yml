@@ -28,7 +28,7 @@ jobs:
           command: rake prepare
       - run:
           name: Database seed
-          command: rails db:migrate:up VERSION=20110208155312
+          command: rake db:migrate:up VERSION=20110208155312
       - run:
           name: Setup CodeClimate test-reporter
           command: |
