@@ -27,6 +27,9 @@ jobs:
           name: Database setup
           command: rake prepare
       - run:
+          name: Database seed
+          command: rails db:migrate:up VERSION=20110208155312
+      - run:
           name: Setup CodeClimate test-reporter
           command: |
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > cc-test-reporter
