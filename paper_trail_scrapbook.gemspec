@@ -18,7 +18,7 @@ Gem::Specification.new do |gem|
   gem.required_ruby_version = '>= 2.3.0'
 
   # Rails does not follow semver, makes breaking changes in minor versions.
-  gem.add_dependency 'activerecord', ['>= 4.0', '<= 5.3']
+  gem.add_dependency 'activerecord'
   gem.add_dependency 'adamantium'
   gem.add_dependency 'concord'
   gem.add_dependency 'paper_trail', ['>= 5.2', '<= 9.2.0']
@@ -26,7 +26,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rake', '~> 10.4.2'
 
   # Why `railties`? Possibly used by `spec/dummy_app` boot up?
-  gem.add_development_dependency 'railties', ['>= 4.0', '<= 5.2.1']
+  gem.add_development_dependency 'railties', '= 5.2.2.1'
 
   gem.add_development_dependency 'codeclimate-test-reporter', '~> 1.0.7'
   gem.add_development_dependency 'database_cleaner', '~> 1.2'
