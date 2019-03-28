@@ -62,7 +62,7 @@ require 'ffaker'
 require 'timecop'
 
 # Run any available migration
-ActiveRecord::Migrator.migrate File.expand_path('dummy_app/db/migrate/', __dir__)
+ActiveRecord::Migration.migrate(:up) # File.expand_path('dummy_app/db/migrate/', __dir__)
 
 require 'database_cleaner'
 DatabaseCleaner.strategy = :truncation
