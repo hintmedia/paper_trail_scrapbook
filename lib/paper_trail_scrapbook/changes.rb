@@ -9,6 +9,8 @@ module PaperTrailScrapbook
     include Concord.new(:version)
     include Adamantium::Flat
 
+    delegate :object_changes, to: :version
+
     def initialize(*)
       super
       build_associations
@@ -36,7 +38,7 @@ module PaperTrailScrapbook
 
     def digest(key, values)
       old, new = values
-      return if old.nil? && (new.nil? || new.eql?('')) || (old == new)
+      return if old.nil? && (new.nil? || new.eql?('')) || (old == new && !creating?)
 
       "#{BULLET} #{key.tr('_', ' ')}: #{detailed_analysis(key, new, old)}"
     end
@@ -63,17 +65,26 @@ module PaperTrailScrapbook
       return '*empty*' unless value
 
       begin
-        build_associations[key].find(value).to_s.to_s + "[#{value}]"
+        assoc_target(key).find(value).to_s.to_s + "[#{value}]"
       rescue StandardError
         "*not found*[#{value}]"
       end
     end
 
+    def assoc_target(key)
+      x = build_associations[key]
+      return x unless x.to_s.start_with?('*')
+
+      Object.const_get(changes[x[1..-1] + '_type'].last.classify)
+    end
+
     def assoc_klass(name, options = {})
       direct_class = options[:class_name]
-      return direct_class if direct_class && !direct_class.is_a?(String)
+      poly = options[:polymorphic]
 
-      Object.const_get((direct_class || name.to_s).classify)
+      return direct_class if !poly && direct_class && !direct_class.is_a?(String)
+
+      poly ? '*' + name.to_s : Object.const_get((direct_class || name.to_s).classify)
     rescue StandardError
       Object.const_set(name.to_s.classify, Class.new)
     end
@@ -90,10 +101,6 @@ module PaperTrailScrapbook
         .select { |a| a.macro.equal?(:belongs_to) }
         .map { |x| [x.foreign_key.to_s, assoc_klass(x.name, x.options)] }
         ]
-    end
-
-    def object_changes
-      version.object_changes
     end
 
     def changes

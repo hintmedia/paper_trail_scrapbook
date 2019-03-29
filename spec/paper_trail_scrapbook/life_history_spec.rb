@@ -61,7 +61,7 @@ module PaperTrailScrapbook
           .to match(/How the Grinch stole Xmas\[\d+\] was \*removed\*/)
       end
 
-      context 'it handles missing whodunnit record' do
+      context 'when it handles missing whodunnit record' do
         it 'provides a whole story with missing whodunnit record' do
           target
           pid = person.id
@@ -88,12 +88,22 @@ module PaperTrailScrapbook
         end
       end
 
-      context 'no papertrail' do
+      context 'without papertrail' do
         let(:target) { Elephant.create! }
 
         it 'has none' do
           target
           expect(subject).to eql ''
+        end
+      end
+
+      context 'with polymorphic data' do
+        let(:target) { Whatchamajigger.create!(owner: author) }
+
+        it 'has none' do
+          target
+          expect(subject).to match(/Dr. Seuss\[/)
+          expect(subject).to match(/owner type: Person/)
         end
       end
 
