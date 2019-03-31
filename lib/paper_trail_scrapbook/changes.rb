@@ -27,9 +27,9 @@ module PaperTrailScrapbook
     #
     def change_log
       text = changes
-             .map { |k, v| digest(k, v) }
-             .compact
-             .join("\n")
+               .map { |k, v| digest(k, v) }
+               .compact
+               .join("\n")
 
       text = text.gsub(' id:', ':') if PaperTrailScrapbook.config.drop_id_suffix
       text
@@ -90,15 +90,15 @@ module PaperTrailScrapbook
         # the default was not changed and therefore is not in
         # object changes
         orig_instance = Object.const_get(version.item_type.classify).new
-        latest_class = orig_instance[(x[1..-1] + '_type').to_sym]
+        latest_class  = orig_instance[(x[1..-1] + '_type').to_sym]
       end
-      
+
       Object.const_get(latest_class.classify)
     end
 
     def assoc_klass(name, options = {})
       direct_class = options[:class_name]
-      poly = options[:polymorphic]
+      poly         = options[:polymorphic]
 
       return direct_class if !poly && direct_class && !direct_class.is_a?(String)
 
@@ -115,9 +115,9 @@ module PaperTrailScrapbook
       @build_associations ||=
         Hash[
           klass
-        .reflect_on_all_associations
-        .select { |a| a.macro.equal?(:belongs_to) }
-        .map { |x| [x.foreign_key.to_s, assoc_klass(x.name, x.options)] }
+            .reflect_on_all_associations
+            .select { |a| a.macro.equal?(:belongs_to) }
+            .map { |x| [x.foreign_key.to_s, assoc_klass(x.name, x.options)] }
         ]
     end
 
