@@ -23,13 +23,17 @@ module PaperTrailScrapbook
     # @return [String] analyzed versions
     #
     def story
-      versions.map do |v|
+      x = versions.map do |v|
         if primary?(v)
           Chapter
         else
           SecondaryChapter
         end.new(v).story
-      end.compact.join("\n\n")
+      end.compact
+
+      x.reverse! if PaperTrailScrapbook.config.recent_first
+
+      x.join("\n\n")
     end
 
     private

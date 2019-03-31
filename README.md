@@ -60,6 +60,14 @@ end
 PaperTrailScrapbook.config.whodunnit_class = WhoDidIt
 ```
 
+You also have the option of seeing the most recent changes first (default is chronological)
+
+```ruby
+
+ config.recent_first = true
+
+```
+
 ### Life Story
 
 The `LifeStory` module provides a complete history of an object (limited by the

@@ -22,7 +22,8 @@ module PaperTrailScrapbook
                   :drop_id_suffix,
                   :unknown_whodunnit,
                   :invalid_whodunnit,
-                  :filter_non_changes
+                  :filter_non_changes,
+                  :recent_first
 
     def initialize
       @whodunnit_class    = nil
@@ -33,6 +34,7 @@ module PaperTrailScrapbook
       @invalid_whodunnit  = proc { |w| "*missing (#{w})*" }
       @drop_id_suffix     = true
       @filter_non_changes = true
+      @recent_first       = false
     end
   end
 end
