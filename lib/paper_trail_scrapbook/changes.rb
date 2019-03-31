@@ -81,7 +81,7 @@ module PaperTrailScrapbook
       return x unless polymorphic?(x)
 
       # try object changes to see if the belongs_to class is specified
-      latest_class = changes[x[1..-1] + '_type'].last
+      latest_class = changes[x[1..-1] + '_type']&.last
 
       if latest_class.nil? && create?
         # try the db default class
