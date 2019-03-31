@@ -44,7 +44,7 @@ module PaperTrailScrapbook
       old, new = values
       return if old.nil? && (new.nil? || new.eql?('')) || (old == new && !creating?)
 
-      "#{BULLET} #{key.tr('_', ' ')}: #{detailed_analysis(key, new, old)}"
+      "#{BULLET} #{(assoc_target(key).to_s&.deconstantize.presence || key).tr('_', ' ')}: #{detailed_analysis(key, new, old)}"
     end
 
     def detailed_analysis(key, new, old)
