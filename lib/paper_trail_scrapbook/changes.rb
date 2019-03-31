@@ -9,7 +9,7 @@ module PaperTrailScrapbook
     include Concord.new(:version)
     include Adamantium::Flat
 
-    delegate :object_changes, to: :version
+    delegate :object_changes, :create?, to: :version
 
     def initialize(*)
       super
@@ -35,6 +35,10 @@ module PaperTrailScrapbook
     end
 
     private
+
+    def polymorphic?(x)
+      x.to_s.start_with?('*')
+    end
 
     def digest(key, values)
       old, new = values
@@ -73,9 +77,22 @@ module PaperTrailScrapbook
 
     def assoc_target(key)
       x = build_associations[key]
-      return x unless x.to_s.start_with?('*')
+      return x unless polymorphic?(x)
 
-      Object.const_get(changes[x[1..-1] + '_type'].last.classify)
+      # try object changes to see if the belongs_to class is specified
+      latest_class = changes[x[1..-1] + '_type'].last
+
+      if latest_class.nil? && create?
+        # try the db default class
+        # for creates where the object changes do not specify this it
+        # is most likely because the default ==  type selected so
+        # the default was not changed and therefore is not in
+        # object changes
+        orig_instance = version.item_type.classify.new
+        latest_class = orig_instance[(x[1..-1] + '_type').to_sym]
+      end
+      
+      Object.const_get(latest_class.classify)
     end
 
     def assoc_klass(name, options = {})

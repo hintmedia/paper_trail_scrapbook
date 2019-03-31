@@ -100,8 +100,7 @@ module PaperTrailScrapbook
       context 'with polymorphic data' do
         let(:target) { Whatchamajigger.create!(owner: author) }
 
-        it 'has none' do
-          target
+        it 'locates the proper model' do
           expect(subject).to match(/Dr. Seuss\[/)
           expect(subject).to match(/owner type: Person/)
         end
