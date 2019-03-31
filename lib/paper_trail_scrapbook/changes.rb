@@ -26,10 +26,11 @@ module PaperTrailScrapbook
     # @return [String] Summary analysis of changes
     #
     def change_log
-      text = changes
-               .map { |k, v| digest(k, v) }
-               .compact
-               .join("\n")
+      text =
+        changes
+          .map { |k, v| digest(k, v) }
+          .compact
+          .join("\n")
 
       text = text.gsub(' id:', ':') if PaperTrailScrapbook.config.drop_id_suffix
       text
@@ -79,9 +80,10 @@ module PaperTrailScrapbook
     def assoc_target(key)
       x = build_associations[key]
       return x unless polymorphic?(x)
+      ref = x[1..-1] + '_type'
 
       # try object changes to see if the belongs_to class is specified
-      latest_class = changes[x[1..-1] + '_type']&.last
+      latest_class = changes[ref]&.last
 
       if latest_class.nil? && create?
         # try the db default class
@@ -90,7 +92,7 @@ module PaperTrailScrapbook
         # the default was not changed and therefore is not in
         # object changes
         orig_instance = Object.const_get(version.item_type.classify).new
-        latest_class  = orig_instance[(x[1..-1] + '_type').to_sym]
+        latest_class  = orig_instance[ref.to_sym]
       end
 
       Object.const_get(latest_class.classify)
