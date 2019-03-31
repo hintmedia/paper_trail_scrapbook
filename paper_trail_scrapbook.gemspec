@@ -21,7 +21,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'activerecord'
   gem.add_dependency 'adamantium'
   gem.add_dependency 'concord'
-  gem.add_dependency 'paper_trail', ['>= 5.2', '<= 9.2.0']
+  gem.add_dependency 'paper_trail', ['>= 5.2', '<= 10.2.1']
 
   gem.add_development_dependency 'ffaker', '~> 2.5'
   gem.add_development_dependency 'rake', '~> 10.4.2'
