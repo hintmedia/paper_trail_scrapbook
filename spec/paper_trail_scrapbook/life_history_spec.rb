@@ -136,6 +136,12 @@ module PaperTrailScrapbook
           end
         end
 
+        after do
+          config = PaperTrailScrapbook.config
+          config.recent_first = false
+          config.time_format = '%A, %d %b %Y at %l:%M %p'
+        end
+
         it 'includes related content history' do
           expect(subject).to match(/created the following Person\[\d+\] info/)
           expect(subject).to match(/name: Dr\. Seuss/)
