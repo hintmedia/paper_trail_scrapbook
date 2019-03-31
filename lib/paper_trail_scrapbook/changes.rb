@@ -8,8 +8,9 @@ module PaperTrailScrapbook
   class Changes
     include Concord.new(:version)
     include Adamantium::Flat
+    include PaperTrailScrapbook::VersionHelpers
 
-    delegate :object_changes, :create?, to: :version
+    delegate :object_changes, to: :version
 
     def initialize(*)
       super
@@ -88,7 +89,7 @@ module PaperTrailScrapbook
         # is most likely because the default ==  type selected so
         # the default was not changed and therefore is not in
         # object changes
-        orig_instance = version.item_type.classify.new
+        orig_instance = Object.const_get(version.item_type.classify).new
         latest_class = orig_instance[(x[1..-1] + '_type').to_sym]
       end
       
