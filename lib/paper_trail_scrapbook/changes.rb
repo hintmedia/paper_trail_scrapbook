@@ -8,6 +8,11 @@ module PaperTrailScrapbook
   class Changes
     include Concord.new(:version)
     include Adamantium::Flat
+    include PaperTrailScrapbook::VersionHelpers
+
+    POLYMORPH_BT_INDICATOR = '*'
+
+    delegate :object_changes, to: :version
 
     def initialize(*)
       super
@@ -23,10 +28,11 @@ module PaperTrailScrapbook
     # @return [String] Summary analysis of changes
     #
     def change_log
-      text = changes
-             .map { |k, v| digest(k, v) }
-             .compact
-             .join("\n")
+      text =
+        changes
+          .map { |k, v| digest(k, v) }
+          .compact
+          .join("\n")
 
       text = text.gsub(' id:', ':') if PaperTrailScrapbook.config.drop_id_suffix
       text
@@ -34,9 +40,13 @@ module PaperTrailScrapbook
 
     private
 
+    def polymorphic?(x)
+      x.to_s.start_with?(POLYMORPH_BT_INDICATOR)
+    end
+
     def digest(key, values)
       old, new = values
-      return if old.nil? && (new.nil? || new.eql?('')) || (old == new)
+      return if old.nil? && (new.nil? || new.eql?('')) || (old == new && !creating?)
 
       "#{BULLET} #{key.tr('_', ' ')}: #{detailed_analysis(key, new, old)}"
     end
@@ -63,17 +73,40 @@ module PaperTrailScrapbook
       return '*empty*' unless value
 
       begin
-        build_associations[key].find(value).to_s.to_s + "[#{value}]"
+        assoc_target(key).find(value).to_s.to_s + "[#{value}]"
       rescue StandardError
         "*not found*[#{value}]"
       end
     end
 
+    def assoc_target(key)
+      x = build_associations[key]
+      return x unless polymorphic?(x)
+      ref = x[1..-1] + '_type'
+
+      # try object changes to see if the belongs_to class is specified
+      latest_class = changes[ref]&.last
+
+      if latest_class.nil? && create?
+        # try the db default class
+        # for creates where the object changes do not specify this it
+        # is most likely because the default ==  type selected so
+        # the default was not changed and therefore is not in
+        # object changes
+        orig_instance = Object.const_get(version.item_type.classify).new
+        latest_class  = orig_instance[ref.to_sym]
+      end
+
+      Object.const_get(latest_class.classify)
+    end
+
     def assoc_klass(name, options = {})
       direct_class = options[:class_name]
-      return direct_class if direct_class && !direct_class.is_a?(String)
+      poly         = options[:polymorphic]
 
-      Object.const_get((direct_class || name.to_s).classify)
+      return direct_class if !poly && direct_class && !direct_class.is_a?(String)
+
+      poly ? POLYMORPH_BT_INDICATOR + name.to_s : Object.const_get((direct_class || name.to_s).classify)
     rescue StandardError
       Object.const_set(name.to_s.classify, Class.new)
     end
@@ -86,14 +119,10 @@ module PaperTrailScrapbook
       @build_associations ||=
         Hash[
           klass
-        .reflect_on_all_associations
-        .select { |a| a.macro.equal?(:belongs_to) }
-        .map { |x| [x.foreign_key.to_s, assoc_klass(x.name, x.options)] }
+            .reflect_on_all_associations
+            .select { |a| a.macro.equal?(:belongs_to) }
+            .map { |x| [x.foreign_key.to_s, assoc_klass(x.name, x.options)] }
         ]
-    end
-
-    def object_changes
-      version.object_changes
     end
 
     def changes
