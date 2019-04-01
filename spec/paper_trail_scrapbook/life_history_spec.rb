@@ -149,6 +149,8 @@ module PaperTrailScrapbook
           expect(subject).to match(/created the following Book\[\d+\] info/)
           expect(subject).to match(/title: How the Grinch stole Xmas/)
 
+          expect(subject.squish).to match(/created the following Book.*created the following Person/)
+
           expect(subject).to match(/created the following Authorship info/)
           expect(subject).to match(/book: How the Grinch stole Xmas\[\d+\]/)
           expect(subject).to match(/author: Dr\. Seuss\[\d+\]/)
