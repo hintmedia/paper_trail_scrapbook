@@ -10,6 +10,8 @@ module PaperTrailScrapbook
     include Adamantium::Flat
     include PaperTrailScrapbook::VersionHelpers
 
+    POLYMORPH_BT_INDICATOR = '*'
+
     delegate :object_changes, to: :version
 
     def initialize(*)
@@ -39,7 +41,7 @@ module PaperTrailScrapbook
     private
 
     def polymorphic?(x)
-      x.to_s.start_with?('*')
+      x.to_s.start_with?(POLYMORPH_BT_INDICATOR)
     end
 
     def digest(key, values)
@@ -104,7 +106,7 @@ module PaperTrailScrapbook
 
       return direct_class if !poly && direct_class && !direct_class.is_a?(String)
 
-      poly ? '*' + name.to_s : Object.const_get((direct_class || name.to_s).classify)
+      poly ? POLYMORPH_BT_INDICATOR + name.to_s : Object.const_get((direct_class || name.to_s).classify)
     rescue StandardError
       Object.const_set(name.to_s.classify, Class.new)
     end
