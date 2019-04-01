@@ -26,7 +26,11 @@ module PaperTrailScrapbook
     def story
       s = versions.map do |v|
         JournalEntry.new(v).story
-      end.compact.join("\n\n")
+      end.compact
+
+      s.reverse! if PaperTrailScrapbook.config.recent_first
+
+      s.join("\n\n")
 
       "#{preface}#{s.presence || 'No history'}"
     end
