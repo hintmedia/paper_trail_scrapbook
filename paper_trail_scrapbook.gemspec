@@ -9,9 +9,9 @@ Gem::Specification.new do |gem|
   gem.summary     = 'Paper Trail Scrapbook'
   gem.description = "Human Readable Change Log for Paper Trail'd data"
   gem.authors     = ['Timothy Chambers']
-  gem.email       = 'tim@possibilogy.com'
+  gem.email       = 'tim@hint.io'
   gem.files       = `git ls-files`.split("\n")
-  gem.homepage    = 'https://github.com/tjchambers/paper_trail_scrapbook'
+  gem.homepage    = 'https://github.com/hintmedia/paper_trail_scrapbook'
   gem.license     = 'MIT'
 
   gem.required_rubygems_version = '>= 1.3.6'
