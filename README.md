@@ -215,7 +215,7 @@ possible.
 
 ## Intellectual Property
 
-Copyright (c) 2017 Tim Chambers (tim@possibilogy.com).
+Copyright (c) 2017 Hint Media, Inc.
 Released under the MIT licence.
 
 

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    paper_trail_scrapbook (0.1.15)
+    paper_trail_scrapbook (0.1.16)
       activerecord
       adamantium
       concord
@@ -200,4 +200,4 @@ DEPENDENCIES
   timecop (~> 0.8.0)
 
 BUNDLED WITH
-   2.0.1
+   2.0.2
