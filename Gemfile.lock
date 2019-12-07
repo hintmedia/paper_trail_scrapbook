@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    paper_trail_scrapbook (0.1.16)
+    paper_trail_scrapbook (0.1.17)
       activerecord
       adamantium
       concord
