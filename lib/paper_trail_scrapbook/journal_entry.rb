@@ -5,7 +5,7 @@ require_relative 'version_helpers'
 module PaperTrailScrapbook
   # Class JournalEntry provides single version history analysis
   #
-  # @author Jason Dinsmore <jason@dinjas.com>
+  # @author Jason Dinsmore <jason@hint.io>
   #
   class JournalEntry
     include Concord.new(:version)

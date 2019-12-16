@@ -3,7 +3,7 @@
 module PaperTrailScrapbook
   # Class Changes provides detailed attribute by attribute analysis
   #
-  # @author Timothy Chambers <tim@possibilogy.com>
+  # @author Timothy Chambers <tim@hint.io>
   #
   class Changes
     include Concord.new(:version)
