@@ -5,7 +5,7 @@ require_relative 'version_helpers'
 module PaperTrailScrapbook
   # Class Chapter provides single version history analysis
   #
-  # @author Timothy Chambers <tim@possibilogy.com>
+  # @author Timothy Chambers <tim@hint.io>
   #
   class Chapter
     include Concord.new(:version)

@@ -3,7 +3,7 @@
 module PaperTrailScrapbook
   # Class LifeHistory provides Full multi version history
   #
-  # @author Timothy Chambers <tim@possibilogy.com>
+  # @author Timothy Chambers <tim@hint.io>
   #
   class LifeHistory
     def initialize(object)

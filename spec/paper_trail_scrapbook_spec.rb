@@ -2,5 +2,13 @@
 
 require 'spec_helper'
 
-module PaperTrailScrapbook
+RSpec.describe PaperTrailScrapbook do
+  describe '.config' do
+    it 'sets the @config ivar' do
+      described_class.config
+
+      expect(described_class.instance_variable_get(:@config))
+        .to equal(PaperTrailScrapbook::Config.instance)
+    end
+  end
 end

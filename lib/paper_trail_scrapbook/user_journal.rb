@@ -4,7 +4,7 @@ module PaperTrailScrapbook
   # Class UserJournal provides history for a user, optionally scoped by
   # object class and/or date range
   #
-  # @author Jason Dinsmore <jason@dinjas.com>
+  # @author Jason Dinsmore <jason@hint.io>
   #
   class UserJournal
     include Adamantium::Flat
