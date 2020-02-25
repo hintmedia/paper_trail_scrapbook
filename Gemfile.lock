@@ -98,7 +98,7 @@ GEM
     mutant-rspec (0.8.14)
       mutant (~> 0.8.14)
       rspec-core (>= 3.4.0, < 3.7.0)
-    nokogiri (1.10.5)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     paper_trail (10.2.1)
       activerecord (>= 4.2, < 6.1)
