@@ -1,6 +1,6 @@
 # Paper Trail Scrapbook
 
-[![CircleCI](https://circleci.com/gh/tjchambers/paper_trail_scrapbook/tree/master.svg?style=svg)](https://circleci.com/gh/tjchambers/paper_trail_scrapbook/tree/master)
+[![CircleCI](https://circleci.com/gh/hintmedia/paper_trail_scrapbook/tree/master.svg?style=svg)](https://circleci.com/gh/tjchambers/paper_trail_scrapbook/tree/master)
 [![Gem Version](https://badge.fury.io/rb/paper_trail_scrapbook.svg)](https://badge.fury.io/rb/paper_trail_scrapbook)
 
 Human Readable audit reporting for users of [PaperTrail](https://github.com/paper-trail-gem/paper_trail) gem.
@@ -18,7 +18,7 @@ Add PaperTrailScrapBook to your `Gemfile`.
 This gem is dependent on [PaperTrail](https://github.com/paper-trail-gem/paper_trail),
 and specifically, on the `object_changes` column in the `PaperTrail::Version` 
 table. If your `PaperTrail` installation does not include this column, you can
-add it manually, or re-runthe `PaperTrail` generator:
+add it manually, or re-run the `PaperTrail` generator:
 
 ```
 bundle exec rake generate paper_trail:install --with_changes
@@ -199,7 +199,7 @@ text = PaperTrailScrapbook::UserJournal.new(who, start: 1.month.ago, end: Time.n
 
 ## Problems
 
-Please use GitHub's [issue tracker](http://github.com/tjchambers/paper_trail_scrapbook/issues).
+Please use GitHub's [issue tracker](http://github.com/hintmedia/paper_trail_scrapbook/issues).
 
 
 ## Contributors
