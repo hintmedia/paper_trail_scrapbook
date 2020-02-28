@@ -23,10 +23,11 @@ jobs:
           command: |
             echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
             source $BASH_ENV
-            gem install bundler
+            gem install bundler -v $BUNDLER_VERSION
       - run:
           name: Bundle Install
-          command: bundle check || bundle install
+          command:
+            bundle check || bundle install
       - save_cache:
           key: paper_trail_scrapbook-{{ checksum "Gemfile.lock" }}
           paths:
