@@ -9,19 +9,19 @@ module PaperTrailScrapbook
     end
 
     def related_content
-      if object.respond_to?(:trailed_related_content)
-        object.trailed_related_content.compact.flat_map(&:versions)
-      else
-        []
+      unless object.respond_to?(:trailed_related_content)
+        return []
       end
+
+      object.trailed_related_content.compact.flat_map(&:versions)
     end
 
     def filtered(object_versions)
-      if object.respond_to?(:version_filter)
-        object_versions.select { |v| object.version_filter(v) }
-      else
-        object_versions
+      unless object.respond_to?(:version_filter)
+        return object_versions
       end
+
+      object_versions.select { |v| object.version_filter(v) }
     end
 
   end
