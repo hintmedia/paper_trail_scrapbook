@@ -8,14 +8,7 @@ module PaperTrailScrapbook
   class LifeHistory
     def initialize(object)
       @object   = object
-      @versions = object.versions
-      if object.respond_to?(:trailed_related_content)
-        object.trailed_related_content.compact.each do |trc|
-          @versions |= trc.versions
-        end
-      end
-
-      @versions = @versions.sort_by(&:created_at)
+      @versions = Versions.new(object).versions
     end
 
     # Retries textual historical analysis of versions
