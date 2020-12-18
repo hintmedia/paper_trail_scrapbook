@@ -4,7 +4,7 @@ class Versions
   include Concord.new(:object)
 
   def versions
-    sorted(filtered(object.versions | related_content))
+    filtered(object.versions | related_content).sort_by(&:created_at)
   end
 
   def related_content
@@ -21,10 +21,6 @@ class Versions
     else
       object_versions
     end
-  end
-
-  def sorted(object_versions)
-    object_versions.sort_by(&:created_at)
   end
 
 end
