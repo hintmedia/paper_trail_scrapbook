@@ -35,7 +35,6 @@ module PaperTrailScrapbook
       end
     end
 
-    # TODO: auto-generated
     describe '#related_content' do
       it 'related_content returns nothing if no related content' do
         result = object.related_content
