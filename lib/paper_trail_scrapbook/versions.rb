@@ -4,23 +4,23 @@ class Versions
   include Concord.new(:object)
 
   def versions
-    sorted(filtered(with_related(object.versions)))
+    sorted(filtered(object.versions | related_content))
   end
 
-  def with_related(object_versions)
-    unless object.respond_to?(:trailed_related_content)
-      return object_versions
+  def related_content
+    if object.respond_to?(:trailed_related_content)
+      object.trailed_related_content.compact.map(&:versions)
+    else
+      []
     end
-
-    object_versions | object.trailed_related_content.compact.map(&:versions)
   end
 
   def filtered(object_versions)
-    unless object.respond_to?(:version_filter)
-      return object_versions
+    if object.respond_to?(:version_filter)
+      object_versions.select { |v| object.version_filter(v) }
+    else
+      object_versions
     end
-
-    object_versions.select { |v| object.version_filter(v) }
   end
 
   def sorted(object_versions)
