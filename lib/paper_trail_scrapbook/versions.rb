@@ -9,7 +9,7 @@ class Versions
 
   def related_content
     if object.respond_to?(:trailed_related_content)
-      object.trailed_related_content.compact.map(&:versions)
+      object.trailed_related_content.compact.flat_map(&:versions)
     else
       []
     end
