@@ -180,6 +180,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86_64-darwin-20
 
 DEPENDENCIES
   codeclimate-test-reporter (~> 1.0.7)
@@ -202,4 +203,4 @@ DEPENDENCIES
   timecop (~> 0.8.0)
 
 BUNDLED WITH
-   2.1.4
+   2.2.2
