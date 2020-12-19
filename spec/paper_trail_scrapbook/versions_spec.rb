@@ -11,15 +11,11 @@ module PaperTrailScrapbook
     end
 
     let(:book) do
-      b = Book.new(title: 'How the Grinch stole Xmas')
-      b.save!
-      b
+      Book.new(title: 'How the Grinch stole Xmas').tap(&:save!)
     end
     let(:person) { Person.create(name: 'The Tim Man') }
     let!(:authorship) do
-      a = Authorship.new(book: book, author: person)
-      a.save!
-      a
+      Authorship.new(book: book, author: person).tap(&:save!)
     end
 
     let(:object) { described_class.new(book) }
