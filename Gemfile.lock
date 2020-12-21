@@ -109,7 +109,7 @@ GEM
     pg (0.18.4)
     powerpack (0.1.1)
     procto (0.0.3)
-    rack (2.0.8)
+    rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails-dom-testing (2.0.3)
