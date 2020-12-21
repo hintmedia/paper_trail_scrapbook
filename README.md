@@ -16,7 +16,7 @@ Add PaperTrailScrapBook to your `Gemfile`.
 ### Configuration
 
 This gem is dependent on [PaperTrail](https://github.com/paper-trail-gem/paper_trail),
-and specifically, on the `object_changes` column in the `PaperTrail::Version` 
+and specifically, on the `object_changes` column in the `PaperTrail::Version`
 table. If your `PaperTrail` installation does not include this column, you can
 add it manually, or re-run the `PaperTrail` generator:
 
@@ -78,12 +78,12 @@ widget = Widget.find 42
 text = PaperTrailScrapbook::LifeHistory.new(widget).story
 # On Wednesday, 07 Jun 2017 at 2:37 PM, Rob Owens created the following Widget information:
 #   • email: Tim@example.com
-#   • name: Tim's Widget 
+#   • name: Tim's Widget
 #   • built: true
 #   • created_by: Rob Owens[1742]
 #   • provider: RedCharge[3113]
 #   • cost: 29612.0
-#   • discounted_price: 29612.0 
+#   • discounted_price: 29612.0
 ```
 
 If desired, you can implement a `trailed_related_content` method in your model
@@ -118,18 +118,64 @@ text = PaperTrailScrapbook::LifeHistory.new(widget).story
 #
 # On Wednesday, 07 Jun 2017 at 2:37 PM, Rob Owens created the following Widget information:
 #   • email: Tim@example.com
-#   • name: Tim's Widget 
+#   • name: Tim's Widget
 #   • manufacturer: WidgetsAreUs[411]
 #   •: 1234
-#   
+#
 # On Thursday, 23 Oct 2017 at 7:55 AM PDT, Rob Owens updated Manufacturer[411]:
 #  • name: WidgetsRUs
-# 
+#
 # On Friday, 24 Oct 2017 at 10:10 AM PDT, Rob Owens created the following Attachment[212] information:
 #  • name: Electromagnet
 #  • widget: Tim's Widget[1234]
 #  •: 212
-# 
+#
+```
+
+`PaperTrailScrapbook` also implements a `version_filter` hook to provide a flexible way to filter which versions appear in a object's history. For example, if we only wanted our `Widget` class to include history for its manufacturer after the widget was created, we might implement `Widget#version_filter` like this:
+
+```ruby
+class Widget < ApplicationRecord
+  has_paper_trail
+
+  def trailed_related_content
+    attachments | [manufacturer]
+  end
+
+  def version_filter(version)
+    case version.item_type
+      when 'Manufacturer'
+        if version.created_at < created_at
+          return nil
+        end
+    end
+    version
+  end
+
+  ...
+```
+
+Then, the above history would be:
+
+```ruby
+widget = Widget.find 42
+
+text = PaperTrailScrapbook::LifeHistory.new(widget).story
+
+# On Wednesday, 07 Jun 2017 at 2:37 PM, Rob Owens created the following Widget information:
+#   • email: Tim@example.com
+#   • name: Tim's Widget
+#   • manufacturer: WidgetsAreUs[411]
+#   •: 1234
+#
+# On Thursday, 23 Oct 2017 at 7:55 AM PDT, Rob Owens updated Manufacturer[411]:
+#  • name: WidgetsRUs
+#
+# On Friday, 24 Oct 2017 at 10:10 AM PDT, Rob Owens created the following Attachment[212] information:
+#  • name: Electromagnet
+#  • widget: Tim's Widget[1234]
+#  •: 212
+#
 ```
 
 ### User Journal
