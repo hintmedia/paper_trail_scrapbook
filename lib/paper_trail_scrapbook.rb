@@ -14,6 +14,7 @@ require 'paper_trail_scrapbook/secondary_chapter'
 require 'paper_trail_scrapbook/user_journal'
 require 'paper_trail_scrapbook/version'
 require 'paper_trail_scrapbook/version_helpers'
+require 'paper_trail_scrapbook/versions'
 
 # Library namespace
 #

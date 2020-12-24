@@ -5,6 +5,12 @@ recommendations of [keepachangelog.com](http://keepachangelog.com/).
 
 ## Unreleased
 
+## 0.1.20 (2020-12-24)  Bugfix Release
+
+### Fixed
+
+- Missing require for new Versions
+
 ## 0.1.11 (2018-08-09)  Functional Release
 
 ### Breaking Changes
@@ -77,4 +83,3 @@ recommendations of [keepachangelog.com](http://keepachangelog.com/).
 ### Fixed
 
 - None
-

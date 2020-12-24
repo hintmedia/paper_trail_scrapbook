@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'paper_trail_scrapbook/versions'
 
 module PaperTrailScrapbook
   ::RSpec.describe Versions do
