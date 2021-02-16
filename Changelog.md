@@ -5,6 +5,12 @@ recommendations of [keepachangelog.com](http://keepachangelog.com/).
 
 ## Unreleased
 
+## 0.1.21 (2021-02-16)  Rails 6.1 compatibility
+
+### Fixed
+
+- Updated dependency gem versions
+
 ## 0.1.20 (2020-12-24)  Bugfix Release
 
 ### Fixed
