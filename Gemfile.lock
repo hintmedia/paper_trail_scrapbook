@@ -1,11 +1,11 @@
 PATH
   remote: .
   specs:
-    paper_trail_scrapbook (0.1.19)
+    paper_trail_scrapbook (0.1.21)
       activerecord
       adamantium
       concord
-      paper_trail (>= 5.2, <= 10.2.1)
+      paper_trail (>= 5.2, <= 11.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -100,13 +100,13 @@ GEM
       rspec-core (>= 3.4.0, < 3.7.0)
     nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
-    paper_trail (10.2.1)
-      activerecord (>= 4.2, < 6.1)
+    paper_trail (10.3.1)
+      activerecord (>= 4.2)
       request_store (~> 1.1)
     parallel (1.12.1)
     parser (2.4.0.2)
       ast (~> 2.3)
-    pg (0.18.4)
+    pg (1.2.3)
     powerpack (0.1.1)
     procto (0.0.3)
     rack (2.2.3)
@@ -180,7 +180,6 @@ GEM
 
 PLATFORMS
   ruby
-  x86_64-darwin-20
 
 DEPENDENCIES
   codeclimate-test-reporter (~> 1.0.7)
@@ -190,7 +189,7 @@ DEPENDENCIES
   mutant
   mutant-rspec
   paper_trail_scrapbook!
-  pg (= 0.18.4)
+  pg (= 1.2.3)
   rack (>= 2.0.6)
   railties (= 5.2.3)
   rake (~> 13.0.1)

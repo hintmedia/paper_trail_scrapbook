@@ -21,7 +21,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'activerecord'
   gem.add_dependency 'adamantium'
   gem.add_dependency 'concord'
-  gem.add_dependency 'paper_trail', ['>= 5.2', '<= 10.2.1']
+  gem.add_dependency 'paper_trail', ['>= 5.2', '<= 11.1.0']
 
   gem.add_development_dependency 'ffaker', '~> 2.5'
   gem.add_development_dependency 'rake', '~> 13.0.1'
@@ -34,7 +34,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'loofah', '~> 2.3.1'
   gem.add_development_dependency 'mutant'
   gem.add_development_dependency 'mutant-rspec'
-  gem.add_development_dependency 'pg', '= 0.18.4'
+  gem.add_development_dependency 'pg', '= 1.2.3'
   gem.add_development_dependency 'rspec-rails'
   gem.add_development_dependency 'rspec-jumpstart'
   gem.add_development_dependency 'rspec_junit_formatter'
