@@ -41,4 +41,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rubocop-rspec'
   gem.add_development_dependency 'simplecov'
   gem.add_development_dependency 'timecop', '~> 0.8.0'
+  gem.add_development_dependency 'rack', '>= 2.0.6'
+  gem.add_development_dependency 'solargraph'
+  gem.add_development_dependency 'yard'
 end

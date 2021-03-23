@@ -30,4 +30,12 @@ module PaperTrailScrapbook
     end
     alias configure config
   end
+
+  def self.logger
+    @@logger ||= defined?(Rails) ? Rails.logger : Logger.new($stdout)
+  end
+
+  def self.logger=(logger)
+    @@logger = logger
+  end
 end

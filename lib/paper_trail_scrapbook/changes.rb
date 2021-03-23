@@ -28,14 +28,29 @@ module PaperTrailScrapbook
     # @return [String] Summary analysis of changes
     #
     def change_log
-      text =
+      story =
         changes
         .map { |k, v| digest(k, v) }
         .compact
         .join("\n")
 
-      text = text.gsub(' id:', ':') if PaperTrailScrapbook.config.drop_id_suffix
-      text
+      case PaperTrailScrapbook.config.format
+      when :json
+        # No Op
+        # JSON is already formatted as valid JSON
+      when :markdown
+        story = story
+                .compact
+                .join("\n")
+      else
+        PaperTrailScrapbook.logger.debug("Unknown formatting #{PaperTrailScrapbook.config.format} default to :markdown")
+        story = story
+                .compact
+                .join("\n")
+      end
+
+      story = story.gsub(' id:', ':') if PaperTrailScrapbook.config.drop_id_suffix
+      story
     end
 
     private
@@ -52,6 +67,18 @@ module PaperTrailScrapbook
     end
 
     def detailed_analysis(key, new, old)
+      if creating?
+        find_value(key, new).to_s
+      elsif old.nil?
+        "#{find_value(key, new)} added"
+      elsif new.nil?
+        "#{find_value(key, old)} was *removed*"
+      else
+        "#{find_value(key, old)} -> #{find_value(key, new)}"
+      end
+    end
+
+    def markdown_detailed_analysis(key, new, old)
       if creating?
         find_value(key, new).to_s
       elsif old.nil?
