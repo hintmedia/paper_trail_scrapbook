@@ -22,7 +22,16 @@ module PaperTrailScrapbook
       updates = changes
       return unless create? || updates.present? || !config.filter_non_changes
 
-      "#{preface}\n#{updates}"
+      case PaperTrailScrapbook.config.format
+      when :json
+        # Return the Array of changes for JSON packaging
+        { "#{preface}": updates }
+      when :markdown
+        "#{preface}\n#{updates}"
+      else
+        PaperTrailScrapbook.logger.debug("Unknown formatting #{PaperTrailScrapbook.config.format} default to :markdown")
+        "#{preface}\n#{updates}"
+      end
     end
 
     private

@@ -26,7 +26,16 @@ module PaperTrailScrapbook
 
       x.reverse! if PaperTrailScrapbook.config.recent_first
 
-      x.join("\n\n")
+      case PaperTrailScrapbook.config.format
+      when :json
+        # Return the Array of changes for JSON packaging
+        x
+      when :markdown
+        x.join("\n\n")
+      else
+        PaperTrailScrapbook.logger.debug("Unknown formatting #{PaperTrailScrapbook.config.format} default to :markdown")
+        x.join("\n\n")
+      end
     end
 
     private

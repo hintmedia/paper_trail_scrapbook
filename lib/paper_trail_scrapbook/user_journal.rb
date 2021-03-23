@@ -21,7 +21,7 @@ module PaperTrailScrapbook
 
     # Retries textual historical analysis of versions
     #
-    # @return [String] analyzed versions
+    # @return [String || Hash ] analyzed versions
     #
     def story
       s = versions.map do |v|
@@ -30,9 +30,18 @@ module PaperTrailScrapbook
 
       s.reverse! if PaperTrailScrapbook.config.recent_first
 
-      s.join("\n\n")
-
-      "#{preface}#{s.presence || 'No history'}"
+      case PaperTrailScrapbook.config.format
+      when :json
+        # Return the Array of changes for JSON packaging
+        { "#{preface}": (s.presence || ['No history']) }
+      when :markdown
+        s.join("\n\n")
+        "#{preface}#{s.presence || 'No history'}"
+      else
+        PaperTrailScrapbook.logger.debug("Unknown formatting #{PaperTrailScrapbook.config.format} default to :markdown")
+        s.join("\n\n")
+        "#{preface}#{s.presence || 'No history'}"
+      end
     end
 
     private
