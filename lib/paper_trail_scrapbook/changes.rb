@@ -28,14 +28,27 @@ module PaperTrailScrapbook
     # @return [String] Summary analysis of changes
     #
     def change_log
-      text =
+      story =
         changes
-          .map { |k, v| digest(k, v) }
-          .compact
-          .join("\n")
+        .map { |k, v| digest(k, v) }
 
-      text = text.gsub(' id:', ':') if PaperTrailScrapbook.config.drop_id_suffix
-      text
+      case PaperTrailScrapbook.config.format
+      when :json
+        # No Op
+        # JSON is already formatted as valid JSON
+      when :markdown
+        story = story
+                .compact
+                .join("\n")
+      else
+        PaperTrailScrapbook.logger.debug("Unknown formatting #{PaperTrailScrapbook.config.format} default to :markdown")
+        story = story
+                .compact
+                .join("\n")
+      end
+
+      story = story.gsub(' id:', ':') if PaperTrailScrapbook.config.drop_id_suffix
+      story
     end
 
     private
@@ -52,6 +65,18 @@ module PaperTrailScrapbook
     end
 
     def detailed_analysis(key, new, old)
+      if creating?
+        find_value(key, new).to_s
+      elsif old.nil?
+        "#{find_value(key, new)} added"
+      elsif new.nil?
+        "#{find_value(key, old)} was *removed*"
+      else
+        "#{find_value(key, old)} -> #{find_value(key, new)}"
+      end
+    end
+
+    def markdown_detailed_analysis(key, new, old)
       if creating?
         find_value(key, new).to_s
       elsif old.nil?
@@ -82,7 +107,8 @@ module PaperTrailScrapbook
     def assoc_target(key)
       x = build_associations[key]
       return x unless polymorphic?(x)
-      ref = x[1..-1] + '_type'
+
+      ref = "#{x[1..]}_type"
 
       # try object changes to see if the belongs_to class is specified
       latest_class = changes[ref]&.last
@@ -119,9 +145,9 @@ module PaperTrailScrapbook
       @build_associations ||=
         Hash[
           klass
-            .reflect_on_all_associations
-            .select { |a| a.macro.equal?(:belongs_to) }
-            .map { |x| [x.foreign_key.to_s, assoc_klass(x.name, x.options)] }
+        .reflect_on_all_associations
+        .select { |a| a.macro.equal?(:belongs_to) }
+        .map { |x| [x.foreign_key.to_s, assoc_klass(x.name, x.options)] }
         ]
     end
 

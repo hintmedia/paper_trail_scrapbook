@@ -20,16 +20,50 @@ module PaperTrailScrapbook
       updates = changes
       return unless tell_story?(updates)
 
-      [preface, (updates unless destroy?)].compact.join("\n")
+      chapter_story = [preface, (updates unless destroy?)]
+
+      case PaperTrailScrapbook.config.format
+      when :json
+        chapter_story
+      when :markdown
+        chapter_story.compact.join("\n")
+      else
+        PaperTrailScrapbook.logger.debug("Unknown formatting #{PaperTrailScrapbook.config.format} default to :markdown")
+        chapter_story.compact.join("\n")
+      end
     end
 
     private
 
     def preface
-      "On #{whenn}, #{who} #{kind} #{what}".squeeze(' ')
+      case format
+      when :json
+        json_preface
+      when :markdown
+        markdown_preface
+      else
+        PaperTrailScrapbook.logger.debug("Unknown formatting #{format} default to :markdown")
+        markdown_preface
+      end
     end
 
     def what
+      case PaperTrailScrapbook.config.format
+      when :json
+        json_what
+      when :markdown
+        markdown_preface
+      else
+        PaperTrailScrapbook.logger.debug("Unknown formatting #{PaperTrailScrapbook.config.format} default to :markdown")
+        markdown_preface
+      end
+    end
+
+    def markdown_preface
+      "On #{whenn}, #{who} #{kind} #{what}".squeeze(' ')
+    end
+
+    def markdown_what
       if destroy?
         "#{model}#{item_id}"
       else
