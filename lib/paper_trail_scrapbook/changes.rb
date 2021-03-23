@@ -76,18 +76,6 @@ module PaperTrailScrapbook
       end
     end
 
-    def markdown_detailed_analysis(key, new, old)
-      if creating?
-        find_value(key, new).to_s
-      elsif old.nil?
-        "#{find_value(key, new)} added"
-      elsif new.nil?
-        "#{find_value(key, old)} was *removed*"
-      else
-        "#{find_value(key, old)} -> #{find_value(key, new)}"
-      end
-    end
-
     def creating?
       version.event.eql?('create')
     end
