@@ -24,6 +24,7 @@ module PaperTrailScrapbook
 
       case PaperTrailScrapbook.config.format
       when :json
+        # Return the Array of changes for JSON packaging
         chapter_story
       when :markdown
         chapter_story.compact.join("\n")
@@ -36,34 +37,10 @@ module PaperTrailScrapbook
     private
 
     def preface
-      case format
-      when :json
-        json_preface
-      when :markdown
-        markdown_preface
-      else
-        PaperTrailScrapbook.logger.debug("Unknown formatting #{format} default to :markdown")
-        markdown_preface
-      end
-    end
-
-    def what
-      case PaperTrailScrapbook.config.format
-      when :json
-        json_what
-      when :markdown
-        markdown_preface
-      else
-        PaperTrailScrapbook.logger.debug("Unknown formatting #{PaperTrailScrapbook.config.format} default to :markdown")
-        markdown_preface
-      end
-    end
-
-    def markdown_preface
       "On #{whenn}, #{who} #{kind} #{what}".squeeze(' ')
     end
 
-    def markdown_what
+    def what
       if destroy?
         "#{model}#{item_id}"
       else
