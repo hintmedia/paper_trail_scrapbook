@@ -4,7 +4,6 @@ require File.expand_path('boot', __dir__)
 
 # Pick the frameworks you want:
 require 'active_record/railtie'
-require 'action_controller/railtie'
 
 Bundler.require(:default, Rails.env)
 require 'paper_trail'

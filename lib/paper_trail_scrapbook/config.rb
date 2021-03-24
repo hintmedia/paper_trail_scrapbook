@@ -28,7 +28,7 @@ module PaperTrailScrapbook
                   :invalid_whodunnit,
                   :filter_non_changes,
                   :recent_first,
-                  :default_format
+                  :format
 
     def initialize
       @whodunnit_class    = nil
@@ -40,7 +40,7 @@ module PaperTrailScrapbook
       @drop_id_suffix     = true
       @filter_non_changes = true
       @recent_first       = false
-      @default_format     = :markdown
+      @format             = :markdown
     end
   end
 end
