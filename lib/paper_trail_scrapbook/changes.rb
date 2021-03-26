@@ -64,8 +64,9 @@ module PaperTrailScrapbook
     def digest(key, values)
       old, new = values
       return if old.nil? && (new.nil? || new.eql?('')) || (old == new && !creating?)
+      bullet_prefix = PaperTrailScrapbook.config.format == :markdown ? BULLET : ''
 
-      "#{BULLET} #{key.tr('_', ' ')}: #{detailed_analysis(key, new, old)}"
+      "#{bullet_prefix} #{key.tr('_', ' ')}: #{detailed_analysis(key, new, old)}".squeeze(" ")
     end
 
     def detailed_analysis(key, new, old)
