@@ -36,18 +36,20 @@ module PaperTrailScrapbook
       when :json
         # No Op
         # JSON is already formatted as valid JSON
+        story
       when :markdown
         story = story
                 .compact
                 .join("\n")
+        story = story.gsub(' id:', ':') if PaperTrailScrapbook.config.drop_id_suffix
       else
         PaperTrailScrapbook.logger.debug("Unknown formatting #{PaperTrailScrapbook.config.format} default to :markdown")
         story = story
                 .compact
                 .join("\n")
+        story = story.gsub(' id:', ':') if PaperTrailScrapbook.config.drop_id_suffix
       end
 
-      story = story.gsub(' id:', ':') if PaperTrailScrapbook.config.drop_id_suffix
       story
     end
 
