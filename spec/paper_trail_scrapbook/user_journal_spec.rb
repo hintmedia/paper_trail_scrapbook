@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
-
 module PaperTrailScrapbook
   RSpec.describe UserJournal do
     before do
@@ -17,13 +15,13 @@ module PaperTrailScrapbook
     let(:changes) { 'made the following changes:' }
     let(:b_changes) { 'made the following Book changes:' }
 
-    let(:book) { Book.create!(title: title) }
+    let(:book) { Book.create!(title:) }
     let(:author) { Person.create!(name: a_name) }
-    let(:a_ship) { Authorship.create!(book: book, author: author) }
+    let(:a_ship) { Authorship.create!(book:, author:) }
     let(:person) do
       who                          = PaperTrail.request.whodunnit
       PaperTrail.request.whodunnit = nil
-      p                            = Person.new(name: name)
+      p                            = Person.new(name:)
       p.save!
       PaperTrail.request.whodunnit = who
       p
@@ -174,8 +172,8 @@ module PaperTrailScrapbook
           let(:starts) { Time.current.advance(minutes: 4) }
 
           it 'provides a story' do
-            expect(subject).to eql("Between #{f_starts} and #{f_ends}, #{name}"\
-                                     " #{b_changes}\n\nNo history".squeeze(' '))
+            expect(subject).to eql("Between #{f_starts} and #{f_ends}, #{name}" \
+                                   " #{b_changes}\n\nNo history".squeeze(' '))
           end
         end
 
@@ -185,8 +183,8 @@ module PaperTrailScrapbook
           it 'provides a story' do
             expect(subject)
               .to match('Between Thursday, 01 Jan 1970 at 12:00 AM ' \
-                          "and #{Time.current.in_time_zone.strftime(format).squeeze(' ')}, #{name}"\
-                                     " #{b_changes}\n\n".squeeze(' '))
+                        "and #{Time.current.in_time_zone.strftime(format).squeeze(' ')}, #{name}" \
+                        " #{b_changes}\n\n".squeeze(' '))
           end
         end
       end

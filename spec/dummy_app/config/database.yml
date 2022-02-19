@@ -2,8 +2,8 @@
 test: &test
   adapter: postgresql
   encoding: unicode
-  host: localhost
-  database: pts_db
+  host: <%= ENV['DB_HOST'] || 'localhost' %>
+  database: <%= ENV['DB_DATABASE'] || 'pts_db' %>
   port: <%= ENV['DB_PORT'] || 5432 %>
   pool: 5
 

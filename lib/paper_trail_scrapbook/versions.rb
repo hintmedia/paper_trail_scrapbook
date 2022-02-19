@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module PaperTrailScrapbook
+  # Versions
   class Versions
     include Concord.new(:object)
 
@@ -9,21 +10,15 @@ module PaperTrailScrapbook
     end
 
     def related_content
-      unless object.respond_to?(:trailed_related_content)
-        return []
-      end
+      return [] unless object.respond_to?(:trailed_related_content)
 
       object.trailed_related_content.compact.flat_map(&:versions)
     end
 
     def filtered(object_versions)
-      unless object.respond_to?(:version_filter)
-        return object_versions
-      end
+      return object_versions unless object.respond_to?(:version_filter)
 
       object_versions.select { |v| object.version_filter(v) }
     end
-
   end
-
 end

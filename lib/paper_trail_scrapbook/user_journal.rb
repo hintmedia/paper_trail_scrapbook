@@ -46,9 +46,10 @@ module PaperTrailScrapbook
       params = { whodunnit: user_id }
       return params if options.empty?
 
-      params.merge(item_type:  what,
-                   created_at: starts..ends)
-            .delete_if { |_, v| v.presence.nil? }
+      params.merge(
+        item_type: what,
+        created_at: starts..ends
+      ).delete_if { |_, v| v.presence.nil? }
     end
 
     def time_format
@@ -56,7 +57,7 @@ module PaperTrailScrapbook
     end
 
     def what
-      String(options.fetch(:klass, nil)).presence
+      String(options.fetch(:klass, '')).presence
     end
 
     def when_range

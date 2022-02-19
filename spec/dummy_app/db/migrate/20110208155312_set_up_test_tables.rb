@@ -11,10 +11,7 @@ class SetUpTestTables < (
     ::ActiveRecord::Migration
   end
 )
-  MYSQL_ADAPTERS = [
-    'ActiveRecord::ConnectionAdapters::MysqlAdapter',
-    'ActiveRecord::ConnectionAdapters::Mysql2Adapter'
-  ].freeze
+  MYSQL_ADAPTERS = %w[ActiveRecord::ConnectionAdapters::MysqlAdapter ActiveRecord::ConnectionAdapters::Mysql2Adapter].freeze
   TEXT_BYTES = 1_073_741_823
 
   def up
@@ -61,7 +58,7 @@ class SetUpTestTables < (
       t.timestamps null: true
     end
 
-    create_table :versions, versions_table_options do |t|
+    create_table :versions, **versions_table_options do |t|
       t.string   :item_type, item_type_options
       t.integer  :item_id,   null: false
       t.string   :event,     null: false

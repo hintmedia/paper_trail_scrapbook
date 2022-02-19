@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
-
 module PaperTrailScrapbook
   ::RSpec.describe Versions do
     before do
@@ -14,7 +12,7 @@ module PaperTrailScrapbook
     end
     let(:person) { Person.create(name: 'The Tim Man') }
     let!(:authorship) do
-      Authorship.new(book: book, author: person).tap(&:save!)
+      Authorship.new(book:, author: person).tap(&:save!)
     end
 
     let(:object) { described_class.new(book) }
@@ -79,9 +77,7 @@ module PaperTrailScrapbook
         allow(book).to receive(:respond_to?).with(:version_filter, true).and_return(true)
         allow(book).to receive(:respond_to?).with(:version_filter).and_return(true)
         allow(book).to receive(:version_filter) do |version|
-          if version.event.eql?('update')
-            version
-          end
+          version if version.event.eql?('update')
         end
 
         result = object.filtered(book.versions)

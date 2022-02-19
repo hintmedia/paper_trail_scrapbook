@@ -31,5 +31,6 @@ module Dummy
       config.active_record.raise_in_transactional_callbacks = true if v >= Gem::Version.new('4.2') && v < Gem::Version.new('5.0.0.beta1')
       config.active_record.time_zone_aware_types = [:datetime] if v >= Gem::Version.new('5.0.0.beta1')
     end
+    config.legacy_connection_handling = false
   end
 end

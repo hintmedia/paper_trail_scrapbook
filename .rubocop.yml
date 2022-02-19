@@ -1,7 +1,6 @@
 AllCops:
   DisabledByDefault: false
-  TargetRubyVersion: 2.3
-  TargetRailsVersion: 4.0
+  TargetRubyVersion: 3.1
   DisplayCopNames: true
   Exclude:
     - 'db/**/*'
@@ -11,6 +10,7 @@ AllCops:
     - 'test/**/*'
     - 'bin/**/*'
     - 'spec/dummy_app/db/**/*'
+  NewCops: enable
 
 Security/YAMLLoad:
   Enabled: false
@@ -28,4 +28,5 @@ Metrics/ModuleLength:
   Exclude:
     - 'spec/**/*'
 
-
+Metrics/AbcSize:
+  Max: 20

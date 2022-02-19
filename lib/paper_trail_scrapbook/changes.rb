@@ -24,15 +24,12 @@ module PaperTrailScrapbook
 
     # Attribute change analysis
     #
-    #
     # @return [String] Summary analysis of changes
     #
     def change_log
-      text =
-        changes
-          .map { |k, v| digest(k, v) }
-          .compact
-          .join("\n")
+      text = changes.map { |k, v| digest(k, v) }
+                    .compact
+                    .join("\n")
 
       text = text.gsub(' id:', ':') if PaperTrailScrapbook.config.drop_id_suffix
       text
@@ -40,13 +37,13 @@ module PaperTrailScrapbook
 
     private
 
-    def polymorphic?(x)
-      x.to_s.start_with?(POLYMORPH_BT_INDICATOR)
+    def polymorphic?(text)
+      text.to_s.start_with?(POLYMORPH_BT_INDICATOR)
     end
 
     def digest(key, values)
       old, new = values
-      return if old.nil? && (new.nil? || new.eql?('')) || (old == new && !creating?)
+      return if (old.nil? && (new.nil? || new.eql?(''))) || (old == new && !creating?)
 
       "#{BULLET} #{key.tr('_', ' ')}: #{detailed_analysis(key, new, old)}"
     end
@@ -82,7 +79,8 @@ module PaperTrailScrapbook
     def assoc_target(key)
       x = build_associations[key]
       return x unless polymorphic?(x)
-      ref = x[1..-1] + '_type'
+
+      ref = "#{x[1..]}_type"
 
       # try object changes to see if the belongs_to class is specified
       latest_class = changes[ref]&.last
@@ -117,19 +115,15 @@ module PaperTrailScrapbook
 
     def build_associations
       @build_associations ||=
-        Hash[
-          klass
-            .reflect_on_all_associations
-            .select { |a| a.macro.equal?(:belongs_to) }
-            .map { |x| [x.foreign_key.to_s, assoc_klass(x.name, x.options)] }
-        ]
+        klass.reflect_on_all_associations
+             .select { |a| a.macro.equal?(:belongs_to) }
+             .to_h { |x| [x.foreign_key.to_s, assoc_klass(x.name, x.options)] }
     end
 
     def changes
       @changes ||= if object_changes
-                     YAML
-                       .load(object_changes)
-                       .except(*PaperTrailScrapbook.config.scrub_columns)
+                     YAML.unsafe_load(object_changes)
+                         .except(*PaperTrailScrapbook.config.scrub_columns)
                    else
                      {}
                    end

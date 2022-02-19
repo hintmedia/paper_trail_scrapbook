@@ -5,6 +5,13 @@ recommendations of [keepachangelog.com](http://keepachangelog.com/).
 
 ## Unreleased
 
+## 0.2.0 (2022-02-19)  Rails 7.0 compatibility
+
+### Fixed
+
+- Rails version increased to 7.0
+- Ruby version increased to 3.1
+
 ## 0.1.21 (2021-02-16)  Rails 6.1 compatibility
 
 ### Fixed
