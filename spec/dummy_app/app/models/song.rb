@@ -3,7 +3,7 @@
 module OverrideSongAttributesTheRails4Way
   def attributes
     if name
-      super.merge(name: name)
+      super.merge(name:)
     else
       super
     end
@@ -11,7 +11,7 @@ module OverrideSongAttributesTheRails4Way
 
   def changed_attributes
     if name
-      super.merge(name: name)
+      super.merge(name:)
     else
       super
     end
@@ -34,6 +34,7 @@ class Song < ActiveRecord::Base
     attribute :name, :string
   else
     attr_accessor :name
+
     prepend OverrideSongAttributesTheRails4Way
   end
 end

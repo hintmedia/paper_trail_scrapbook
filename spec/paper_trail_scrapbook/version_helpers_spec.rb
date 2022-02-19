@@ -1,18 +1,20 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
 require 'ostruct'
 
 module PaperTrailScrapbook
   RSpec.describe VersionHelpers do
     let(:person) { Person.create!(name: 'The Tim Man') }
     let(:book) { Book.create!(title: 'How the Grinch stole Xmas') }
+    let(:event) { 'create' }
     let(:version) do
-      OpenStruct.new(event: 'create',
-                     item_type: 'Book',
-                     item_id: book.id,
-                     created_at: Time.current,
-                     version_author: person.id)
+      double(
+        event:,
+        item_type: 'Book',
+        item_id: book.id,
+        created_at: Time.current,
+        version_author: person.id
+      )
     end
     let(:config) { PaperTrailScrapbook.config }
     let(:subject) { JournalEntry.new(version) }
@@ -39,14 +41,18 @@ module PaperTrailScrapbook
         expect(subject.create?).to be true
       end
 
-      it 'returns false if not create event' do
-        version.event = 'update'
+      context 'with not create event' do
+        let(:event) { 'update' }
 
-        expect(subject.create?).to be false
+        it 'returns false' do
+          expect(subject.create?).to be false
+        end
       end
     end
 
     describe '#changes' do
+      before { allow(version).to receive(:object_changes) }
+
       it 'returns changes' do
         expect(subject.changes).to eql('')
       end

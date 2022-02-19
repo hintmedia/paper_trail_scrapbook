@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
-
 RSpec.describe PaperTrailScrapbook do
   describe '.config' do
     it 'sets the @config ivar' do

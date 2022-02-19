@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
-
 module PaperTrailScrapbook
   ::RSpec.describe LifeHistory do
     before do
@@ -24,7 +22,7 @@ module PaperTrailScrapbook
     end
 
     let(:target) do
-      a = Authorship.new(book: book, author: author)
+      a = Authorship.new(book:, author:)
       a.save!
       a
     end

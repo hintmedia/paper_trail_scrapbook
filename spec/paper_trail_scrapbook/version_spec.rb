@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
-
 module PaperTrailScrapbook
   ::RSpec.describe VERSION do
+    it { expect(VERSION).to be_kind_of(String) }
   end
 end

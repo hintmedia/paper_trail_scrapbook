@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
-
 module PaperTrailScrapbook
   ::RSpec.describe Config do
     describe '.instance' do
