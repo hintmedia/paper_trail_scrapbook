@@ -33,7 +33,7 @@ jobs:
       DATABASE_NAME: pts_db
       DATABASE_USER: postgres
       DATABASE_PASSWORD: postgres
-      DATABASE_HOST: postgres
+      DATABASE_HOST: "127.0.0.1"
 
     steps:
       - name: Checkout code
@@ -43,7 +43,7 @@ jobs:
         with:
           bundler-cache: true
       - name: Set up database
-        run: bundle exec rails db:prepare
+        run: bundle exec rake db:reset
       # Add or replace test runners here
       - name: Run tests
         run: bundle exec rspec
