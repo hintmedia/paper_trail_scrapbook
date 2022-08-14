@@ -1,0 +1,54 @@
+# This workflow uses actions that are not certified by GitHub.  They are
+# provided by a third-party and are governed by separate terms of service,
+# privacy policy, and support documentation.
+#
+# This workflow will install a prebuilt Ruby version, install dependencies, and
+# run tests and linters.
+name: "CI"
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres
+        ports:
+          - "5432:5432"
+        env:
+          POSTGRES_DB: pts_db
+          POSTGRES_USER: postgres
+    env:
+      RAILS_ENV: test
+      DATABASE_NAME: pts_db
+      DATABASE_USER: root
+      DATABASE_PASSWORD: root
+      DATABASE_HOST: "127.0.0.1"
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Set up database
+        run: bin/rails db:prepare
+      # Add or replace test runners here
+      - name: Run tests
+        run: bin/rspec
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Lint Ruby files
+        run: bin/rubocop --parallel
