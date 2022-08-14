@@ -21,11 +21,18 @@ jobs:
         env:
           POSTGRES_DB: pts_db
           POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        # needed because the postgres container does not provide a healthcheck
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     env:
       RAILS_ENV: test
       DATABASE_NAME: pts_db
-      DATABASE_USER: root
-      DATABASE_PASSWORD: root
+      DATABASE_USER: postgres
+      DATABASE_PASSWORD: postgres
       DATABASE_HOST: postgres
 
     steps:
