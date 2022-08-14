@@ -26,7 +26,7 @@ jobs:
       DATABASE_NAME: pts_db
       DATABASE_USER: root
       DATABASE_PASSWORD: root
-      DATABASE_HOST: "127.0.0.1"
+      DATABASE_HOST: postgres
 
     steps:
       - name: Checkout code
