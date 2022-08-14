@@ -79,9 +79,7 @@ module PaperTrailScrapbook
         allow(book).to receive(:respond_to?).with(:version_filter, true).and_return(true)
         allow(book).to receive(:respond_to?).with(:version_filter).and_return(true)
         allow(book).to receive(:version_filter) do |version|
-          if version.event.eql?('update')
-            version
-          end
+          version if version.event.eql?('update')
         end
 
         result = object.filtered(book.versions)
