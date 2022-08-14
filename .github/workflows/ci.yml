@@ -36,10 +36,10 @@ jobs:
         with:
           bundler-cache: true
       - name: Set up database
-        run: bin/rails db:prepare
+        run: bundle exec rails db:prepare
       # Add or replace test runners here
       - name: Run tests
-        run: bin/rspec
+        run: bundle exec rspec
 
   lint:
     runs-on: ubuntu-latest
@@ -51,4 +51,4 @@ jobs:
         with:
           bundler-cache: true
       - name: Lint Ruby files
-        run: bin/rubocop --parallel
+        run: bundle exec rubocop
