@@ -62,7 +62,7 @@ require 'timecop'
 
 # Run any available migration
 schema_migration = ActiveRecord::Base.connection.schema_migration
-::ActiveRecord::MigrationContext.new(File.expand_path('dummy_app/db/migrate/', __dir__),schema_migration).migrate
+::ActiveRecord::MigrationContext.new(File.expand_path('dummy_app/db/migrate/', __dir__), schema_migration).migrate
 
 require 'database_cleaner'
 DatabaseCleaner.strategy = :truncation
