@@ -8,8 +8,8 @@ module PaperTrailScrapbook
     include Singleton
 
     DEFAULT_TIME_FORMAT = '%A, %d %b %Y at %l:%M %p'
-    DEFAULT_EVENTS      = { 'create'  => 'created',
-                            'update'  => 'updated',
+    DEFAULT_EVENTS      = { 'create' => 'created',
+                            'update' => 'updated',
                             'destroy' => 'destroyed' }.freeze
 
     SCRUB_COLUMNS     = %w[updated_at created_at id].freeze

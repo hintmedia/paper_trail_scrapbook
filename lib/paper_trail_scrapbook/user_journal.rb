@@ -46,7 +46,7 @@ module PaperTrailScrapbook
       params = { whodunnit: user_id }
       return params if options.empty?
 
-      params.merge(item_type:  what,
+      params.merge(item_type: what,
                    created_at: starts..ends)
             .delete_if { |_, v| v.presence.nil? }
     end
