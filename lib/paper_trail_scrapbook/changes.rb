@@ -131,9 +131,13 @@ module PaperTrailScrapbook
 
     def changes
       @changes ||= if object_changes
-                     YAML
-                       .load(object_changes)
-                       .except(*PaperTrailScrapbook.config.scrub_columns)
+                    serialized_changes = {}
+                    if version.class.object_changes_col_is_json?
+                      serialized_changes = object_changes
+                     else
+                      serialized_changes = YAML.load(object_changes)
+                     end
+                     serialized_changes.except(*PaperTrailScrapbook.config.scrub_columns)
                    else
                      {}
                    end
