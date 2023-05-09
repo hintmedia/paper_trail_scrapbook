@@ -31,7 +31,7 @@ module PaperTrailScrapbook
     end
 
     def whenn
-      version.created_at.strftime(config.time_format)
+      version.created_at.in_time_zone(config.time_zone).strftime(config.time_format)
     end
 
     def kind

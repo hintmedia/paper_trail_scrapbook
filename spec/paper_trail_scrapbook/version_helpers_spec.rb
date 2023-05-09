@@ -61,7 +61,17 @@ module PaperTrailScrapbook
     describe '#whenn' do
       it 'returns version created_at' do
         expect(subject.whenn)
-          .to eql(version.created_at.strftime(config.time_format))
+          .to eql(version.created_at.in_time_zone(config.time_zone).strftime(config.time_format))
+      end
+
+      it 'returns version created_at in configured timezone' do
+        old_timezone = subject.config.time_zone
+        subject.config.time_zone = 'Asia/Singapore'
+
+        expect(subject.whenn)
+          .to eql(version.created_at.in_time_zone(subject.config.time_zone).strftime(subject.config.time_format))
+
+        subject.config.time_zone = old_timezone
       end
     end
 

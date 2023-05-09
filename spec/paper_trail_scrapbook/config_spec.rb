@@ -10,6 +10,8 @@ module PaperTrailScrapbook
         expect(described_class.instance.whodunnit_class).to equal(Person).or be_nil
         expect(described_class.instance.time_format)
           .to eql(described_class::DEFAULT_TIME_FORMAT)
+        expect(described_class.instance.time_zone)
+          .to eql(described_class::DEFAULT_TIME_ZONE)
         expect(described_class.instance.events)
           .to eql(described_class::DEFAULT_EVENTS)
         expect(described_class.instance.scrub_columns)
