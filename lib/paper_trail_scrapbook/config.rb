@@ -8,12 +8,14 @@ module PaperTrailScrapbook
     include Singleton
 
     DEFAULT_TIME_FORMAT = '%A, %d %b %Y at %l:%M %p'
+    DEFAULT_TIME_ZONE = 'Etc/UTC'
     DEFAULT_EVENTS      = { 'create' => 'created',
                             'update' => 'updated',
                             'destroy' => 'destroyed' }.freeze
 
     SCRUB_COLUMNS     = %w[updated_at created_at id].freeze
     UNKNOWN_WHODUNNIT = '*the app*'
+
 
     attr_accessor :whodunnit_class,
                   :time_format,
@@ -23,11 +25,13 @@ module PaperTrailScrapbook
                   :unknown_whodunnit,
                   :invalid_whodunnit,
                   :filter_non_changes,
-                  :recent_first
+                  :recent_first,
+                  :time_zone
 
     def initialize
       @whodunnit_class    = nil
       @time_format        = DEFAULT_TIME_FORMAT
+      @time_zone          = DEFAULT_TIME_ZONE
       @events             = DEFAULT_EVENTS
       @scrub_columns      = SCRUB_COLUMNS
       @unknown_whodunnit  = UNKNOWN_WHODUNNIT

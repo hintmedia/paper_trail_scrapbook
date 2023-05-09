@@ -1,4 +1,7 @@
 test.log
 .tool*
 
+spec/dummy_app/config/database.yml
+spec/dummy_app/log/
+
 coverage*

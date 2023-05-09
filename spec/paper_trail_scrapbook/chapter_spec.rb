@@ -5,10 +5,11 @@ require 'spec_helper'
 module PaperTrailScrapbook
   ::RSpec.describe Chapter do
     let(:version) do
-      OpenStruct.new(id: 2_674_798,
+      double(PaperTrail::Version, id: 2_674_798,
                      item_type: 'Widget',
                      item_id: 4804,
                      event: 'update',
+                     version_author: nil,
                      whodunnit: '1742',
                      object: ['---',
                               'id: ',
@@ -51,6 +52,11 @@ module PaperTrailScrapbook
     let(:subject) { object.story }
 
     describe '#story' do
+      before do
+        expect(version).to receive(:class).and_return(PaperTrail::Version)
+        expect(PaperTrail::Version).to receive(:object_changes_col_is_json?).and_return(false)
+      end
+
       it 'provides a whole story' do
         expect(subject).to match(/updated the following Widget info/)
         expect(subject).to match(/email: tim@redbox.com added/)

@@ -14,12 +14,11 @@ RSpec.describe PaperTrailScrapbook::JournalEntry do
                    version_author: person.id)
   end
   let(:subject) { described_class.new(version) }
-  let(:whenn) { Time.parse('2019-12-16 12:01:29 -0800') }
+  let(:whenn) { Time.parse('2019-12-16 12:01:29 utc +0000') }
 
   describe '#story' do
     it 'story' do
       result = subject.story
-
       expect(result).to eql('On Monday, 16 Dec 2019 at 12:01 PM, '\
                             "created Book[#{book.id}]:\n")
     end
