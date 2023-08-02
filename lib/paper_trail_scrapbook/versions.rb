@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 module PaperTrailScrapbook
+  # Fetches available versions and related version info
+  # Provides filtering
   class Versions
     include Concord.new(:object)
 

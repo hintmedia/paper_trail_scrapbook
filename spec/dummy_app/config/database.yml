@@ -1,7 +1,13 @@
 
 test: &test
-  adapter: sqlite3
+  adapter: postgresql
+  encoding: unicode
+  host: <%= ENV['DATABASE_HOST'] || 'localhost' %>
   database: pts_db
+  username: postgres
+  password: postgres
+  port: <%= ENV['DB_PORT'] || 5432 %>
+  pool: 5
 
 foo:
   <<: *test

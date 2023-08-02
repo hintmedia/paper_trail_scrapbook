@@ -24,5 +24,4 @@ RSpec.describe PaperTrailScrapbook::JournalEntry do
                             "created Book[#{book.id}]:\n")
     end
   end
-
 end

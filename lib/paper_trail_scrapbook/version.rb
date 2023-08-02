@@ -2,5 +2,7 @@
 
 module PaperTrailScrapbook
   # Current version
-  VERSION = '0.1.22'
+  # Corresponds to actual gem version this was forked from
+  # with an "ma*" suffix 
+  VERSION = '0.2.0.ma1'
 end

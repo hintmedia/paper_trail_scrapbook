@@ -2,7 +2,6 @@
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV['RAILS_ENV'] ||= 'test'
-ENV['DB'] ||= 'sqlite'
 
 require 'simplecov'
 
@@ -62,7 +61,8 @@ require 'ffaker'
 require 'timecop'
 
 # Run any available migration
-::ActiveRecord::MigrationContext.new(File.expand_path('dummy_app/db/migrate/', __dir__)).migrate
+schema_migration = ActiveRecord::Base.connection.schema_migration
+::ActiveRecord::MigrationContext.new(File.expand_path('dummy_app/db/migrate/', __dir__), schema_migration).migrate
 
 require 'database_cleaner'
 DatabaseCleaner.strategy = :truncation
@@ -70,12 +70,4 @@ DatabaseCleaner.strategy = :truncation
 RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.use_transactional_fixtures = active_record_gem_version >= ::Gem::Version.new('5')
-
-  # In rails < 5, some tests seem to require DatabaseCleaner-truncation.
-  # Truncation is about three times slower than transaction rollback, so it'll
-  # be nice when we can drop support for rails < 5.
-  if active_record_gem_version < ::Gem::Version.new('5')
-    config.before(:each) { DatabaseCleaner.start }
-    config.after(:each) { DatabaseCleaner.clean }
-  end
 end
