@@ -37,7 +37,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rspec-jumpstart'
   gem.add_development_dependency 'rspec-rails'
   gem.add_development_dependency 'rspec_junit_formatter'
-  gem.add_development_dependency 'rspec-rails'
   gem.add_development_dependency 'rubocop'
   gem.add_development_dependency 'rubocop-rspec'
   gem.add_development_dependency 'simplecov'
